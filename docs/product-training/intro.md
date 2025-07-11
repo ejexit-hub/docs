@@ -1,0 +1,74 @@
+---
+id: intro
+title: Product Training
+sidebar_position: 1
+sidebar: productTrainingSidebar
+---
+
+import ProductTrainingFeatures from '@site/src/components/ProductTrainingFeatures';
+
+# Product Training
+
+<div style={{
+  textAlign: 'center',
+  marginBottom: '3rem',
+  padding: '2rem',
+  background: 'linear-gradient(135deg, rgba(39, 100, 173, 0.1) 0%, rgba(129, 186, 84, 0.1) 100%)',
+  borderRadius: '12px',
+  border: '1px solid rgba(255, 255, 255, 0.1)'
+}}>
+  <h2 style={{
+    fontSize: '1.8rem',
+    fontWeight: '600',
+    marginBottom: '1rem',
+    color: '#2764AD'
+  }}>
+    Master ExitTech Product Evaluation
+  </h2>
+  <p style={{
+    fontSize: '1.1rem',
+    color: 'rgba(255, 255, 255, 0.9)',
+    maxWidth: '600px',
+    margin: '0 auto',
+    lineHeight: '1.6'
+  }}>
+    Comprehensive training designed to help new team members understand the fundamentals of IT asset evaluation and acquisition at ExitTech.
+  </p>
+</div>
+
+## Training Categories
+
+Explore our comprehensive product training modules covering all major IT asset categories:
+
+<ProductTrainingFeatures />
+
+<div style={{
+  marginTop: '3rem',
+  padding: '2rem',
+  background: 'rgba(255, 255, 255, 0.05)',
+  borderRadius: '12px',
+  border: '1px solid rgba(255, 255, 255, 0.1)',
+  textAlign: 'center'
+}}>
+  <h3 style={{ color: '#2764AD', marginBottom: '1rem' }}>📚 What You'll Learn</h3>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
+    <div>
+      <strong style={{ color: '#81BA54' }}>Asset Valuation</strong>
+      <p style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)', margin: '0.5rem 0 0' }}>
+        Learn what makes IT assets valuable and how to assess their market worth.
+      </p>
+    </div>
+    <div>
+      <strong style={{ color: '#81BA54' }}>Quality Assessment</strong>
+      <p style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)', margin: '0.5rem 0 0' }}>
+        Identify key quality indicators and red flags to avoid in equipment evaluation.
+      </p>
+    </div>
+    <div>
+      <strong style={{ color: '#81BA54' }}>Best Practices</strong>
+      <p style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)', margin: '0.5rem 0 0' }}>
+        Master industry standards and ExitTech-specific evaluation criteria.
+      </p>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,97 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+  background: linear-gradient(180deg, #1a1e23 0%, #23272f 100%);
+  animation: fadeIn 1s ease-out 0.8s both;
+}
+
+.featureSvg {
+  height: 64px;
+  width: 64px;
+  color: #2764AD;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.featureCard {
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(39, 100, 173, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(39, 100, 173, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.featureCard:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.featureCard:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.featureCard:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.featureCard:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(39, 100, 173, 0.25);
+  border-color: rgba(39, 100, 173, 0.4);
+  background: rgba(39, 100, 173, 0.18);
+}
+
+.featureCard:hover .featureSvg {
+  color: #81BA54;
+  transform: scale(1.1);
+}
+
+.featureTitle {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.featureDescription a {
+  color: #2764AD;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.featureDescription a:hover, .featureDescription a:focus {
+  color: #2c6eb8;
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

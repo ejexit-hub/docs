@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { User, LogOut, ChevronDown, Shield } from 'lucide-react';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import styles from './styles.module.css';
 
 export default function AuthStatus() {
+  // Don't render during SSR
+  if (!ExecutionEnvironment.canUseDOM) {
+    return null;
+  }
+
   const { user, signOut, loading } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import Link from '@docusaurus/Link';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { Shield, Lock } from 'lucide-react';
 
 interface ProtectedRouteProps {
@@ -9,6 +10,30 @@ interface ProtectedRouteProps {
 }
 
 export default function ProtectedRoute({ children, fallback }: ProtectedRouteProps) {
+  // Don't render during SSR - show loading fallback
+  if (!ExecutionEnvironment.canUseDOM) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '400px',
+        flexDirection: 'column',
+        gap: '1rem'
+      }}>
+        <div style={{
+          width: '40px',
+          height: '40px',
+          border: '3px solid rgba(129, 186, 84, 0.3)',
+          borderTop: '3px solid #81BA54',
+          borderRadius: '50%',
+          animation: 'spin 1s linear infinite'
+        }}></div>
+        <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Loading...</p>
+      </div>
+    );
+  }
+
   const { user, loading } = useAuth();
 
   if (loading) {

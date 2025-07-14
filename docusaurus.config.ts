@@ -13,7 +13,7 @@ const config: Config = {
   // Custom fields for environment variables
   customFields: {
     supabaseUrl: process.env.REACT_APP_SUPABASE_URL || 'https://gnwugojconikwvcduegl.supabase.co',
-    supabaseAnonKey: process.env.REACT_APP_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdud3Vnb2pjb25pa3d2Y2R1ZWdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyNjQ1NTcsImV4cCI6MjA2Nzg0MDU1N30.LK-56kaYKjSvRATNc078MNi86h8gsBienh8H-DOMijA',
+    supabaseAnonKey: process.env.REACT_APP_SUPABASE_ANON_KEY || '',
   },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

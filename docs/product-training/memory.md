@@ -1,4 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { memory_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -40,35 +42,8 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 
 ## Product Gallery
 
-import ProductCarousel from '@site/src/components/ui/product-carousel';
-
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&h=600&fit=crop",
-      alt: "DDR4 RAM Module",
-      title: "DDR4 RAM Module",
-      description: "High-speed DDR4 memory module for desktop computers with heat spreader design."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1555617981-dac3880e045c?w=800&h=600&fit=crop",
-      alt: "Laptop SO-DIMM Memory",
-      title: "SO-DIMM Memory",
-      description: "Compact laptop memory module designed for portable devices and small form factors."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=800&h=600&fit=crop",
-      alt: "Server ECC Memory",
-      title: "ECC Server Memory",
-      description: "Error-correcting code memory for servers and mission-critical applications."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=800&h=600&fit=crop",
-      alt: "High-Performance RAM Kit",
-      title: "Gaming RAM Kit",
-      description: "High-frequency RAM kit with RGB lighting for gaming and enthusiast builds."
-    }
-  ]}
+  images={memory_images}
   title="Memory (RAM) Gallery"
 />
 

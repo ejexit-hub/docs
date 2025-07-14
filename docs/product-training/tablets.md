@@ -1,4 +1,5 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import { tablets_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -44,32 +45,7 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 import ProductCarousel from '@site/src/components/ui/product-carousel';
 
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&h=600&fit=crop",
-      alt: "iPad Pro",
-      title: "Professional Tablet",
-      description: "High-performance tablet with advanced features for creative professionals and business users."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&h=600&fit=crop",
-      alt: "Android Tablet",
-      title: "Android Tablet",
-      description: "Versatile Android tablet offering flexibility and customization for various use cases."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=800&h=600&fit=crop",
-      alt: "Budget Tablet",
-      title: "Consumer Tablet",
-      description: "Affordable tablet perfect for media consumption, browsing, and everyday entertainment."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=800&h=600&fit=crop",
-      alt: "Windows Tablet",
-      title: "Windows Tablet",
-      description: "Convertible Windows tablet combining laptop functionality with tablet portability."
-    }
-  ]}
+  images={tablets_images}
   title="Tablets Gallery"
 />
 

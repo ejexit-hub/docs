@@ -1,4 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { processors_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -40,35 +42,8 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 
 ## Product Gallery
 
-import ProductCarousel from '@site/src/components/ui/product-carousel';
-
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1555617981-dac3880e045c?w=800&h=600&fit=crop",
-      alt: "Intel Core Processor",
-      title: "Intel Core i7 Processor",
-      description: "High-performance Intel Core processor for demanding computing tasks and multitasking."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop",
-      alt: "AMD Ryzen Processor",
-      title: "AMD Ryzen Processor",
-      description: "Advanced AMD Ryzen processor offering excellent performance per dollar value."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=800&h=600&fit=crop",
-      alt: "Server CPU",
-      title: "Server CPU",
-      description: "Enterprise-grade server processor designed for data center applications."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=800&h=600&fit=crop",
-      alt: "CPU Installation",
-      title: "CPU Installation",
-      description: "Professional CPU installation on motherboard showing proper socket alignment."
-    }
-  ]}
+  images={processors_images}
   title="Processors (CPU) Gallery"
 />
 

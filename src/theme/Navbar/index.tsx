@@ -4,15 +4,11 @@ import AuthStatus from '@site/src/components/AuthStatus';
 
 export default function Navbar(props) {
   return (
-    <div style={{ position: 'relative' }}>
-      <NavbarOriginal {...props} />
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        right: '1rem',
-        transform: 'translateY(-50%)',
-        zIndex: 1000
-      }}>
+    <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+      <div style={{ flex: 1 }}>
+        <NavbarOriginal {...props} />
+      </div>
+      <div style={{ marginRight: '1rem', display: 'flex', alignItems: 'center', zIndex: 1000 }}>
         <AuthStatus />
       </div>
     </div>

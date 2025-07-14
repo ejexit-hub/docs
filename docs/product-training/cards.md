@@ -4,6 +4,8 @@ title: Cards
 sidebar: false
 ---
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { cards_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -46,35 +48,8 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 
 ## Product Gallery
 
-import ProductCarousel from '@site/src/components/ui/product-carousel';
-
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&h=600&fit=crop",
-      alt: "Network Interface Card",
-      title: "Gigabit Ethernet Card",
-      description: "High-speed gigabit Ethernet network interface card for reliable wired connectivity."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      alt: "Wireless Network Card",
-      title: "Wireless Network Card",
-      description: "Wi-Fi 6 wireless network card providing fast and reliable wireless connectivity."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop",
-      alt: "Fiber Optic Network Card",
-      title: "Fiber Optic Card",
-      description: "High-performance fiber optic network card for long-distance, high-speed connections."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
-      alt: "Enterprise Network Card",
-      title: "Enterprise Network Card",
-      description: "Multi-port enterprise network card designed for servers and data center applications."
-    }
-  ]}
+  images={cards_images}
   title="Network Cards Gallery"
 />
 

@@ -1,4 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { servers_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -65,6 +67,13 @@ Servers are specialized computers designed to provide services, data, resources,
 
 ## 7. Additional Resources
 For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P Technical Cut Lines.xlsb).
+
+## Product Gallery
+
+<ProductCarousel 
+  images={servers_images}
+  title="Servers Gallery"
+/>
 
 ---
 

@@ -1,4 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { storage_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -41,35 +43,8 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 
 ## Product Gallery
 
-import ProductCarousel from '@site/src/components/ui/product-carousel';
-
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop",
-      alt: "Network Attached Storage",
-      title: "Network Attached Storage (NAS)",
-      description: "Multi-bay NAS system for centralized file storage and sharing across networks."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      alt: "External Storage Drive",
-      title: "External Storage Drive",
-      description: "Portable external storage solution for backup and additional capacity needs."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&h=600&fit=crop",
-      alt: "SAN Storage Array",
-      title: "Storage Area Network (SAN)",
-      description: "Enterprise SAN storage array for high-performance data center environments."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
-      alt: "Rack Mount Storage",
-      title: "Rack Mount Storage",
-      description: "High-density rack-mounted storage solution for enterprise data centers."
-    }
-  ]}
+  images={storage_images}
   title="Storage Units Gallery"
 />
 

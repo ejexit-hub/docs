@@ -141,6 +141,78 @@
 }
 
 /* ========================================
+   SEARCH BAR STYLING
+   ======================================== */
+
+/* Search bar container */
+.searchBox {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Search input field */
+.searchBox input {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: none !important;
+  outline: none !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+}
+
+.searchBox input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Search results dropdown */
+.searchBox .searchBox__results {
+  background: #23272f !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Search result items */
+.searchBox .searchBox__results .searchBox__results__item {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  padding: 12px 16px !important;
+  transition: background 0.2s ease !important;
+}
+
+.searchBox .searchBox__results .searchBox__results__item:hover {
+  background: rgba(129, 186, 84, 0.1) !important;
+  color: #81BA54 !important;
+}
+
+/* Search result title */
+.searchBox .searchBox__results .searchBox__results__item .searchBox__results__item__title {
+  color: #81BA54 !important;
+  font-weight: 600 !important;
+}
+
+/* Search result snippet */
+.searchBox .searchBox__results .searchBox__results__item .searchBox__results__item__snippet {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 13px !important;
+}
+
+/* Search icon */
+.searchBox .searchBox__icon {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Search box focus state */
+.searchBox:focus-within {
+  border-color: #81BA54 !important;
+  box-shadow: 0 0 0 2px rgba(129, 186, 84, 0.2) !important;
+}
+
+/* ========================================
    GLOBAL PAGE ENTRANCE ANIMATIONS
    ======================================== */
 
@@ -472,6 +544,54 @@ h4, h5, h6 {
 .docusaurus-mt-lg h1 {
   text-align: center;
   color: #2764AD; /* Clean blue for special headers */
+}
+
+/* === Always-Expanded Docusaurus Search Bar === */
+.DocSearch-Button {
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  min-width: 220px;
+  width: 220px;
+  height: 40px;
+  padding: 0 16px !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, border 0.2s;
+  font-size: 1em;
+}
+.DocSearch-Button:hover, .DocSearch-Button:focus {
+  background: rgba(129,186,84,0.18) !important;
+  border-color: #81BA54 !important;
+}
+.DocSearch-Button-Keys,
+.DocSearch-Button-Container,
+.DocSearch-Button-Label {
+  display: none !important;
+}
+.DocSearch-Button-Placeholder {
+  color: #fff !important;
+  opacity: 0.8;
+  font-size: 1em;
+  display: block !important;
+}
+
+/* === Force-hide Docusaurus Search Shortcut Key === */
+.DocSearch-Button-Keys,
+.DocSearch-Button .DocSearch-Button-Keys,
+.DocSearch-Button-Container,
+.DocSearch-Button-Label {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
 }
 
 /* Respect user preferences for reduced motion */

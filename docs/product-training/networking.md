@@ -1,4 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { networking_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -54,35 +56,8 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 
 ## Product Gallery
 
-import ProductCarousel from '@site/src/components/ui/product-carousel';
-
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&h=600&fit=crop",
-      alt: "Network Switch",
-      title: "Managed Network Switch",
-      description: "Enterprise-grade managed switch with multiple ports for business network connectivity."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      alt: "Wireless Router",
-      title: "Business Wireless Router",
-      description: "High-performance wireless router with advanced security and management features."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
-      alt: "Network Infrastructure",
-      title: "Data Center Networking",
-      description: "Enterprise networking infrastructure for large-scale data center environments."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&h=600&fit=crop",
-      alt: "Access Point",
-      title: "Wireless Access Point",
-      description: "Professional wireless access point for extending Wi-Fi coverage in business environments."
-    }
-  ]}
+  images={networking_images}
   title="Networking Equipment Gallery"
 />
 

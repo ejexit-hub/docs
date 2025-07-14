@@ -1,4 +1,5 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import { phones_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -46,32 +47,7 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 import ProductCarousel from '@site/src/components/ui/product-carousel';
 
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop",
-      alt: "Modern Smartphone",
-      title: "Flagship Smartphone",
-      description: "Latest generation smartphone with advanced features, premium build, and flagship performance."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
-      alt: "Business Phone",
-      title: "Business Smartphone",
-      description: "Enterprise-grade smartphone with enhanced security features and productivity tools."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=800&h=600&fit=crop",
-      alt: "Budget Smartphone",
-      title: "Budget Smartphone",
-      description: "Affordable smartphone offering essential features and reliable performance for everyday use."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&h=600&fit=crop",
-      alt: "Feature Phone",
-      title: "Feature Phone",
-      description: "Simple and durable feature phone focused on essential communication needs."
-    }
-  ]}
+  images={phones_images}
   title="Phones Gallery"
 />
 

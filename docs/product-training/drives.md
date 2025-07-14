@@ -1,4 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
+import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { drives_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
 
@@ -41,35 +43,8 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 
 ## Product Gallery
 
-import ProductCarousel from '@site/src/components/ui/product-carousel';
-
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop",
-      alt: "SSD Drive",
-      title: "Solid State Drive (SSD)",
-      description: "High-performance SSD drive offering fast data access and improved system responsiveness."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      alt: "Hard Disk Drive",
-      title: "Hard Disk Drive (HDD)",
-      description: "Traditional mechanical storage drive providing large capacity at an economical price point."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&h=600&fit=crop",
-      alt: "NVMe SSD",
-      title: "NVMe M.2 SSD",
-      description: "Ultra-fast NVMe SSD with direct PCIe connection for maximum performance and speed."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
-      alt: "Enterprise Storage",
-      title: "Enterprise Storage Drive",
-      description: "Heavy-duty storage drive designed for 24/7 operation in server and data center environments."
-    }
-  ]}
+  images={drives_images}
   title="Storage Drives Gallery"
 />
 

@@ -65,34 +65,10 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 ## Product Gallery
 
 import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { laptops_desktops_images } from '@site/src/data/product-images';
 
 <ProductCarousel 
-  images={[
-    {
-      src: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop",
-      alt: "Modern Business Laptop",
-      title: "Business Laptop",
-      description: "Professional laptop with enhanced security features and business-grade performance."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&h=600&fit=crop",
-      alt: "Desktop Workstation",
-      title: "Desktop Workstation",
-      description: "High-performance desktop computer ideal for demanding professional applications."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop",
-      alt: "MacBook Pro",
-      title: "MacBook Pro",
-      description: "Apple's professional laptop featuring M-series processors for creative workflows."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=800&h=600&fit=crop",
-      alt: "Gaming Laptop",
-      title: "Gaming Laptop",
-      description: "High-performance laptop designed for gaming and graphics-intensive applications."
-    }
-  ]}
+  images={laptops_desktops_images}
   title="Laptops & Desktops Gallery"
 />
 

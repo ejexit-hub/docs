@@ -10,7 +10,14 @@ export default function Home() {
     <Layout title="ExitTech Wiki" description="Technical documentation and knowledge base for ExitTech">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <BackgroundGradientAnimation>
-          <div className="container relative z-10">
+          <div className="container relative z-10" style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            justifyContent: 'center', 
+            alignItems: 'center',
+            minHeight: '45vh',
+            padding: '2rem 0'
+          }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', marginBottom: 0 }}>
               <img
                 src="/img/logo-main.png"

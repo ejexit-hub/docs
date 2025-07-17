@@ -1,5 +1,5 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
-import ProductCarousel from '@site/src/components/ui/product-carousel';
+import { ProductCarousel } from '@site/src/components/ui/product-carousel';
 import { gpu_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
@@ -56,7 +56,7 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=628871544&single=true"
   width="100%"
   height="800"
-  style="border: none; border-radius: 8px;"
+  style={{ border: 'none', borderRadius: '8px' }}
   title="Technical Cutlines"
   allowfullscreen
 ></iframe>

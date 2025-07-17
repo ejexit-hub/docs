@@ -4,13 +4,16 @@
  */
 
 .heroBanner {
-  padding: 6rem 0 4rem 0;
+  padding: 0;
   text-align: center;
   position: relative;
   overflow: visible;
   background: transparent;
   color: #fff;
-  min-height: 500px;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

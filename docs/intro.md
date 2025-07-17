@@ -17,23 +17,19 @@ This wiki is organized into several key sections:
 - **Best Practices** – Guidelines, standards, and recommendations
 - **Troubleshooting** – Solutions to common issues and FAQs
 
-## Quick Navigation
+## Training Resources
 
-Use the sidebar or search to find what you need. Each page is designed to be self-contained and will link to related topics for deeper learning.
+### R2 Focus Materials (FM) Training Presentation
 
-## Contributing
+<iframe
+  src="/Files/7.2.7-T%20FM%20Training%20-%201.0%20(1).pdf"
+  width="100%"
+  height="600"
+  style={{ border: 'none', borderRadius: '8px' }}
+  title="R2 Focus Materials (FM) Training Presentation"
+></iframe>
 
-To add or update documentation:
-1. Use the document import CLI for PDFs, DOCXs, and CSVs
-2. Edit Markdown files directly in the `/docs` directory
-3. Follow our documentation standards and formatting guidelines
-
-## Need Help?
-
-If you can't find what you're looking for:
-- Use the search function
-- Check the troubleshooting section
-- Reach out to the ExitTech team for support
+**[Download PDF](/Files/7.2.7-T%20FM%20Training%20-%201.0%20(1).pdf)** - Right-click and "Save As" to download the FM training document.
 
 ---
 

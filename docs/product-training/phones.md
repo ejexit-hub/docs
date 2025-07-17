@@ -53,14 +53,15 @@ import ProductCarousel from '@site/src/components/ui/product-carousel';
 
 ---
 
+
 ## Technical Cutlines
 
 <iframe
   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=1205348412&single=true"
   width="100%"
   height="800"
-  style={{ border: 'none', borderRadius: '8px' }}
+  style="border: none; border-radius: 8px;"
   title="Technical Cutlines"
-  allowFullScreen
+  allowfullscreen
 ></iframe>
 

@@ -3,17 +3,17 @@ import path from "path";
 
 // 1. Fill in your mapping here:
 const gidMap: Record<string, string> = {
-  "laptops-desktops.mdx": "956631618", // <-- Replace with actual gid
-  "servers.mdx": "816388005",          // <-- Replace with actual gid
-  "networking.mdx": "1345533357",      // <-- Replace with actual gid
-  "cards.mdx": "785219754",           // <-- Replace with actual gid
-  "drives.mdx": "255372992",          // <-- Replace with actual gid
-  "gpu.mdx": "628871544",             // <-- Replace with actual gid
-  "memory.mdx": "2095076836",          // <-- Replace with actual gid
-  "phones.mdx": "1205348412",          // <-- Replace with actual gid
-  "processors.mdx": "433613894",      // <-- Replace with actual gid
-  "storage.mdx": "708310103",         // <-- Replace with actual gid
-  "tablets.mdx": "1164082397"          // <-- Replace with actual gid
+  "laptops-desktops.md": "658319452", // <-- Replace with actual gid
+  "servers.md": "1966414049",          // <-- Replace with actual gid
+  "networking.md": "637810809",      // <-- Replace with actual gid
+  "cards.md": "634340236",           // <-- Replace with actual gid
+  "drives.md": "1030159871",          // <-- Replace with actual gid
+  "gpu.md": "302295510",             // <-- Replace with actual gid
+  "memory.md": "2023041348",          // <-- Replace with actual gid
+  "phones.md": "1812324705",          // <-- Replace with actual gid
+  "processors.md": "882296196",      // <-- Replace with actual gid
+  "storage.md": "1752306421",         // <-- Replace with actual gid
+  "tablets.md": "1116239162"          // <-- Replace with actual gid
 };
 
 const productDir = path.join(__dirname, "../docs/product-training");

@@ -45,7 +45,7 @@ export function ProductCarousel({
   }, [autoPlay, interval, images.length]);
 
   return (
-    <div className={`relative w-full max-w-4xl mx-auto ${className}`}>
+    <div className={`relative w-full max-w-md mx-auto ${className}`}>
       <Carousel
         initialIndex={currentIndex}
         onIndexChange={setCurrentIndex}

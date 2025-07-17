@@ -137,7 +137,7 @@ function CarouselNavigation({
         type='button'
         aria-label='Previous slide'
         className={cn(
-          'pointer-events-auto h-12 w-12 rounded-full bg-white/90 backdrop-blur-md p-3 transition-all duration-300 shadow-xl hover:bg-white hover:shadow-2xl hover:scale-110 dark:bg-zinc-900/90 dark:hover:bg-zinc-800/95 border border-white/20 dark:border-zinc-700/50',
+          'pointer-events-auto h-10 w-10 rounded-full bg-[#81BA54]/90 backdrop-blur-md p-2.5 transition-all duration-300 shadow-lg hover:bg-[#81BA54] hover:shadow-xl hover:scale-105 border border-[#81BA54]/30',
           alwaysShow
             ? 'opacity-100'
             : 'opacity-0 group-hover/hover:opacity-100',
@@ -154,14 +154,14 @@ function CarouselNavigation({
         }}
       >
         <ChevronLeft
-          className='stroke-zinc-700 dark:stroke-zinc-200'
-          size={20}
+          className='stroke-white'
+          size={18}
         />
       </button>
       <button
         type='button'
         className={cn(
-          'pointer-events-auto h-12 w-12 rounded-full bg-white/90 backdrop-blur-md p-3 transition-all duration-300 shadow-xl hover:bg-white hover:shadow-2xl hover:scale-110 dark:bg-zinc-900/90 dark:hover:bg-zinc-800/95 border border-white/20 dark:border-zinc-700/50',
+          'pointer-events-auto h-10 w-10 rounded-full bg-[#81BA54]/90 backdrop-blur-md p-2.5 transition-all duration-300 shadow-lg hover:bg-[#81BA54] hover:shadow-xl hover:scale-105 border border-[#81BA54]/30',
           alwaysShow
             ? 'opacity-100'
             : 'opacity-0 group-hover/hover:opacity-100',
@@ -179,8 +179,8 @@ function CarouselNavigation({
         }}
       >
         <ChevronRight
-          className='stroke-zinc-700 dark:stroke-zinc-200'
-          size={20}
+          className='stroke-white'
+          size={18}
         />
       </button>
     </div>

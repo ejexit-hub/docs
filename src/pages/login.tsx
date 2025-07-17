@@ -152,8 +152,8 @@ export default function LoginPage() {
     <div style={{ maxWidth: 350, margin: '2.5rem auto', padding: 24, background: '#23272f', borderRadius: 12, boxShadow: '0 2px 16px rgba(0,0,0,0.12)' }}>
       {/* Logo at the top */}
       <img
-        src="/img/logo-main.png"
-        alt="Company Logo"
+        src="/img/logo-exit-technologies.png"
+        alt="exIT Technologies Logo"
         style={{ display: 'block', margin: '0 auto 16px auto', width: 60, height: 60 }}
       />
       <h2 style={{ color: '#81BA54', marginBottom: 16, fontSize: '1.25rem' }}>{isSignUp ? 'Create Account' : 'Login'}</h2>

@@ -213,6 +213,70 @@
 }
 
 /* ========================================
+   DROPDOWN MENU STYLING
+   ======================================== */
+
+/* Dropdown menu container */
+.navbar__item.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+.navbar__dropdown {
+  background: #23272f !important;
+  border: 1px solid rgba(129, 186, 84, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 0.5rem !important;
+  min-width: 600px !important;
+  z-index: 1000 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.25rem !important;
+}
+
+/* Dropdown menu items */
+.navbar__dropdown .navbar__dropdown-item {
+  color: #ffffff !important;
+  padding: 0.5rem 0.75rem !important;
+  transition: all 0.2s ease !important;
+  border: none !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  border-radius: 4px !important;
+  font-size: 0.9rem !important;
+}
+
+/* Dropdown menu items hover state */
+.navbar__dropdown .navbar__dropdown-item:hover {
+  background: rgba(129, 186, 84, 0.1) !important;
+  color: #81BA54 !important;
+  text-decoration: none !important;
+}
+
+/* Dropdown menu items active state */
+.navbar__dropdown .navbar__dropdown-item--active {
+  background: rgba(129, 186, 84, 0.15) !important;
+  color: #81BA54 !important;
+  font-weight: 600 !important;
+}
+
+/* Dropdown arrow */
+.navbar__dropdown-arrow {
+  color: #81BA54 !important;
+  transition: transform 0.2s ease !important;
+}
+
+/* Dropdown arrow when open */
+.navbar__dropdown--show .navbar__dropdown-arrow {
+  transform: rotate(180deg) !important;
+}
+
+/* ========================================
    GLOBAL PAGE ENTRANCE ANIMATIONS
    ======================================== */
 
@@ -391,6 +455,77 @@ article[role="main"],
 /* Pagination */
 .pagination-nav {
   animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+/* ========================================
+   HIDE TABLE OF CONTENTS (RIGHT SIDEBAR)
+   ======================================== */
+
+/* Hide table of contents on all documentation pages */
+.table-of-contents {
+  display: none !important;
+}
+
+/* Hide the right sidebar column that contains the table of contents */
+.theme-doc-sidebar-container {
+  display: none !important;
+}
+
+/* Hide any right sidebar or table of contents containers */
+.theme-doc-toc-desktop,
+.theme-doc-toc-mobile,
+[class*="toc"],
+[class*="TOC"],
+.theme-doc-toc,
+.toc,
+.TOC {
+  display: none !important;
+}
+
+/* Hide any elements that might contain table of contents */
+aside[class*="toc"],
+aside[class*="TOC"],
+nav[class*="toc"],
+nav[class*="TOC"] {
+  display: none !important;
+}
+
+/* Adjust the main content area to take full width */
+.theme-doc-layout {
+  grid-template-columns: 1fr !important;
+}
+
+.theme-doc-layout-main {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Ensure content takes full width */
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+}
+
+/* Remove any right margin/padding that might be reserved for TOC */
+.row {
+  margin-right: 0 !important;
+}
+
+.col {
+  padding-right: 0 !important;
+}
+
+/* Additional layout adjustments for better content display */
+.theme-doc-markdown {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Ensure proper spacing without TOC */
+.theme-doc-layout {
+  gap: 0 !important;
+  padding: 0 !important;
 }
 
 /* ========================================

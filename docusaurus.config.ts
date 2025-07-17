@@ -93,9 +93,60 @@ const config: Config = {
           activeBaseRegex: '^/docs/(?!product-training|technical-cutlines)',
         },
         {
-          to: '/docs/product-training/intro',
+          type: 'dropdown',
           label: 'Product Training',
           position: 'left',
+          to: '/docs/product-training/intro',
+          items: [
+            {
+              label: 'Introduction',
+              to: '/docs/product-training/intro',
+            },
+            {
+              label: 'Cards',
+              to: '/docs/product-training/cards',
+            },
+            {
+              label: 'Drives',
+              to: '/docs/product-training/drives',
+            },
+            {
+              label: 'GPU',
+              to: '/docs/product-training/gpu',
+            },
+            {
+              label: 'Laptops & Desktops',
+              to: '/docs/product-training/laptops-desktops',
+            },
+            {
+              label: 'Memory',
+              to: '/docs/product-training/memory',
+            },
+            {
+              label: 'Networking',
+              to: '/docs/product-training/networking',
+            },
+            {
+              label: 'Phones',
+              to: '/docs/product-training/phones',
+            },
+            {
+              label: 'Processors',
+              to: '/docs/product-training/processors',
+            },
+            {
+              label: 'Servers',
+              to: '/docs/product-training/servers',
+            },
+            {
+              label: 'Storage',
+              to: '/docs/product-training/storage',
+            },
+            {
+              label: 'Tablets',
+              to: '/docs/product-training/tablets',
+            },
+          ],
         },
         {
           to: '/docs/technical-cutlines',

@@ -22,8 +22,8 @@ export default function Home() {
             <p className={styles.heroSubtitleAccent + ' hero__subtitle'}>Technical documentation and knowledge base for ExitTech</p>
             <p className={styles.heroIntroAccent}>
               Your central hub for technical excellence. Discover comprehensive guides, expert insights, and cutting-edge solutions that empower teams to achieve breakthrough results. From quick troubleshooting to deep technical mastery—everything you need is right here.
-            </p>
-          </div>
+          </p>
+        </div>
         </BackgroundGradientAnimation>
       </header>
       <main>

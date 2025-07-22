@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import { Book, RefreshCw, Compass, Users } from 'lucide-react';
+import { Book, RefreshCw, Compass, Users, BookOpen } from 'lucide-react';
 
 const FeatureList = [
   {
@@ -15,11 +15,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Always Current',
-    Icon: RefreshCw,
+    title: 'IT Asset Glossary',
+    Icon: BookOpen,
     description: (
       <>
-        Stay ahead with continuously updated content, latest best practices, and cutting-edge technical insights from industry experts.
+        Essential terminology and abbreviations for IT asset management. Quick reference for technical terms, hardware components, and industry standards.
       </>
     ),
   },
@@ -44,17 +44,31 @@ const FeatureList = [
 ];
 
 function Feature({title, Icon, description}: {title: string; Icon: any; description: ReactNode}) {
+  const isGlossary = title === 'IT Asset Glossary';
+  
   return (
     <div className={clsx('col col--3')}>
-      <div className={clsx('text--center', styles.featureCard)}>
-        <div className="text--center">
-          <Icon size={48} strokeWidth={1.5} className={styles.featureSvg} role="img" />
+      {isGlossary ? (
+        <a href="/it-glossary" className={clsx('text--center', styles.featureCard, 'no-underline')} style={{ display: 'block', textDecoration: 'none' }}>
+          <div className="text--center">
+            <Icon size={48} strokeWidth={1.5} className={styles.featureSvg} role="img" />
+          </div>
+          <div className="text--center padding-horiz--md">
+            <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+            <p className={styles.featureDescription}>{description}</p>
+          </div>
+        </a>
+      ) : (
+        <div className={clsx('text--center', styles.featureCard)}>
+          <div className="text--center">
+            <Icon size={48} strokeWidth={1.5} className={styles.featureSvg} role="img" />
+          </div>
+          <div className="text--center padding-horiz--md">
+            <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+            <p className={styles.featureDescription}>{description}</p>
+          </div>
         </div>
-        <div className="text--center padding-horiz--md">
-          <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
-          <p className={styles.featureDescription}>{description}</p>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

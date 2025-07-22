@@ -88,7 +88,7 @@ const config: Config = {
       items: [
         {
           to: '/docs/intro',
-          label: 'Docs',
+          label: 'Getting Started',
           position: 'left',
           activeBaseRegex: '^/docs/(?!product-training|technical-cutlines)',
         },
@@ -103,50 +103,60 @@ const config: Config = {
               to: '/docs/product-training/intro',
             },
             {
-              label: 'Cards',
-              to: '/docs/product-training/cards',
-            },
-            {
-              label: 'Drives',
-              to: '/docs/product-training/drives',
-            },
-            {
-              label: 'GPU',
-              to: '/docs/product-training/gpu',
-            },
-            {
-              label: 'Laptops & Desktops',
-              to: '/docs/product-training/laptops-desktops',
+              label: 'Processors',
+              to: '/docs/product-training/processors',
             },
             {
               label: 'Memory',
               to: '/docs/product-training/memory',
             },
             {
-              label: 'Networking',
-              to: '/docs/product-training/networking',
+              label: 'GPU',
+              to: '/docs/product-training/gpu',
             },
             {
-              label: 'Phones',
-              to: '/docs/product-training/phones',
-            },
-            {
-              label: 'Processors',
-              to: '/docs/product-training/processors',
-            },
-            {
-              label: 'Servers',
-              to: '/docs/product-training/servers',
+              label: 'Drives',
+              to: '/docs/product-training/drives',
             },
             {
               label: 'Storage',
               to: '/docs/product-training/storage',
             },
             {
+              label: 'Laptops & Desktops',
+              to: '/docs/product-training/laptops-desktops',
+            },
+            {
+              label: 'Servers',
+              to: '/docs/product-training/servers',
+            },
+            {
+              label: 'Networking',
+              to: '/docs/product-training/networking',
+            },
+            {
+              label: 'Cards',
+              to: '/docs/product-training/cards',
+            },
+            {
+              label: 'Phones',
+              to: '/docs/product-training/phones',
+            },
+            {
               label: 'Tablets',
               to: '/docs/product-training/tablets',
             },
           ],
+        },
+        {
+          to: '/it-glossary',
+          label: 'IT Glossary',
+          position: 'left',
+        },
+        {
+          to: '/nomenclature',
+          label: 'Nomenclature',
+          position: 'left',
         },
         {
           to: '/docs/technical-cutlines',

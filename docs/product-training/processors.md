@@ -71,7 +71,7 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 ## Technical Cutlines
 
 <iframe
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=433613894&single=true"
+  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=882296196&single=true"
   width="100%"
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}

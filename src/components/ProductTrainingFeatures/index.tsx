@@ -87,19 +87,17 @@ function ProductCategory({title, Icon, link, description}: {
   description: string;
 }) {
   return (
-    <div className={clsx('col col--4')}>
-      <Link to={link} className={styles.categoryLink}>
-        <div className={clsx('text--center', styles.categoryCard)}>
-          <div className="text--center">
-            <Icon size={40} strokeWidth={1.5} className={styles.categorySvg} role="img" />
-          </div>
-          <div className="text--center padding-horiz--md">
-            <Heading as="h3" className={styles.categoryTitle}>{title}</Heading>
-            <p className={styles.categoryDescription}>{description}</p>
-          </div>
+    <Link to={link} className={styles.categoryLink}>
+      <div className={clsx('text--center', styles.categoryCard)}>
+        <div className="text--center">
+          <Icon size={40} strokeWidth={1.5} className={styles.categorySvg} role="img" />
         </div>
-      </Link>
-    </div>
+        <div className="text--center padding-horiz--md" style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+          <Heading as="h3" className={styles.categoryTitle}>{title}</Heading>
+          <p className={styles.categoryDescription}>{description}</p>
+        </div>
+      </div>
+    </Link>
   );
 }
 

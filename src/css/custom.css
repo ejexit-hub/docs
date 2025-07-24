@@ -494,7 +494,7 @@ details > summary::-webkit-details-marker {
 .accordion-header h4 {
   margin: 0;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   transition: all 0.2s ease;
 }
 
@@ -503,6 +503,8 @@ details > summary::-webkit-details-marker {
   margin-bottom: 1rem;
   border-left: 3px solid transparent;
   transition: all 0.2s ease;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* Color schemes for different accordion types */
@@ -540,6 +542,160 @@ details > summary::-webkit-details-marker {
 
 .accordion-header.accordion-note + .accordion-content {
   border-left-color: #f59e0b;
+}
+
+/* ========================================
+   ACCORDION CONTENT TYPOGRAPHY REFINEMENTS
+   ======================================== */
+
+.accordion-content p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+[data-theme='dark'] .accordion-content p {
+  color: #d1d5db;
+}
+
+.accordion-content h4,
+.accordion-content h5,
+.accordion-content h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #2764AD;
+}
+
+[data-theme='dark'] .accordion-content h4,
+[data-theme='dark'] .accordion-content h5,
+[data-theme='dark'] .accordion-content h6 {
+  color: #81BA54;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.accordion-content li {
+  margin-bottom: 0.25rem;
+  color: #374151;
+}
+
+[data-theme='dark'] .accordion-content li {
+  color: #d1d5db;
+}
+
+.accordion-content strong {
+  font-weight: 600;
+  color: #2764AD;
+}
+
+[data-theme='dark'] .accordion-content strong {
+  color: #81BA54;
+}
+
+/* ========================================
+   PRODUCT CAROUSEL SIZE OPTIMIZATION
+   ======================================== */
+
+/* Reduce overall carousel size */
+[data-path*="product-training"] .product-carousel {
+  max-width: 320px !important;
+  margin: 1rem auto;
+}
+
+/* Make carousel images smaller */
+[data-path*="product-training"] .product-carousel img {
+  max-height: 200px !important;
+  object-fit: cover;
+}
+
+/* Reduce carousel container padding */
+[data-path*="product-training"] .product-carousel .carousel-item {
+  padding: 0.25rem !important;
+}
+
+/* Make carousel navigation smaller */
+[data-path*="product-training"] .product-carousel .carousel-navigation {
+  transform: scale(0.8);
+}
+
+/* Reduce carousel indicators size */
+[data-path*="product-training"] .product-carousel .carousel-indicator {
+  transform: scale(0.9);
+}
+
+/* ========================================
+   SUB-HEADER INDENTATION FOR NETWORKING PAGE
+   ======================================== */
+
+/* Target h3 elements that follow h2 elements in networking page */
+[data-path*="product-training/networking"] h2 + h3,
+[data-path*="product-training/networking"] h2 ~ h3 {
+  margin-left: 1.5rem !important;
+  padding-left: 1rem !important;
+  border-left: 2px solid #81BA54 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Add subtle background to indented sections */
+[data-path*="product-training/networking"] h2 + h3::before,
+[data-path*="product-training/networking"] h2 ~ h3::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1.5rem;
+  background: linear-gradient(90deg, rgba(129, 186, 84, 0.1), transparent);
+  border-radius: 4px 0 0 4px;
+}
+
+/* Style the h3 content area */
+[data-path*="product-training/networking"] h2 + h3 + ul,
+[data-path*="product-training/networking"] h2 + h3 + ol,
+[data-path*="product-training/networking"] h2 ~ h3 + ul,
+[data-path*="product-training/networking"] h2 ~ h3 + ol {
+  margin-left: 2rem !important;
+  padding-left: 1rem !important;
+  border-left: 1px solid rgba(129, 186, 84, 0.3) !important;
+}
+
+/* Responsive sizing for mobile devices */
+@media (max-width: 768px) {
+  [data-path*="product-training"] .product-carousel {
+    max-width: 280px !important;
+  }
+  
+  [data-path*="product-training"] .product-carousel img {
+    max-height: 160px !important;
+  }
+  
+  [data-path*="product-training"] .product-carousel .carousel-navigation {
+    transform: scale(0.7);
+  }
+  
+  [data-path*="product-training"] .product-carousel .carousel-indicator {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  [data-path*="product-training"] .product-carousel {
+    max-width: 240px !important;
+  }
+  
+  [data-path*="product-training"] .product-carousel img {
+    max-height: 140px !important;
+  }
 }
 
 /* ========================================
@@ -661,6 +817,7 @@ h3 {
   font-weight: 600;
   margin-bottom: 1rem;
   position: relative;
+  font-size: 1.1rem;
 }
 
 /* Add dot accent to h3 */
@@ -942,7 +1099,8 @@ article[role="main"],
 .markdown ul,
 .markdown ol {
   margin-bottom: 1.5rem;
-  line-height: 1.7;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .markdown pre,
@@ -1169,6 +1327,7 @@ h4 {
   margin-bottom: 0.8rem;
   position: relative;
   padding-left: 1rem;
+  font-size: 1rem;
 }
 
 .blog-post-title,
@@ -1320,3 +1479,619 @@ article h1 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN IMPROVEMENTS
+   ======================================== */
+
+/* Ensure proper viewport behavior */
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Prevent horizontal overflow on all elements */
+body {
+  overflow-x: hidden;
+}
+
+/* Global responsive image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive iframe handling */
+iframe {
+  max-width: 100%;
+}
+
+/* Base responsive container improvements */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive breakpoints for better laptop compatibility */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 996px) and (max-width: 1199px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Improved responsive grid system */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+
+/* Responsive typography improvements */
+@media screen and (max-width: 768px) {
+  .markdown h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  .markdown h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .markdown h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  .markdown p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .markdown h1 {
+    font-size: 1.5rem;
+  }
+  
+  .markdown h2 {
+    font-size: 1.25rem;
+  }
+  
+  .markdown h3 {
+    font-size: 1.1rem;
+  }
+  
+  .markdown p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive navigation improvements */
+@media screen and (max-width: 996px) {
+  .navbar__items {
+    gap: 0.5rem;
+  }
+  
+  .navbar__item {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__brand {
+    font-size: 1.1rem;
+  }
+  
+  .navbar__logo {
+    height: 28px;
+    width: auto;
+  }
+}
+
+/* Responsive sidebar improvements */
+@media screen and (max-width: 996px) {
+  .theme-doc-sidebar-container {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .theme-doc-sidebar {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Responsive content area improvements */
+@media screen and (max-width: 768px) {
+  .theme-doc-layout-main {
+    padding: 1rem 0.5rem;
+  }
+  
+  .theme-doc-markdown {
+    padding: 0;
+  }
+}
+
+/* Responsive table improvements */
+@media screen and (max-width: 768px) {
+  .markdown table {
+    font-size: 0.8rem;
+  }
+  
+  .markdown th,
+  .markdown td {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Responsive code block improvements */
+@media screen and (max-width: 768px) {
+  .markdown pre {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+    overflow-x: auto;
+  }
+  
+  .markdown code {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive image improvements */
+@media screen and (max-width: 768px) {
+  .markdown img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Responsive iframe improvements */
+@media screen and (max-width: 768px) {
+  .markdown iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+  }
+}
+
+/* Responsive accordion improvements */
+@media screen and (max-width: 768px) {
+  .accordion-header h4 {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+  
+  .accordion-content {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive carousel improvements */
+@media screen and (max-width: 768px) {
+  .product-carousel {
+    max-width: 100% !important;
+  }
+  
+  .product-carousel img {
+    max-height: 120px !important;
+  }
+  
+  .carousel-navigation {
+    transform: scale(0.6) !important;
+  }
+  
+  .carousel-indicator {
+    transform: scale(0.7) !important;
+  }
+}
+
+/* Responsive footer improvements */
+@media screen and (max-width: 700px) {
+  .footer__links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer__col {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive search improvements */
+@media screen and (max-width: 768px) {
+  .searchBox {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .searchBox input {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Responsive pagination improvements */
+@media screen and (max-width: 768px) {
+  .pagination-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .pagination-nav__link {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Responsive table of contents improvements */
+@media screen and (max-width: 996px) {
+  .table-of-contents {
+    display: none;
+  }
+}
+
+/* Responsive breadcrumb improvements */
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+  
+  .breadcrumbs__link {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Responsive card improvements */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card h2 {
+    font-size: 1.1rem;
+  }
+  
+  .card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive button improvements */
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .button--primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive form improvements */
+@media screen and (max-width: 768px) {
+  input, textarea, select {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  
+  label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive modal improvements */
+@media screen and (max-width: 768px) {
+  .modal {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+  
+  .modal__header {
+    padding: 1rem;
+  }
+  
+  .modal__body {
+    padding: 1rem;
+  }
+  
+  .modal__footer {
+    padding: 1rem;
+  }
+}
+
+/* Responsive tooltip improvements */
+@media screen and (max-width: 768px) {
+  .tooltip {
+    font-size: 0.8rem;
+    max-width: 200px;
+  }
+}
+
+/* Responsive badge improvements */
+@media screen and (max-width: 768px) {
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Responsive alert improvements */
+@media screen and (max-width: 768px) {
+  .alert {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .alert__title {
+    font-size: 0.9rem;
+  }
+  
+  .alert__content {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive list improvements */
+@media screen and (max-width: 768px) {
+  .markdown ul,
+  .markdown ol {
+    padding-left: 1.5rem;
+  }
+  
+  .markdown li {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive blockquote improvements */
+@media screen and (max-width: 768px) {
+  .markdown blockquote {
+    padding: 0.75rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive horizontal rule improvements */
+@media screen and (max-width: 768px) {
+  .markdown hr {
+    margin: 1.5rem 0;
+  }
+}
+
+/* Responsive definition list improvements */
+@media screen and (max-width: 768px) {
+  .markdown dl {
+    font-size: 0.85rem;
+  }
+  
+  .markdown dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .markdown dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Responsive superscript and subscript improvements */
+@media screen and (max-width: 768px) {
+  .markdown sup,
+  .markdown sub {
+    font-size: 0.7rem;
+  }
+}
+
+/* Responsive keyboard improvements */
+@media screen and (max-width: 768px) {
+  .markdown kbd {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Responsive mark improvements */
+@media screen and (max-width: 768px) {
+  .markdown mark {
+    padding: 0.1rem 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive small text improvements */
+@media screen and (max-width: 768px) {
+  .markdown small {
+    font-size: 0.75rem;
+  }
+}
+
+/* Responsive large text improvements */
+@media screen and (max-width: 768px) {
+  .markdown .large {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive extra large text improvements */
+@media screen and (max-width: 768px) {
+  .markdown .xlarge {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive utility class improvements */
+@media screen and (max-width: 768px) {
+  .text--left {
+    text-align: left !important;
+  }
+  
+  .text--center {
+    text-align: center !important;
+  }
+  
+  .text--right {
+    text-align: right !important;
+  }
+  
+  .padding-horiz--md {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  .padding-vert--md {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  
+  .margin-horiz--md {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  .margin-vert--md {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+}
+
+/* ========================================
+   ADDITIONAL RESPONSIVE FIXES
+   ======================================== */
+
+/* Ensure main content areas are responsive */
+.main-wrapper,
+.theme-doc-layout,
+.theme-doc-layout-main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Fix for wide content that might cause horizontal scroll */
+pre,
+code,
+.prism-code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Responsive table handling */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.8rem;
+  }
+  
+  th, td {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Responsive navigation fixes */
+.navbar {
+  overflow-x: hidden;
+}
+
+.navbar__items {
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 996px) {
+  .navbar__item {
+    font-size: 0.9rem;
+  }
+}
+
+/* Sidebar responsive fixes */
+.theme-doc-sidebar-container {
+  overflow-x: hidden;
+}
+
+/* Content area responsive fixes */
+.markdown,
+.theme-doc-markdown {
+  overflow-x: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fix for very wide viewport screens */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+/* Fix for ultra-wide screens */
+@media screen and (min-width: 2560px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+/* ========================================
+   EXISTING CSS CONTINUES BELOW
+   ======================================== */

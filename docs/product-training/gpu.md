@@ -1,5 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
 import { ProductCarousel } from '@site/src/components/ui/product-carousel';
+import { Accordion } from '@site/src/components/Accordion';
 import { gpu_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
@@ -12,19 +13,53 @@ This manual helps personnel at Exit Technologies Inc. understand GPUs, ensuring 
 ## 1. Overview
 GPUs handle graphical computations, significantly impacting visual performance, graphics rendering, and processing speed for graphics-intensive tasks.
 
-### Key Types:
-- **Integrated GPUs:** Built into CPUs, sufficient for basic graphical tasks.
-- **Dedicated GPUs:** Separate hardware designed for intensive graphics applications such as gaming, video editing, and 3D modeling.
+### Types of GPUs
+
+<Accordion title="Integrated GPUs" description="Built into CPUs for basic tasks" type="info">
+  <p><strong>Overview:</strong> Built into CPUs, suitable for basic graphical tasks like web browsing, office work, and video streaming.</p>
+  <p><strong>Typical VRAM:</strong> Shared with system memory (no dedicated VRAM).</p>
+  <p><strong>Performance Range:</strong> Low power consumption, entry-level graphics.</p>
+  <p><strong>Examples:</strong> Intel UHD Graphics, AMD Radeon Vega (integrated in Ryzen CPUs), Apple M2 GPU.</p>
+  <p><strong>Best For:</strong> Office work, streaming, basic 2D games, and low-demand graphical tasks.</p>
+</Accordion>
+
+<Accordion title="Dedicated GPUs" description="Standalone cards for gaming & content creation" type="tip">
+  <p><strong>Overview:</strong> Standalone graphics cards designed for demanding tasks such as gaming, video editing, and 3D rendering.</p>
+  <p><strong>Typical VRAM:</strong> 4GB – 24GB GDDR6 or GDDR6X.</p>
+  <p><strong>Performance Range:</strong> High frame rates, hardware-accelerated rendering, ray tracing support.</p>
+  <p><strong>Examples:</strong> NVIDIA GeForce RTX 4060/4070/4090, AMD Radeon RX 7600/7900 XT.</p>
+  <p><strong>Best For:</strong> Gaming, content creation, virtual reality (VR).</p>
+</Accordion>
+
+<Accordion title="Workstation GPUs" description="Professional cards for CAD & AI workloads" type="note">
+  <p><strong>Overview:</strong> Specialized GPUs built for professional workloads, focusing on stability and precision rather than gaming.</p>
+  <p><strong>Typical VRAM:</strong> 8GB – 48GB ECC GDDR6.</p>
+  <p><strong>Performance Range:</strong> Optimized drivers for CAD, AI training, and simulation software.</p>
+  <p><strong>Examples:</strong> NVIDIA RTX A6000, AMD Radeon Pro W7900.</p>
+  <p><strong>Best For:</strong> 3D modeling, architecture, AI/ML workloads, scientific simulations.</p>
+</Accordion>
 
 ## 2. Key Specifications
-- **Memory (VRAM):** GPU-dedicated memory, commonly from 4GB up to 24GB or more.
-- **Core Count:** More cores typically translate to higher performance.
-- **Clock Speed:** Measured in MHz/GHz; higher speeds enhance performance.
+
+### Memory (VRAM)
+GPU-dedicated memory, commonly from 4GB up to 24GB or more. Professional GPUs may exceed 48GB for heavy workloads.
+
+### Core Count
+More cores typically translate to higher performance, especially in parallel processing tasks like rendering or AI training.
+
+### Clock Speed
+Measured in MHz/GHz; higher speeds enhance performance but also increase power usage and heat output.
 
 ## 3. Common Use Cases
-- Gaming: High-performance GPUs for immersive, real-time graphics.
-- Professional Applications: Video editing, CAD software, 3D modeling.
-- AI & Machine Learning: Specialized GPUs optimized for computational tasks.
+
+### Gaming
+High-performance GPUs enable immersive, real-time graphics, high refresh rates, and ray tracing for realistic visuals.
+
+### Professional Applications
+Video editing, CAD software, and 3D modeling rely on powerful GPUs for rendering efficiency and accuracy.
+
+### AI & Machine Learning
+Specialized GPUs are optimized for computational tasks, accelerating model training and inference speeds.
 
 ## 4. Frequently Asked Questions
 - **"Do I need a dedicated GPU?"**
@@ -53,7 +88,7 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
 ## Technical Cutlines
 
 <iframe
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=628871544&single=true"
+  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFwW5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=628871544&single=true"
   width="100%"
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}

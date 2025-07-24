@@ -94,9 +94,8 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'Product Training',
+          label: 'Training',
           position: 'left',
-          to: '/docs/product-training/intro',
           items: [
             {
               label: 'Introduction',
@@ -146,17 +145,33 @@ const config: Config = {
               label: 'Tablets',
               to: '/docs/product-training/tablets',
             },
+            {
+              label: 'IT Glossary',
+              to: '/it-glossary',
+            },
           ],
         },
         {
-          to: '/it-glossary',
-          label: 'IT Glossary',
+          type: 'dropdown',
+          label: 'Sales',
           position: 'left',
+          items: [
+            {
+              label: 'Coming Soon',
+              to: '#',
+            },
+          ],
         },
         {
-          to: '/nomenclature',
-          label: 'Nomenclature',
+          type: 'dropdown',
+          label: 'Processing',
           position: 'left',
+          items: [
+            {
+              label: 'Nomenclature',
+              to: '/nomenclature',
+            },
+          ],
         },
         {
           to: '/docs/technical-cutlines',

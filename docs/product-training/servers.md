@@ -12,7 +12,8 @@ This manual helps personnel at Exit Technologies Inc. understand the basics of s
 ## 1. Server Overview
 Servers are specialized computers designed to provide services, data, resources, or applications to other computers, known as clients, within a network.
 
-### Key Components:
+:::info **Key Components** (Click to expand)
+
 - **Processor (CPU):** Handles instructions and processing power. Servers often have multiple CPUs for higher performance.
 - **Memory (RAM):** Crucial for server performance; typically offered from 32GB up to several terabytes.
 - **Storage:**
@@ -20,6 +21,8 @@ Servers are specialized computers designed to provide services, data, resources,
   - **HDD:** Cost-effective solution for storing large volumes of data.
 - **Network Interface Card (NIC):** Manages server network connections.
 - **Power Supply Unit (PSU):** Ensures consistent and reliable power delivery.
+
+:::
 
 ## 2. Types of Servers
 ### Tower Servers:
@@ -38,17 +41,27 @@ Servers are specialized computers designed to provide services, data, resources,
 - Examples: HP BladeSystem, Dell PowerEdge M-Series.
 
 ## 3. Server Use Cases
+
+:::tip **Common Server Applications** (Click to expand)
+
 - **Web Servers:** Host websites and web applications.
 - **Database Servers:** Store, manage, and retrieve databases.
 - **File Servers:** Centralize storage and management of files.
 - **Email Servers:** Manage and facilitate email communication.
 - **Application Servers:** Run applications that clients can access remotely.
 
+:::
+
 ## 4. Specifications – Simplified Breakdown
+
+:::info **Key Specifications** (Click to expand)
+
 - **CPU:** More CPUs or cores mean better multitasking and performance.
 - **RAM:** Larger RAM enables efficient handling of multiple concurrent tasks.
 - **Storage:** Choose SSD for speed, HDD for economical large-capacity storage.
 - **Networking:** Gigabit or higher speed NICs for fast and reliable network connections.
+
+:::
 
 ## 5. Common Questions & Effective Responses
 - **"How many CPUs do I need?"**
@@ -61,9 +74,14 @@ Servers are specialized computers designed to provide services, data, resources,
   - Rack servers are ideal when managing multiple servers or limited physical space.
 
 ## 6. Practical Tips
+
+:::tip **Best Practices** (Click to expand)
+
 - Clearly identify client requirements and recommend server types accordingly.
 - Focus discussions around client business needs, emphasizing reliability and scalability.
 - Use scenarios to illustrate practical server applications relevant to the client's industry.
+
+:::
 
 ## 7. Additional Resources
 For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P Technical Cut Lines.xlsb).

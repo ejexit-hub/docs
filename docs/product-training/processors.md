@@ -12,19 +12,32 @@ This manual helps personnel at Exit Technologies Inc. understand processors (CPU
 ## 1. Overview
 The Central Processing Unit (CPU) is the core component that performs calculations and processes instructions, significantly influencing a computer's performance.
 
-### Key Types:
+:::info **Key Types** (Click to expand)
+
 - **Consumer CPUs:** Suitable for general computing tasks, ranging from everyday use to gaming.
 - **Server CPUs:** Optimized for multitasking, reliability, and performance in data centers and enterprise environments.
 
+:::
+
 ## 2. Key Specifications
+
+:::tip **Important Specs** (Click to expand)
+
 - **Core Count:** More cores allow efficient multitasking and enhanced performance.
 - **Clock Speed:** Measured in GHz; higher speeds enable faster processing.
 - **Cache Size:** Temporary storage for rapid data access; larger caches improve performance.
 
+:::
+
 ## 3. Common Use Cases
+
+:::info **Usage Scenarios** (Click to expand)
+
 - General Computing: Mid-range CPUs (Intel i5, AMD Ryzen 5).
 - Gaming/Creative Tasks: High-end CPUs (Intel i7/i9, AMD Ryzen 7/9).
 - Servers/Data Centers: Specialized server CPUs (Intel Xeon, AMD EPYC).
+
+:::
 
 ## 4. Frequently Asked Questions
 - **"How many cores do I need?"**
@@ -34,8 +47,13 @@ The Central Processing Unit (CPU) is the core component that performs calculatio
   - Core count for multitasking and heavy workloads; clock speed for single-task performance.
 
 ## 5. Practical Tips
+
+:::tip **Best Practices** (Click to expand)
+
 - Clearly define the client's usage scenario to recommend suitable CPU specifications.
 - Simplify technical language to effectively communicate processor benefits.
+
+:::
 
 ## 6. Additional Resources
 For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P Technical Cut Lines.xlsb).

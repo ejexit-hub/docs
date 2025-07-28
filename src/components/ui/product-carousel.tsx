@@ -45,7 +45,7 @@ export function ProductCarousel({
   }, [autoPlay, interval, images.length]);
 
   return (
-    <div className={`relative w-full max-w-2xl mx-auto product-carousel ${className}`} style={{ maxWidth: '640px', overflow: 'hidden' }}>
+    <div className={`relative w-full max-w-4xl mx-auto product-carousel ${className}`} style={{ maxWidth: '900px', overflow: 'hidden' }}>
       <Carousel
         initialIndex={currentIndex}
         onIndexChange={setCurrentIndex}
@@ -54,7 +54,7 @@ export function ProductCarousel({
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className="p-1">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 max-h-80" style={{ width: '100%', maxHeight: '400px' }}>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 max-h-96" style={{ width: '100%', maxHeight: '600px' }}>
                 <img
                   src={image.src}
                   alt={image.alt}

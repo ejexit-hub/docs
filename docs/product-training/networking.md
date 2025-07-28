@@ -148,13 +148,15 @@ Refer to the [Networking Cut Lines](link‑to‑document) for SKU‑specific spe
 
 ---
 
+
 ## Technical Cutlines
 
 <iframe
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=2345678901&single=true"
+  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=637810809&single=true"
   width="100%"
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}
-  title="Networking Cutlines"
+  title="Technical Cutlines"
   allowfullscreen
 ></iframe>
+

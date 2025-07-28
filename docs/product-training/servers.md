@@ -154,13 +154,8 @@ Refer to the [Technical Cut Lines](link-to-document) for detailed specification 
 
 ---
 
+import TechnicalCutlines from '@site/src/components/TechnicalCutlines';
+
 ## Technical Cutlines
 
-<iframe
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBKY_e6e1XBdjLn4WTFw5W5o5j8lyFAAsApDK6FXAvNri0Wh5QAVNY3hFJZTjNdg/pubhtml?widget=true&headers=false&gid=1966414049&single=true"
-  width="100%"
-  height="800"
-  style={{ border: 'none', borderRadius: '8px' }}
-  title="Technical Cutlines"
-  allowfullscreen
-></iframe>
+<TechnicalCutlines category="servers" />

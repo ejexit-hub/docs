@@ -22,6 +22,9 @@
 }
 
 /* Override global .row flexbox with CSS Grid - 3x4 layout */
+.categories .container .row,
+section.categories .container .row,
+div.categories .container .row,
 .categories .container .row {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
@@ -31,6 +34,9 @@
   max-width: 100% !important;
   flex-wrap: unset !important;
   overflow: hidden !important;
+  flex-direction: unset !important;
+  align-items: unset !important;
+  justify-content: unset !important;
 }
 
 .categories .container .row > * {
@@ -38,6 +44,9 @@
   margin: 0 !important;
   padding: 0 !important;
   flex: unset !important;
+  flex-basis: unset !important;
+  flex-grow: unset !important;
+  flex-shrink: unset !important;
 }
 
 .categoryLink {
@@ -163,8 +172,10 @@
 /* Responsive design - Comprehensive breakpoints */
 /* Very large desktop screens (1600px+) */
 @media screen and (min-width: 1600px) {
-  .categories .container .row {
-    grid-template-columns: repeat(4, 1fr) !important;
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 3rem !important;
   }
   
@@ -189,7 +200,9 @@
 
 /* Large desktop screens (1200px - 1599px) */
 @media screen and (min-width: 1200px) and (max-width: 1599px) {
-  .categories .container .row {
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 2.5rem !important;
   }
@@ -215,7 +228,9 @@
 
 /* Standard desktop and laptop screens (996px - 1199px) */
 @media screen and (min-width: 996px) and (max-width: 1199px) {
-  .categories .container .row {
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem !important;
   }
@@ -245,8 +260,10 @@
     padding: 1.5rem 0;
   }
   
-  .categories .container .row {
-    grid-template-columns: repeat(2, 1fr) !important;
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1.5rem !important;
   }
   
@@ -275,7 +292,9 @@
     padding: 1rem 0;
   }
   
-  .categories .container .row {
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem !important;
   }
@@ -307,7 +326,9 @@
     padding: 0.75rem 0;
   }
   
-  .categories .container .row {
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
     grid-template-columns: 1fr !important;
     gap: 0.75rem !important;
   }
@@ -341,7 +362,9 @@
     padding: 0.5rem 0;
   }
   
-  .categories .container .row {
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
     gap: 0.5rem !important;
   }
   
@@ -370,7 +393,9 @@
 
 /* Landscape orientation adjustments for mobile */
 @media screen and (max-width: 767px) and (orientation: landscape) {
-  .categories .container .row {
+  .categories .container .row,
+  section.categories .container .row,
+  div.categories .container .row {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 0.75rem !important;
   }

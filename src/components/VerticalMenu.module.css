@@ -52,13 +52,13 @@
 }
 
 .menuLink.active {
-  background: #3b82f6;
+  background: #81BA54;
   color: #ffffff;
   font-weight: 600;
 }
 
 .menuLink.active:hover {
-  background: #2563eb;
+  background: #6ba045;
   color: #ffffff;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .submenu .menuLink.active {
-  background: #3b82f6;
+  background: #81BA54;
   color: #ffffff;
 }
 

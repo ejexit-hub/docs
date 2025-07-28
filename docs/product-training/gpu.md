@@ -1,6 +1,6 @@
 import ProductTrainingNavBar from '@site/src/components/ProductTrainingNavBar';
 import { ProductCarousel } from '@site/src/components/ui/product-carousel';
-import { Accordion } from '@site/src/components/Accordion';
+import { Accordion, AccordionGroup } from '@site/src/components/Accordion';
 import { gpu_images } from '@site/src/data/product-images';
 
 <ProductTrainingNavBar />
@@ -15,6 +15,7 @@ GPUs handle graphical computations, significantly impacting visual performance, 
 
 ### Types of GPUs
 
+<AccordionGroup>
 <Accordion title="Integrated GPUs" description="Built into CPUs for basic tasks" type="info">
   <p><strong>Overview:</strong> Built into CPUs, suitable for basic graphical tasks like web browsing, office work, and video streaming.</p>
   <p><strong>Typical VRAM:</strong> Shared with system memory (no dedicated VRAM).</p>
@@ -38,6 +39,7 @@ GPUs handle graphical computations, significantly impacting visual performance, 
   <p><strong>Examples:</strong> NVIDIA RTX A6000, AMD Radeon Pro W7900.</p>
   <p><strong>Best For:</strong> 3D modeling, architecture, AI/ML workloads, scientific simulations.</p>
 </Accordion>
+</AccordionGroup>
 
 ## 2. Key Specifications
 

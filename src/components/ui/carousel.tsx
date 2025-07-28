@@ -137,13 +137,13 @@ function CarouselNavigation({
         type='button'
         aria-label='Previous slide'
         className={cn(
-          'pointer-events-auto h-10 w-10 rounded-full bg-[#81BA54]/90 backdrop-blur-md p-2.5 transition-all duration-300 shadow-lg hover:bg-[#81BA54] hover:shadow-xl hover:scale-105 border border-[#81BA54]/30',
+          'pointer-events-auto h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm p-1.5 transition-all duration-200 shadow-md hover:bg-white hover:shadow-lg hover:scale-110 border border-gray-200',
           alwaysShow
             ? 'opacity-100'
             : 'opacity-0 group-hover/hover:opacity-100',
           alwaysShow
-            ? 'disabled:opacity-40 disabled:hover:scale-100'
-            : 'group-hover/hover:disabled:opacity-40 group-hover/hover:disabled:hover:scale-100',
+            ? 'disabled:opacity-30 disabled:hover:scale-100'
+            : 'group-hover/hover:disabled:opacity-30 group-hover/hover:disabled:hover:scale-100',
           classNameButton
         )}
         disabled={index === 0}
@@ -154,20 +154,20 @@ function CarouselNavigation({
         }}
       >
         <ChevronLeft
-          className='stroke-white'
+          className='stroke-gray-700'
           size={18}
         />
       </button>
       <button
         type='button'
         className={cn(
-          'pointer-events-auto h-10 w-10 rounded-full bg-[#81BA54]/90 backdrop-blur-md p-2.5 transition-all duration-300 shadow-lg hover:bg-[#81BA54] hover:shadow-xl hover:scale-105 border border-[#81BA54]/30',
+          'pointer-events-auto h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm p-1.5 transition-all duration-200 shadow-md hover:bg-white hover:shadow-lg hover:scale-110 border border-gray-200',
           alwaysShow
             ? 'opacity-100'
             : 'opacity-0 group-hover/hover:opacity-100',
           alwaysShow
-            ? 'disabled:opacity-40 disabled:hover:scale-100'
-            : 'group-hover/hover:disabled:opacity-40 group-hover/hover:disabled:hover:scale-100',
+            ? 'disabled:opacity-30 disabled:hover:scale-100'
+            : 'group-hover/hover:disabled:opacity-30 group-hover/hover:disabled:hover:scale-100',
           classNameButton
         )}
         aria-label='Next slide'
@@ -179,7 +179,7 @@ function CarouselNavigation({
         }}
       >
         <ChevronRight
-          className='stroke-white'
+          className='stroke-gray-700'
           size={18}
         />
       </button>

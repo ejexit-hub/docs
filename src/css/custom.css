@@ -406,17 +406,122 @@ details[open] summary::after {
 
 /* Page container enhancements */
 .theme-doc-markdown[data-path*="product-training"] {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 750px;
+  margin: 2rem auto;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid rgba(129, 186, 84, 0.3);
+}
+
+/* Add spacing after the main header to prevent overlap with navigation */
+.theme-doc-markdown[data-path*="product-training"] h1 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced accordion indentation with beautiful styling */
+.theme-doc-markdown[data-path*="product-training"] .faq-accordion-container,
+.theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"] {
+  margin-left: 2.5rem !important;
+  margin-right: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  position: relative;
+  background: linear-gradient(135deg, rgba(129, 186, 84, 0.02), rgba(39, 100, 173, 0.02)) !important;
+  border-radius: 12px !important;
+  padding: 0.75rem !important;
+  border-left: 3px solid rgba(129, 186, 84, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(129, 186, 84, 0.1) !important;
+}
+
+[data-theme='dark'] .theme-doc-markdown[data-path*="product-training"] .faq-accordion-container,
+[data-theme='dark'] .theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"] {
+  background: linear-gradient(135deg, rgba(129, 186, 84, 0.05), rgba(39, 100, 173, 0.05)) !important;
+  box-shadow: 0 2px 8px rgba(129, 186, 84, 0.2) !important;
+  border-left: 3px solid rgba(129, 186, 84, 0.4) !important;
+}
+
+/* Add decorative left accent line */
+.theme-doc-markdown[data-path*="product-training"] .faq-accordion-container::before,
+.theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"]::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #81BA54, #2764AD);
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+/* Add extra spacing and visual separation */
+.theme-doc-markdown[data-path*="product-training"] h2 + .faq-accordion-container,
+.theme-doc-markdown[data-path*="product-training"] h3 + .faq-accordion-container,
+.theme-doc-markdown[data-path*="product-training"] h2 + div[class*="faq-accordion-container"],
+.theme-doc-markdown[data-path*="product-training"] h3 + div[class*="faq-accordion-container"] {
+  margin-top: 1.5rem !important;
+}
+
+/* Hover effect for indented accordions */
+.theme-doc-markdown[data-path*="product-training"] .faq-accordion-container:hover,
+.theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"]:hover {
+  background: linear-gradient(135deg, rgba(129, 186, 84, 0.04), rgba(39, 100, 173, 0.04)) !important;
+  box-shadow: 0 4px 16px rgba(129, 186, 84, 0.15) !important;
+  transform: translateX(2px);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .theme-doc-markdown[data-path*="product-training"] .faq-accordion-container:hover,
+[data-theme='dark'] .theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"]:hover {
+  background: linear-gradient(135deg, rgba(129, 186, 84, 0.08), rgba(39, 100, 173, 0.08)) !important;
+  box-shadow: 0 4px 16px rgba(129, 186, 84, 0.25) !important;
+}
+
+/* Responsive indentation for mobile */
+@media (max-width: 768px) {
+  .theme-doc-markdown[data-path*="product-training"] {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+  
+  .theme-doc-markdown[data-path*="product-training"] .faq-accordion-container,
+  .theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"] {
+    margin-left: 1.5rem !important;
+    margin-right: 0.5rem !important;
+    padding: 0.5rem !important;
+  }
+  
+  .theme-doc-markdown[data-path*="product-training"] .faq-accordion-container::before,
+  .theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"]::before {
+    left: -1.5rem;
+  }
 }
 
 [data-theme='dark'] .theme-doc-markdown[data-path*="product-training"] {
   background: rgba(0, 0, 0, 0.02);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid rgba(129, 186, 84, 0.5);
+}
+
+/* Create visual sections with accordion groups */
+.theme-doc-markdown[data-path*="product-training"] .faq-accordion-container + .faq-accordion-container,
+.theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"] + div[class*="faq-accordion-container"] {
+  margin-top: 0.75rem !important;
+}
+
+/* Add breathing room around accordion sections */
+.theme-doc-markdown[data-path*="product-training"] .faq-accordion-container:first-of-type,
+.theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"]:first-of-type {
+  margin-top: 2rem !important;
+}
+
+/* Create visual connection between related accordions */
+.theme-doc-markdown[data-path*="product-training"] .faq-accordion-container + .faq-accordion-container::before,
+.theme-doc-markdown[data-path*="product-training"] div[class*="faq-accordion-container"] + div[class*="faq-accordion-container"]::before {
+  height: calc(100% + 0.75rem);
+  top: -0.75rem;
 }
 
 /* Simple brand color enhancements for product training pages */
@@ -475,161 +580,337 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+
+
 /* ========================================
-   SIMPLE ACCORDION HEADER STYLING
+   FAQ-STYLE ACCORDION STYLING
    ======================================== */
 
-.accordion-header {
+/* Accordion Container - Enhanced for indented layout */
+.faq-accordion-container {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(129, 186, 84, 0.1);
+  position: relative;
+}
+
+.faq-accordion-container:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-color: rgba(129, 186, 84, 0.2);
+}
+
+/* Enhanced accordion in product training pages */
+[data-path*="product-training"] .faq-accordion-container {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+}
+
+[data-path*="product-training"] .faq-accordion-container:hover {
+  box-shadow: none !important;
+}
+
+/* Accordion Header */
+.faq-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
   cursor: pointer;
-  padding: 0.5rem 0;
-  margin: 1rem 0 0.5rem 0;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  border: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  border-left: 4px solid #2764AD;
 }
 
-.accordion-header:hover {
-  transform: translateX(4px);
+[data-theme='dark'] .faq-accordion-header {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(17, 24, 39, 0.9));
 }
 
-.accordion-header h4 {
+.faq-accordion-header:hover {
+  background: linear-gradient(135deg, rgba(39, 100, 173, 0.05), rgba(129, 186, 84, 0.05));
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .faq-accordion-header:hover {
+  background: linear-gradient(135deg, rgba(39, 100, 173, 0.15), rgba(129, 186, 84, 0.15));
+}
+
+.faq-accordion-header.open {
+  background: linear-gradient(135deg, rgba(39, 100, 173, 0.08), rgba(129, 186, 84, 0.08));
+}
+
+[data-theme='dark'] .faq-accordion-header.open {
+  background: linear-gradient(135deg, rgba(39, 100, 173, 0.2), rgba(129, 186, 84, 0.2));
+}
+
+/* Accordion Title */
+.faq-accordion-title h4 {
   margin: 0;
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-
-.accordion-content {
-  padding: 0.5rem 0 1rem 1rem;
-  margin-bottom: 1rem;
-  border-left: 3px solid transparent;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* Color schemes for different accordion types */
-.accordion-header.accordion-info h4 {
   color: #2764AD;
+  line-height: 1.3;
 }
 
-.accordion-header.accordion-info:hover h4 {
-  color: #1a4679;
+[data-theme='dark'] .faq-accordion-title h4 {
+  color: #81BA54;
 }
 
-.accordion-header.accordion-info + .accordion-content {
+.faq-accordion-description {
+  font-weight: 400;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  color: inherit;
+}
+
+/* Accordion Icon */
+.faq-accordion-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2764AD;
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+}
+
+[data-theme='dark'] .faq-accordion-icon {
+  color: #81BA54;
+}
+
+.faq-accordion-icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-accordion-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Accordion Content */
+.faq-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 4px solid #2764AD;
+}
+
+[data-theme='dark'] .faq-accordion-content {
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.faq-accordion-content.open {
+  max-height: 1000px;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+}
+
+.faq-accordion-inner {
+  padding: 1.5rem 1.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-left: 1rem;
+  border-left: 2px solid rgba(129, 186, 84, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 8px 8px 0;
+}
+
+[data-theme='dark'] .faq-accordion-inner {
+  color: #d1d5db;
+  background: rgba(17, 24, 39, 0.4);
+  border-left-color: rgba(129, 186, 84, 0.3);
+}
+
+/* Type-specific styling */
+.faq-accordion-info {
   border-left-color: #2764AD;
 }
 
-.accordion-header.accordion-tip h4 {
-  color: #81BA54;
+.faq-accordion-info .faq-accordion-header {
+  border-left-color: #2764AD;
 }
 
-.accordion-header.accordion-tip:hover h4 {
-  color: #6fa84a;
+.faq-accordion-info .faq-accordion-content {
+  border-left-color: #2764AD;
 }
 
-.accordion-header.accordion-tip + .accordion-content {
+.faq-accordion-tip {
   border-left-color: #81BA54;
 }
 
-.accordion-header.accordion-note h4 {
-  color: #f59e0b;
+.faq-accordion-tip .faq-accordion-header {
+  border-left-color: #81BA54;
 }
 
-.accordion-header.accordion-note:hover h4 {
-  color: #d97706;
+.faq-accordion-tip .faq-accordion-content {
+  border-left-color: #81BA54;
 }
 
-.accordion-header.accordion-note + .accordion-content {
+.faq-accordion-tip .faq-accordion-title h4 {
+  color: #81BA54;
+}
+
+[data-theme='dark'] .faq-accordion-tip .faq-accordion-title h4 {
+  color: #81BA54;
+}
+
+.faq-accordion-tip .faq-accordion-icon {
+  color: #81BA54;
+}
+
+.faq-accordion-note {
   border-left-color: #f59e0b;
 }
 
+.faq-accordion-note .faq-accordion-header {
+  border-left-color: #f59e0b;
+}
+
+.faq-accordion-note .faq-accordion-content {
+  border-left-color: #f59e0b;
+}
+
+.faq-accordion-note .faq-accordion-title h4 {
+  color: #f59e0b;
+}
+
+.faq-accordion-note .faq-accordion-icon {
+  color: #f59e0b;
+}
+
 /* ========================================
-   ACCORDION CONTENT TYPOGRAPHY REFINEMENTS
+   FAQ ACCORDION CONTENT TYPOGRAPHY REFINEMENTS
    ======================================== */
 
-.accordion-content p {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+.faq-accordion-inner p {
+  margin-bottom: 1rem;
   color: #374151;
 }
 
-[data-theme='dark'] .accordion-content p {
+[data-theme='dark'] .faq-accordion-inner p {
   color: #d1d5db;
 }
 
-.accordion-content h4,
-.accordion-content h5,
-.accordion-content h6 {
-  font-size: 0.9rem;
+.faq-accordion-inner h4,
+.faq-accordion-inner h5,
+.faq-accordion-inner h6 {
+  font-size: 1rem;
   font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  color: #2764AD;
-}
-
-[data-theme='dark'] .accordion-content h4,
-[data-theme='dark'] .accordion-content h5,
-[data-theme='dark'] .accordion-content h6 {
-  color: #81BA54;
-}
-
-.accordion-content ul,
-.accordion-content ol {
-  font-size: 0.85rem;
-  line-height: 1.6;
+  margin-top: 1.25rem;
   margin-bottom: 0.75rem;
-  padding-left: 1.25rem;
+  color: #2764AD;
 }
 
-.accordion-content li {
-  margin-bottom: 0.25rem;
+[data-theme='dark'] .faq-accordion-inner h4,
+[data-theme='dark'] .faq-accordion-inner h5,
+[data-theme='dark'] .faq-accordion-inner h6 {
+  color: #81BA54;
+}
+
+.faq-accordion-inner ul,
+.faq-accordion-inner ol {
+  margin: 1.25rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.faq-accordion-inner li {
+  margin-bottom: 0.75rem;
   color: #374151;
+  padding-left: 0.5rem;
+  position: relative;
 }
 
-[data-theme='dark'] .accordion-content li {
+[data-theme='dark'] .faq-accordion-inner li {
   color: #d1d5db;
 }
 
-.accordion-content strong {
+.faq-accordion-inner strong {
   font-weight: 600;
   color: #2764AD;
 }
 
-[data-theme='dark'] .accordion-content strong {
+[data-theme='dark'] .faq-accordion-inner strong {
   color: #81BA54;
+}
+
+.faq-accordion-inner code {
+  background: rgba(129, 186, 84, 0.1);
+  color: #81BA54;
+  border: 1px solid rgba(129, 186, 84, 0.2);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .faq-accordion-inner code {
+  background: rgba(129, 186, 84, 0.15);
+  border-color: rgba(129, 186, 84, 0.3);
+}
+
+/* Responsive accordion styling */
+@media (max-width: 768px) {
+  .faq-accordion-header {
+    padding: 0.875rem 1rem;
+  }
+  
+  .faq-accordion-title h4 {
+    font-size: 0.95rem;
+  }
+  
+  .faq-accordion-inner {
+    padding: 0.875rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* ========================================
    PRODUCT CAROUSEL SIZE OPTIMIZATION
    ======================================== */
 
-/* Reduce overall carousel size */
+/* Carousel size optimization for better visibility */
 [data-path*="product-training"] .product-carousel {
-  max-width: 320px !important;
-  margin: 1rem auto;
+  max-width: 585px !important;
+  margin: 1.25rem auto;
+  float: right;
+  clear: both;
+  margin-left: 2rem;
+  margin-bottom: 1.25rem;
 }
 
-/* Make carousel images smaller */
+/* Make carousel images larger and more visible */
 [data-path*="product-training"] .product-carousel img {
-  max-height: 200px !important;
+  max-height: 338px !important;
   object-fit: cover;
 }
 
-/* Reduce carousel container padding */
+/* Standard carousel container padding */
 [data-path*="product-training"] .product-carousel .carousel-item {
-  padding: 0.25rem !important;
+  padding: 0.375rem !important;
 }
 
-/* Make carousel navigation smaller */
+/* Make carousel navigation full size */
 [data-path*="product-training"] .product-carousel .carousel-navigation {
-  transform: scale(0.8);
+  transform: scale(1);
 }
 
-/* Reduce carousel indicators size */
+/* Full size carousel indicators */
 [data-path*="product-training"] .product-carousel .carousel-indicator {
-  transform: scale(0.9);
+  transform: scale(1);
+}
+
+/* Additional constraints for carousel container */
+[data-path*="product-training"] .product-carousel > div {
+  max-width: 585px !important;
+  max-height: 416px !important;
 }
 
 /* ========================================
@@ -672,29 +953,32 @@ details > summary::-webkit-details-marker {
 /* Responsive sizing for mobile devices */
 @media (max-width: 768px) {
   [data-path*="product-training"] .product-carousel {
-    max-width: 280px !important;
+    max-width: 416px !important;
+    float: none;
+    margin: 1rem auto;
   }
   
   [data-path*="product-training"] .product-carousel img {
-    max-height: 160px !important;
+    max-height: 234px !important;
   }
   
   [data-path*="product-training"] .product-carousel .carousel-navigation {
-    transform: scale(0.7);
+    transform: scale(0.9);
   }
   
   [data-path*="product-training"] .product-carousel .carousel-indicator {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 }
 
 @media (max-width: 480px) {
   [data-path*="product-training"] .product-carousel {
-    max-width: 240px !important;
+    max-width: 364px !important;
+    margin: 0.875rem auto;
   }
   
   [data-path*="product-training"] .product-carousel img {
-    max-height: 140px !important;
+    max-height: 208px !important;
   }
 }
 
@@ -963,24 +1247,116 @@ article h3::before {
    NAVBAR DROPDOWN STYLING
    ======================================== */
 
-.navbar__item.dropdown {
+/* Fix navbar container overflow to allow dropdowns to escape */
+.navbar,
+.navbar__inner,
+.navbar__items {
+  overflow: visible !important;
   position: relative;
 }
 
-.navbar__dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
+/* Docusaurus dropdown container */
+.navbar__item.dropdown {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Style the dropdown menu itself */
+.navbar__item.dropdown .dropdown__menu {
+  position: fixed !important;
+  top: calc(var(--ifm-navbar-height, 3.75rem)) !important;
+  left: auto !important;
   background: #23272f;
   border: 1px solid #3e4451;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   min-width: 200px;
-  z-index: 1000;
+  z-index: 99999 !important;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  pointer-events: none;
+  padding: 0.5rem 0;
+}
+
+/* Show dropdown on hover for hoverable dropdowns */
+.navbar__item.dropdown.dropdown--hoverable:hover .dropdown__menu,
+.navbar__item.dropdown.dropdown--show .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Alternative targeting for different dropdown structures */
+.navbar__item.dropdown .navbar__dropdown,
+.dropdown__menu {
+  position: fixed !important;
+  top: calc(var(--ifm-navbar-height, 3.75rem)) !important;
+  left: auto !important;
+  background: #23272f;
+  border: 1px solid #3e4451;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  min-width: 200px;
+  z-index: 99999 !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  padding: 0.5rem 0;
+}
+
+/* Show dropdown states */
+.navbar__item.dropdown:hover .navbar__dropdown,
+.navbar__item.dropdown:hover .dropdown__menu,
+.navbar__item.dropdown.dropdown--hoverable:hover .navbar__dropdown,
+.navbar__item.dropdown.dropdown--hoverable:hover .dropdown__menu,
+.navbar__item.dropdown.dropdown--show .navbar__dropdown,
+.navbar__item.dropdown.dropdown--show .dropdown__menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+  display: block !important;
+}
+
+/* Force dropdown visibility on hover - more specific selectors */
+.navbar__items .navbar__item.dropdown:hover > .dropdown__menu,
+.navbar__items .navbar__item.dropdown.dropdown--hoverable:hover > .dropdown__menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+  display: block !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  z-index: 999999 !important;
+}
+
+/* Global dropdown z-index override */
+.dropdown__menu,
+.navbar__dropdown {
+  z-index: 999999 !important;
+}
+
+/* Ensure navbar has lower z-index than dropdowns */
+.navbar {
+  z-index: 1000;
+}
+
+/* Fix any potential clipping by parent containers */
+body,
+html,
+#__docusaurus {
+  overflow-x: visible !important;
+}
+
+.main-wrapper {
+  overflow: visible !important;
 }
 
 .navbar__dropdown .navbar__dropdown-item {
@@ -1012,6 +1388,80 @@ article h3::before {
 
 .navbar__dropdown--show .navbar__dropdown-arrow {
   transform: rotate(180deg);
+}
+
+/* Mobile dropdown support */
+@media screen and (max-width: 996px) {
+  .navbar__dropdown,
+  .dropdown__menu {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    margin-top: 0.5rem;
+    display: block !important;
+  }
+  
+  .navbar__dropdown .navbar__dropdown-item,
+  .dropdown__menu .dropdown__link {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-bottom: none;
+    color: #a0a0a0;
+    display: block;
+  }
+  
+  .navbar__dropdown .navbar__dropdown-item:hover,
+  .dropdown__menu .dropdown__link:hover {
+    background: transparent;
+    color: #81BA54;
+    transform: none;
+  }
+}
+
+/* Ensure dropdowns work on desktop */
+@media screen and (min-width: 997px) {
+  .navbar__item.dropdown {
+    position: relative;
+  }
+  
+  .navbar__item.dropdown .dropdown__menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px) !important;
+    pointer-events: none !important;
+    display: block !important;
+    z-index: 99999 !important;
+    background: #23272f;
+    border: 1px solid #3e4451;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    min-width: 200px;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar__item.dropdown:hover .dropdown__menu,
+  .navbar__item.dropdown.dropdown--hoverable:hover .dropdown__menu,
+  .navbar__item.dropdown.dropdown--show .dropdown__menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Fix overflow on navbar containers for desktop */
+  .navbar,
+  .navbar__inner,
+  .navbar__items,
+  .navbar__item.dropdown {
+    overflow: visible !important;
+  }
 }
 
 /* ========================================
@@ -1241,6 +1691,33 @@ aside[class*="toc"],
 .theme-doc-markdown {
   max-width: 100%;
   margin: 0 auto;
+}
+
+/* Override for Product Training grid layout */
+.categories .container .row,
+section.categories .container .row,
+div.categories .container .row {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-wrap: unset !important;
+  overflow: hidden !important;
+  flex-direction: unset !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+}
+
+.categories .container .row > * {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: unset !important;
+  flex-basis: unset !important;
+  flex-grow: unset !important;
+  flex-shrink: unset !important;
 }
 
 .theme-doc-layout {
@@ -1627,12 +2104,43 @@ iframe {
 
 @media screen and (max-width: 768px) {
   .navbar__brand {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .navbar__logo {
-    height: 28px;
-    width: auto;
+    height: 20px;
+    max-width: 60px;
+  }
+  
+  .navbar__brand {
+    margin-right: 0.5rem;
+  }
+  
+  .navbar {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar__brand {
+    font-size: 0.9rem;
+  }
+  
+  .navbar__logo {
+    height: 18px;
+    max-width: 50px;
+  }
+  
+  .navbar__brand {
+    margin-right: 0.25rem;
+  }
+  
+  .navbar__items {
+    gap: 0.25rem;
+  }
+  
+  .navbar {
+    padding: 0 0.75rem;
   }
 }
 
@@ -1717,19 +2225,21 @@ iframe {
 /* Responsive carousel improvements */
 @media screen and (max-width: 768px) {
   .product-carousel {
-    max-width: 100% !important;
+    max-width: 320px !important;
+    float: none;
+    margin: 1rem auto;
   }
   
   .product-carousel img {
-    max-height: 120px !important;
+    max-height: 180px !important;
   }
   
   .carousel-navigation {
-    transform: scale(0.6) !important;
+    transform: scale(0.9) !important;
   }
   
   .carousel-indicator {
-    transform: scale(0.7) !important;
+    transform: scale(0.9) !important;
   }
 }
 
@@ -2052,16 +2562,56 @@ table {
 
 /* Responsive navigation fixes */
 .navbar {
-  overflow-x: hidden;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  max-width: 100vw;
+}
+
+.navbar__inner {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.navbar__brand {
+  flex-shrink: 0;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  height: 24px;
+  width: auto;
+  max-width: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar__items {
   flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 996px) {
   .navbar__item {
     font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  
+  .navbar__logo {
+    height: 22px;
+    max-width: 70px;
+  }
+  
+  .navbar__brand {
+    margin-right: 0.75rem;
+  }
+  
+  .navbar__items {
+    gap: 0.5rem;
   }
 }
 

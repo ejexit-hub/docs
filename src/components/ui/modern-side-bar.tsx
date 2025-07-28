@@ -105,7 +105,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
         <div className="flex items-center justify-between p-5 border-b border-slate-200 bg-slate-50/60">
           {!isCollapsed && (
             <div className="flex items-center space-x-2.5">
-              <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shadow-sm">
+              <div className="w-9 h-9 bg-green-600 rounded-lg flex items-center justify-center shadow-sm">
                 <span className="text-white font-bold text-base">A</span>
               </div>
               <div className="flex flex-col">
@@ -116,7 +116,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
           )}
 
           {isCollapsed && (
-            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center mx-auto shadow-sm">
+            <div className="w-9 h-9 bg-green-600 rounded-lg flex items-center justify-center mx-auto shadow-sm">
               <span className="text-white font-bold text-base">A</span>
             </div>
           )}
@@ -163,7 +163,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
                     className={`
                       w-full flex items-center space-x-2.5 px-3 py-2.5 rounded-md text-left transition-all duration-200 group
                       ${isActive
-                        ? "bg-blue-50 text-blue-700"
+                        ? "bg-green-50 text-green-700"
                         : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                       }
                       ${isCollapsed ? "justify-center px-2" : ""}
@@ -175,7 +175,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
                         className={`
                           h-4.5 w-4.5 flex-shrink-0
                           ${isActive 
-                            ? "text-blue-600" 
+                            ? "text-green-600" 
                             : "text-slate-500 group-hover:text-slate-700"
                           }
                         `}
@@ -189,7 +189,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
                           <span className={`
                             px-1.5 py-0.5 text-xs font-medium rounded-full
                             ${isActive
-                              ? "bg-blue-100 text-blue-700"
+                              ? "bg-green-100 text-green-700"
                               : "bg-slate-100 text-slate-600"
                             }
                           `}>

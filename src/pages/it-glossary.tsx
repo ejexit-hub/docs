@@ -533,7 +533,7 @@ export default function ITGlossary(): React.JSX.Element {
 
                 {/* Search Section */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div className="searchBox" style={{ position: 'relative', minWidth: '200px' }}>
+                  <div className="searchBox" style={{ position: 'relative', minWidth: '200px', border: '1px solid rgba(129, 186, 84, 0.3)', borderRadius: '6px', padding: '2px' }}>
                     <input
                       type="text"
                       placeholder="Search"
@@ -598,7 +598,7 @@ export default function ITGlossary(): React.JSX.Element {
                   }}
                                      onMouseEnter={(e) => {
                      if (selectedLetter !== letter) {
-                       (e.target as HTMLElement).style.backgroundColor = '#f0f9ff';
+                       (e.target as HTMLElement).style.backgroundColor = 'rgba(129, 186, 84, 0.1)';
                      }
                    }}
                    onMouseLeave={(e) => {
@@ -630,7 +630,7 @@ export default function ITGlossary(): React.JSX.Element {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                           <div style={{
                             padding: '8px',
-                            backgroundColor: '#2764AD',
+                            backgroundColor: index % 2 === 0 ? '#2764AD' : '#81BA54',
                             borderRadius: '8px',
                             display: 'flex',
                             alignItems: 'center',
@@ -641,8 +641,8 @@ export default function ITGlossary(): React.JSX.Element {
                           <div style={{ flex: 1 }}>
                             <h3 className="margin-bottom--xs" style={{ fontSize: '18px', fontWeight: '600', color: '#d1d5db' }}>{term.term}</h3>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span className="badge badge--primary" style={{ fontSize: '12px', padding: '4px 8px' }}>{term.abbreviation}</span>
-                              <span className="badge badge--secondary" style={{ fontSize: '12px', padding: '4px 8px' }}>{term.category}</span>
+                              <span style={{ fontSize: '12px', padding: '4px 8px', backgroundColor: '#2764AD', color: 'white', borderRadius: '4px', fontWeight: '500' }}>{term.abbreviation}</span>
+                              <span style={{ fontSize: '12px', padding: '4px 8px', backgroundColor: '#81BA54', color: 'white', borderRadius: '4px', fontWeight: '500' }}>{term.category}</span>
                             </div>
                           </div>
                         </div>

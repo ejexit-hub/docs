@@ -1,71 +1,86 @@
-import React, { useState } from 'react';
+import React, { useState, createContext, useContext, useEffect } from 'react';
+
+interface AccordionContextType {
+  openAccordionId: string | null;
+  setOpenAccordionId: (id: string | null) => void;
+}
+
+const AccordionContext = createContext<AccordionContextType | undefined>(undefined);
 
 interface AccordionProps {
   title: string;
   description?: string;
   children: React.ReactNode;
   type?: 'info' | 'tip' | 'note';
+  id?: string;
 }
 
-export function Accordion({ title, description, children, type = 'info' }: AccordionProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export function Accordion({ title, description, children, type = 'info', id }: AccordionProps) {
+  const [accordionId] = useState(id || `accordion-${Math.random().toString(36).substr(2, 9)}`);
+  const context = useContext(AccordionContext);
+  
+  const isOpen = context?.openAccordionId === accordionId;
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    if (context) {
+      if (isOpen) {
+        context.setOpenAccordionId(null);
+      } else {
+        context.setOpenAccordionId(accordionId);
+      }
+    }
   };
 
   const getTypeStyles = () => {
     switch (type) {
       case 'info':
-        return 'accordion-info';
+        return 'faq-accordion-info';
       case 'tip':
-        return 'accordion-tip';
+        return 'faq-accordion-tip';
       case 'note':
-        return 'accordion-note';
+        return 'faq-accordion-note';
       default:
-        return 'accordion-info';
+        return 'faq-accordion-info';
     }
   };
 
   return (
-    <div>
+    <div className={`faq-accordion-container ${getTypeStyles()}`}>
       <div 
-        className={`accordion-header ${getTypeStyles()}`}
+        className={`faq-accordion-header ${isOpen ? 'open' : ''}`}
         onClick={toggleAccordion}
-        style={{ cursor: 'pointer' }}
       >
-        <h4 style={{ display: 'flex', alignItems: 'center', margin: 0, gap: '8px' }}>
-          <span style={{ 
-            transform: isOpen ? 'rotate(0deg)' : 'rotate(-90deg)',
-            transition: 'transform 0.2s ease',
-            display: 'inline-block'
-          }}>
-            ▼
-          </span>
-          <span>{title}</span>
-          {description && (
-            <span style={{ 
-              fontSize: '0.9rem', 
-              opacity: 0.7, 
-              fontWeight: 'normal',
-              marginLeft: '8px'
-            }}>
-              - {description}
-            </span>
-          )}
-        </h4>
+        <div className="faq-accordion-title">
+          <h4>
+            {title}
+            {description && <span className="faq-accordion-description"> - {description}</span>}
+          </h4>
+        </div>
+        <div className={`faq-accordion-icon ${isOpen ? 'open' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1a.5.5 0 0 1 .5.5v6h6a.5.5 0 0 1 0 1h-6v6a.5.5 0 0 1-1 0v-6h-6a.5.5 0 0 1 0-1h6v-6A.5.5 0 0 1 8 1z"/>
+          </svg>
+        </div>
       </div>
-      <div 
-        className="accordion-content"
-        style={{ 
-          display: isOpen ? 'block' : 'none',
-          padding: '0.5rem 0 1rem 1rem',
-          marginBottom: '1rem',
-          borderLeft: '3px solid transparent'
-        }}
-      >
-        {children}
+      <div className={`faq-accordion-content ${isOpen ? 'open' : ''}`}>
+        <div className="faq-accordion-inner">
+          {children}
+        </div>
       </div>
     </div>
+  );
+}
+
+interface AccordionGroupProps {
+  children: React.ReactNode;
+}
+
+export function AccordionGroup({ children }: AccordionGroupProps) {
+  const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
+
+  return (
+    <AccordionContext.Provider value={{ openAccordionId, setOpenAccordionId }}>
+      {children}
+    </AccordionContext.Provider>
   );
 } 

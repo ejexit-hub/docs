@@ -27,6 +27,14 @@ Our work instructions provide:
 - **[Erasure](/docs/work-instructions/erasure)** - Complete data erasure procedures and secure deletion processes
 - **[Receiving](/docs/work-instructions/receiving)** - Receiving, inspecting, and processing incoming equipment and materials
 
+### Equipment Management
+- **[Large Equipment](/docs/work-instructions/large-equipment)** - Handling, processing, and managing large equipment and machinery
+- **[Small Equipment](/docs/work-instructions/small-equipment)** - Handling, processing, and managing small equipment and components
+- **[Parts](/docs/work-instructions/parts)** - Handling, inventory, and management of parts and components
+
+### Logistics & Operations
+- **[Shipping](/docs/work-instructions/shipping)** - Shipping, packaging, and logistics procedures
+
 ### Equipment & Setup
 - **[Equipment Setup Example](/docs/work-instructions/equipment-setup-example)** - Equipment setup and configuration procedures
 

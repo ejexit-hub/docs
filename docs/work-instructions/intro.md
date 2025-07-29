@@ -31,12 +31,6 @@ Our work instructions provide:
 
 ## 🎨 **Features of Our Work Instructions**
 
-### Visual Learning
-Each work instruction includes:
-- **High-quality images** for every step
-- **Clear visual indicators** and highlights
-- **Responsive design** for mobile devices
-- **Hover effects** for better interaction
 
 ### Professional Styling
 - **Numbered steps** with colored circles
@@ -44,11 +38,6 @@ Each work instruction includes:
 - **Brand colors** (ExitTech green and blue)
 - **Accordion sections** for troubleshooting
 
-### Easy Navigation
-- **Quick access** to specific procedures
-- **Related documents** and references
-- **Search functionality** across all instructions
-- **Mobile-friendly** design
 
 ## 🚀 **How to Use Work Instructions**
 
@@ -58,19 +47,31 @@ Each work instruction includes:
 4. **Check troubleshooting** if issues arise
 5. **Complete quality checks** as specified
 
-## 📱 **Mobile Optimization**
-
-All work instructions are optimized for:
-- **Mobile devices** and tablets
-- **Touch-friendly** navigation
-- **Fast loading** with optimized images
-- **Offline access** capabilities
-
 ## 🔧 **Creating New Work Instructions**
 
 Need to add a new work instruction? Follow our guide:
 - **[Work Instructions Guide](/docs/work-instructions/README)** - How to create and organize work instructions
 - **[Adding Images Guide](/docs/work-instructions/adding-your-images)** - How to add your own images
+
+### 🚀 **Interactive Work Instruction Builder**
+
+Create work instructions easily with our interactive builder:
+
+<div class="text-center my-8">
+  <a href="/work-instruction-builder" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:from-green-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+    </svg>
+    Open Work Instruction Builder
+  </a>
+</div>
+
+**Features of the Builder:**
+- **Visual interface** for easy creation
+- **Image upload** for each step
+- **Real-time preview** of your work instruction
+- **Export to markdown** for immediate use
+- **Professional styling** with your brand colors
 
 ## 📞 **Need Help?**
 

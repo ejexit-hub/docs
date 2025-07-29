@@ -2764,16 +2764,13 @@ table {
 
 /* Work Instructions specific styling */
 .theme-doc-markdown[data-path*="work-instructions"] h1 {
-  background: linear-gradient(135deg, #81BA54, #2764AD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 2rem;
+  color: #fbbf24 !important;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 2rem;
   text-align: center;
   position: relative;
-  padding: 2rem 0;
+  padding-bottom: 1rem;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] h1::after {
@@ -2782,187 +2779,170 @@ table {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(90deg, #81BA54, #2764AD);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
   border-radius: 2px;
 }
 
-/* Step headers with numbered styling */
 .theme-doc-markdown[data-path*="work-instructions"] h2 {
-  color: #2764AD;
-  border-bottom: 2px solid rgba(39, 100, 173, 0.3);
-  padding-bottom: 0.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.75rem;
+  color: #fbbf24 !important;
+  font-size: 1.8rem;
   font-weight: 600;
+  margin: 2rem 0 1rem 0;
   position: relative;
-  padding-left: 3rem;
-  counter-increment: step-counter;
+  padding-left: 1.5rem;
+  counter-increment: section;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] h2::before {
-  content: counter(step-counter);
+  content: counter(section) ".";
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2rem;
-  height: 2rem;
-  background: linear-gradient(135deg, #81BA54, #2764AD);
-  color: white;
+  top: 0;
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: rgba(251, 191, 36, 0.1);
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(129, 186, 84, 0.3);
+  line-height: 1;
 }
 
-/* Reset counter for each work instruction */
 .theme-doc-markdown[data-path*="work-instructions"] {
-  counter-reset: step-counter;
+  counter-reset: section;
 }
 
-/* Work instruction images with enhanced styling */
 .theme-doc-markdown[data-path*="work-instructions"] img {
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  margin: 1.5rem 0;
-  border: 3px solid rgba(129, 186, 84, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  margin: 1.5rem 0;
   max-width: 100%;
   height: auto;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  border-color: rgba(129, 186, 84, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* Step content styling */
 .theme-doc-markdown[data-path*="work-instructions"] h2 + p {
+  color: #fbbf24 !important;
   font-size: 1.1rem;
-  line-height: 1.7;
-  color: #374151;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: rgba(129, 186, 84, 0.05);
-  border-radius: 8px;
-  border-left: 4px solid #81BA54;
+  background: rgba(251, 191, 36, 0.05);
+  border-left: 4px solid #fbbf24;
+  border-radius: 0 8px 8px 0;
 }
 
 [data-theme='dark'] .theme-doc-markdown[data-path*="work-instructions"] h2 + p {
-  color: #d1d5db;
-  background: rgba(129, 186, 84, 0.1);
+  background: rgba(251, 191, 36, 0.1);
 }
 
-/* Important notes styling */
 .theme-doc-markdown[data-path*="work-instructions"] strong {
-  color: #81BA54;
-  font-weight: 600;
+  color: #fbbf24 !important;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] ul {
   margin: 1.5rem 0;
-  padding-left: 0;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] ul li {
+  color: #fbbf24 !important;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
   position: relative;
-  padding: 0.75rem 0 0.75rem 2.5rem;
-  margin: 0.5rem 0;
-  background: rgba(39, 100, 173, 0.03);
-  border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out;
-  border-left: 3px solid #2764AD;
+  line-height: 1.6;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] ul li:hover {
-  background: rgba(39, 100, 173, 0.08);
   transform: translateX(5px);
+  transition: transform 0.2s ease;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] ul li::before {
-  content: '✓';
+  content: '▶';
   position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #81BA54;
-  font-size: 1rem;
+  left: 0;
+  top: 0;
+  color: #fbbf24;
+  font-size: 0.8rem;
   font-weight: bold;
+  background: rgba(251, 191, 36, 0.1);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
-/* Prerequisites section */
 .theme-doc-markdown[data-path*="work-instructions"] h2:first-of-type {
-  color: #f59e0b;
-  border-bottom-color: rgba(245, 158, 11, 0.3);
+  counter-reset: section;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] h2:first-of-type::before {
-  background: linear-gradient(135deg, #f59e0b, #f97316);
-  content: '⚠';
+  counter-reset: section;
 }
 
-/* Troubleshooting section */
 .theme-doc-markdown[data-path*="work-instructions"] h3 {
-  color: #ef4444;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  color: #fbbf24 !important;
   font-size: 1.4rem;
   font-weight: 600;
-  padding-left: 0.5rem;
-  border-left: 3px solid #ef4444;
+  margin: 1.5rem 0 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #fbbf24;
 }
 
-/* Safety reminders section */
 .theme-doc-markdown[data-path*="work-instructions"] h2:last-of-type {
-  color: #10b981;
-  border-bottom-color: rgba(16, 185, 129, 0.3);
+  margin-bottom: 3rem;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] h2:last-of-type::before {
-  background: linear-gradient(135deg, #10b981, #059669);
-  content: '🛡';
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
 }
 
-/* Related documents section */
 .theme-doc-markdown[data-path*="work-instructions"] h2 + ul:last-of-type {
-  background: rgba(129, 186, 84, 0.05);
+  margin-bottom: 3rem;
   padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid rgba(129, 186, 84, 0.2);
+  background: rgba(251, 191, 36, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 [data-theme='dark'] .theme-doc-markdown[data-path*="work-instructions"] h2 + ul:last-of-type {
-  background: rgba(129, 186, 84, 0.1);
-  border-color: rgba(129, 186, 84, 0.3);
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.3);
 }
 
-/* Responsive design for work instructions */
 @media (max-width: 768px) {
   .theme-doc-markdown[data-path*="work-instructions"] h1 {
     font-size: 2rem;
-    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
   }
-  
+
   .theme-doc-markdown[data-path*="work-instructions"] h2 {
     font-size: 1.5rem;
-    padding-left: 2.5rem;
+    padding-left: 1.2rem;
   }
-  
+
   .theme-doc-markdown[data-path*="work-instructions"] h2::before {
-    width: 1.75rem;
-    height: 1.75rem;
-    font-size: 0.9rem;
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
   }
-  
+
   .theme-doc-markdown[data-path*="work-instructions"] img {
     margin: 1rem 0;
+    border-radius: 8px;
   }
 }
 

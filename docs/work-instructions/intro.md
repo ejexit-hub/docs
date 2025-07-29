@@ -38,9 +38,6 @@ Our work instructions provide:
 ### Equipment & Setup
 - **[Equipment Setup Example](/docs/work-instructions/equipment-setup-example)** - Equipment setup and configuration procedures
 
-### Process Guides
-- **[Sample Work Instruction](/docs/work-instructions/sample-work-instruction)** - Example work instruction template
-
 ## 🎨 **Features of Our Work Instructions**
 
 

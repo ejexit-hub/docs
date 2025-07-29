@@ -168,6 +168,14 @@ const config: Config = {
           position: 'left',
           items: [
             {
+              label: 'Overview',
+              to: '/docs/processing',
+            },
+            {
+              label: 'Work Instructions',
+              to: '/docs/work-instructions/README',
+            },
+            {
               label: 'Nomenclature',
               to: '/nomenclature',
             },

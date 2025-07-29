@@ -7,13 +7,13 @@ description: Complete guide for data erasure procedures and secure deletion proc
 
 # Erasure Procedures
 
-<div style="width: 100%; height: 800px; border: none;">
+<div style={{width: "100%", height: "800px", border: "none"}}>
   <iframe 
     src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true"
     width="100%" 
     height="100%" 
-    frameborder="0"
-    style="border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    frameBorder="0"
+    style={{border: "none", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"}}>
   </iframe>
 </div>
 

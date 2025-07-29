@@ -7,13 +7,13 @@ description: Complete guide for receiving, inspecting, and processing incoming e
 
 # Receiving Procedures
 
-<div style="width: 100%; height: 800px; border: none;">
+<div style={{width: "100%", height: "800px", border: "none"}}>
   <iframe 
     src="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/pub?embedded=true"
     width="100%" 
     height="100%" 
-    frameborder="0"
-    style="border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    frameBorder="0"
+    style={{border: "none", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"}}>
   </iframe>
 </div>
 

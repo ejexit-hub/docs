@@ -40,47 +40,14 @@ Our work instructions provide:
 
 ## 🎨 **Features of Our Work Instructions**
 
+Our work instructions are designed to be comprehensive, user-friendly, and always up-to-date:
 
-### Professional Styling
-- **Numbered steps** with colored circles
-- **Color-coded sections** (prerequisites, steps, troubleshooting)
-- **Brand colors** (ExitTech green and blue)
-- **Accordion sections** for troubleshooting
-
-
-## 🚀 **How to Use Work Instructions**
-
-1. **Select the appropriate instruction** for your task
-2. **Review prerequisites** and safety requirements
-3. **Follow steps sequentially** with visual guidance
-4. **Check troubleshooting** if issues arise
-5. **Complete quality checks** as specified
-
-## 🔧 **Creating New Work Instructions**
-
-Need to add a new work instruction? Follow our guide:
-- **[Work Instructions Guide](/docs/work-instructions/README)** - How to create and organize work instructions
-- **[Adding Images Guide](/docs/work-instructions/adding-your-images)** - How to add your own images
-
-### 🚀 **Interactive Work Instruction Builder**
-
-Create work instructions easily with our interactive builder:
-
-<div class="text-center my-8">
-  <a href="/work-instruction-builder" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:from-green-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-    </svg>
-    Open Work Instruction Builder
-  </a>
-</div>
-
-**Features of the Builder:**
-- **Visual interface** for easy creation
-- **Image upload** for each step
-- **Real-time preview** of your work instruction
-- **Export to markdown** for immediate use
-- **Professional styling** with your brand colors
+- **📖 Step-by-Step Guidance**: Clear, numbered procedures for every process
+- **🖼️ Visual Support**: Images and diagrams to enhance understanding
+- **⚠️ Safety First**: Prominent safety reminders and warnings
+- **🔧 Troubleshooting**: Common issues and solutions included
+- **📱 Mobile Optimized**: Easy to read on any device
+- **🔄 Real-time Updates**: Content automatically updates when procedures change
 
 ## 📞 **Need Help?**
 

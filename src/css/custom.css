@@ -2973,43 +2973,178 @@ table {
 .work-instruction-builder {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
-.work-instruction-builder .preview-container {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-top: 2rem;
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.work-instruction-builder .step-preview {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: white;
+.button-group--block {
+  width: 100%;
+}
+
+.button-group--block .button {
+  flex: 1;
+}
+
+/* Input group styling */
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.input-group input,
+.input-group textarea {
+  flex: 1;
+}
+
+/* Image preview styling */
+.img-preview {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
   border-radius: 8px;
-  border-left: 4px solid #81BA54;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  margin-left: 0.5rem;
+}
+
+/* Form label styling */
+.form__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Card styling improvements */
+.card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-card-background-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.work-instruction-builder .export-container {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-top: 2rem;
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px 8px 0 0;
 }
 
-.work-instruction-builder pre {
-  background: #1e293b;
-  color: #e2e8f0;
+.card__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.card__body {
   padding: 1.5rem;
-  border-radius: 8px;
-  overflow-x: auto;
+}
+
+/* Button styling improvements */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.button--primary:hover {
+  background: var(--ifm-color-primary-darker);
+}
+
+.button--secondary {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+}
+
+.button--secondary:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+.button--outline {
+  background: transparent;
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-700);
+}
+
+.button--outline:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.button--danger {
+  background: var(--ifm-color-danger);
+  color: white;
+}
+
+.button--danger:hover {
+  background: var(--ifm-color-danger-darker);
+}
+
+.button--sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.button__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Input and textarea styling */
+.input-group input,
+.input-group textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(var(--ifm-color-primary-rgb), 0.2);
+}
+
+/* Code block styling */
+.code-block {
+  background: var(--ifm-code-background);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 1rem;
   font-size: 0.875rem;
   line-height: 1.5;
+  overflow-x: auto;
+  color: var(--ifm-color-emphasis-900);
 }
 
 /* Preview styling to match existing work instruction pages */
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] {
+  counter-reset: step-counter;
+}
+
 .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h1 {
   color: #2764AD;
   font-size: 2.5rem;
@@ -3064,6 +3199,8 @@ table {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   margin: 1.5rem 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] img:hover {
@@ -3151,12 +3288,21 @@ table {
 /* Responsive design for builder */
 @media (max-width: 768px) {
   .work-instruction-builder {
-    padding: 1rem;
+    padding: 0 1rem;
   }
   
-  .work-instruction-builder .preview-container,
-  .work-instruction-builder .export-container {
-    padding: 1rem;
+  .button-group--block {
+    flex-direction: column;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .card__header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
   }
   
   .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h1 {
@@ -3177,13 +3323,4 @@ table {
   .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h3 {
     font-size: 1.2rem;
   }
-}
-
-/* Preview styling to match existing work instruction pages */
-.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] {
-  counter-reset: step-counter;
-}
-
-.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h1 {
-  counter-reset: step-counter;
 }

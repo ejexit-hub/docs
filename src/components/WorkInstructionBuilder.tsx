@@ -222,46 +222,45 @@ ${note}
   return (
     <div className="work-instruction-builder">
       {/* Tab Navigation */}
-      <div className="flex space-x-2 mb-6">
-        <Button
-          variant={activeTab === 'builder' ? 'default' : 'outline'}
-          onClick={() => setActiveTab('builder')}
-          className="flex items-center space-x-2"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Builder</span>
-        </Button>
-        <Button
-          variant={activeTab === 'preview' ? 'default' : 'outline'}
-          onClick={() => setActiveTab('preview')}
-          className="flex items-center space-x-2"
-        >
-          <Eye className="w-4 h-4" />
-          <span>Preview</span>
-        </Button>
-        <Button
-          variant={activeTab === 'export' ? 'default' : 'outline'}
-          onClick={() => setActiveTab('export')}
-          className="flex items-center space-x-2"
-        >
-          <Download className="w-4 h-4" />
-          <span>Export</span>
-        </Button>
+      <div className="margin-bottom--lg">
+        <div className="button-group button-group--block">
+          <button
+            className={`button button--${activeTab === 'builder' ? 'primary' : 'secondary'}`}
+            onClick={() => setActiveTab('builder')}
+          >
+            <Plus className="button__icon" />
+            Builder
+          </button>
+          <button
+            className={`button button--${activeTab === 'preview' ? 'primary' : 'secondary'}`}
+            onClick={() => setActiveTab('preview')}
+          >
+            <Eye className="button__icon" />
+            Preview
+          </button>
+          <button
+            className={`button button--${activeTab === 'export' ? 'primary' : 'secondary'}`}
+            onClick={() => setActiveTab('export')}
+          >
+            <Download className="button__icon" />
+            Export
+          </button>
+        </div>
       </div>
 
       {activeTab === 'builder' && (
-        <div className="space-y-6">
+        <div className="margin-bottom--lg">
           {/* Basic Information */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <span>Basic Information</span>
-                <Badge variant="secondary">Required</Badge>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Title</label>
+          <div className="card margin-bottom--lg">
+            <div className="card__header">
+              <h3 className="card__title">
+                Basic Information
+                <Badge variant="secondary" className="margin-left--sm">Required</Badge>
+              </h3>
+            </div>
+            <div className="card__body">
+              <div className="margin-bottom--md">
+                <label className="form__label">Title</label>
                 <Input
                   placeholder="Enter work instruction title..."
                   value={workInstruction.title}
@@ -269,7 +268,7 @@ ${note}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Description</label>
+                <label className="form__label">Description</label>
                 <Textarea
                   placeholder="Brief description of the work instruction..."
                   value={workInstruction.description}
@@ -277,73 +276,66 @@ ${note}
                   rows={3}
                 />
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Prerequisites */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
-                <span>Prerequisites</span>
-                <Button onClick={addPrerequisite} size="sm" variant="outline">
-                  <Plus className="w-4 h-4 mr-1" />
-                  Add Prerequisite
-                </Button>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
+          <div className="card margin-bottom--lg">
+            <div className="card__header">
+              <h3 className="card__title">Prerequisites</h3>
+              <button className="button button--sm button--outline" onClick={addPrerequisite}>
+                <Plus className="button__icon" />
+                Add Prerequisite
+              </button>
+            </div>
+            <div className="card__body">
+              <div className="margin-bottom--sm">
                 {workInstruction.prerequisites.map((prereq, index) => (
-                  <div key={index} className="flex space-x-2">
-                    <Input
-                      placeholder="Enter prerequisite..."
-                      value={prereq}
-                      onChange={(e) => updatePrerequisite(index, e.target.value)}
-                    />
-                    <Button
-                      onClick={() => removePrerequisite(index)}
-                      size="sm"
-                      variant="outline"
-                      className="text-red-500 hover:text-red-700"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </Button>
+                  <div key={index} className="margin-bottom--sm">
+                    <div className="input-group">
+                      <Input
+                        placeholder="Enter prerequisite..."
+                        value={prereq}
+                        onChange={(e) => updatePrerequisite(index, e.target.value)}
+                      />
+                      <button
+                        onClick={() => removePrerequisite(index)}
+                        className="button button--sm button--outline button--danger"
+                      >
+                        <Trash2 className="button__icon" />
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Steps */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
-                <span>Steps</span>
-                <Button onClick={addStep} size="sm" variant="outline">
-                  <Plus className="w-4 h-4 mr-1" />
-                  Add Step
-                </Button>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
+          <div className="card margin-bottom--lg">
+            <div className="card__header">
+              <h3 className="card__title">Steps</h3>
+              <button className="button button--sm button--outline" onClick={addStep}>
+                <Plus className="button__icon" />
+                Add Step
+              </button>
+            </div>
+            <div className="card__body">
+              <div className="margin-bottom--lg">
                 {workInstruction.steps.map((step, index) => (
-                  <div key={step.id} className="border rounded-lg p-4 bg-gray-50">
-                    <div className="flex items-center justify-between mb-4">
-                      <h4 className="text-lg font-semibold">Step {index + 1}</h4>
-                      <Button
+                  <div key={step.id} className="card margin-bottom--md">
+                    <div className="card__header">
+                      <h4 className="card__title">Step {index + 1}</h4>
+                      <button
                         onClick={() => removeStep(step.id)}
-                        size="sm"
-                        variant="outline"
-                        className="text-red-500 hover:text-red-700"
+                        className="button button--sm button--outline button--danger"
                       >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                        <Trash2 className="button__icon" />
+                      </button>
                     </div>
-                    
-                    <div className="space-y-4">
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Step Title</label>
+                    <div className="card__body">
+                      <div className="margin-bottom--md">
+                        <label className="form__label">Step Title</label>
                         <Input
                           placeholder="Enter step title..."
                           value={step.title}
@@ -351,8 +343,8 @@ ${note}
                         />
                       </div>
                       
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Description</label>
+                      <div className="margin-bottom--md">
+                        <label className="form__label">Description</label>
                         <Textarea
                           placeholder="Describe this step..."
                           value={step.description}
@@ -361,9 +353,9 @@ ${note}
                         />
                       </div>
                       
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Image</label>
-                        <div className="flex items-center space-x-4">
+                      <div className="margin-bottom--md">
+                        <label className="form__label">Image</label>
+                        <div className="input-group">
                           <Input
                             type="file"
                             accept="image/*"
@@ -371,264 +363,265 @@ ${note}
                               const file = e.target.files?.[0];
                               if (file) handleImageUpload(step.id, file);
                             }}
-                            className="flex-1"
                           />
                           {step.imagePreview && (
                             <img
                               src={step.imagePreview}
                               alt="Preview"
-                              className="w-20 h-20 object-cover rounded border"
+                              className="img-preview"
                             />
                           )}
                         </div>
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium mb-2">Important Notes</label>
-                        <div className="space-y-2">
+                        <label className="form__label">Important Notes</label>
+                        <div className="margin-bottom--sm">
                           {step.notes.map((note, noteIndex) => (
-                            <div key={noteIndex} className="flex space-x-2">
-                              <Input
-                                placeholder="Enter important note..."
-                                value={note}
-                                onChange={(e) => {
-                                  const newNotes = [...step.notes];
-                                  newNotes[noteIndex] = e.target.value;
-                                  updateStep(step.id, 'notes', newNotes);
-                                }}
-                              />
-                              <Button
-                                onClick={() => {
-                                  const newNotes = step.notes.filter((_, i) => i !== noteIndex);
-                                  updateStep(step.id, 'notes', newNotes);
-                                }}
-                                size="sm"
-                                variant="outline"
-                                className="text-red-500 hover:text-red-700"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </Button>
+                            <div key={noteIndex} className="margin-bottom--sm">
+                              <div className="input-group">
+                                <Input
+                                  placeholder="Enter important note..."
+                                  value={note}
+                                  onChange={(e) => {
+                                    const newNotes = [...step.notes];
+                                    newNotes[noteIndex] = e.target.value;
+                                    updateStep(step.id, 'notes', newNotes);
+                                  }}
+                                />
+                                <button
+                                  onClick={() => {
+                                    const newNotes = step.notes.filter((_, i) => i !== noteIndex);
+                                    updateStep(step.id, 'notes', newNotes);
+                                  }}
+                                  className="button button--sm button--outline button--danger"
+                                >
+                                  <Trash2 className="button__icon" />
+                                </button>
+                              </div>
                             </div>
                           ))}
-                          <Button
+                          <button
                             onClick={() => {
                               const newNotes = [...step.notes, ''];
                               updateStep(step.id, 'notes', newNotes);
                             }}
-                            size="sm"
-                            variant="outline"
+                            className="button button--sm button--outline"
                           >
-                            <Plus className="w-4 h-4 mr-1" />
+                            <Plus className="button__icon" />
                             Add Note
-                          </Button>
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Troubleshooting */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
-                <span>Troubleshooting</span>
-                <Button onClick={addTroubleshooting} size="sm" variant="outline">
-                  <Plus className="w-4 h-4 mr-1" />
-                  Add Issue
-                </Button>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
+          <div className="card margin-bottom--lg">
+            <div className="card__header">
+              <h3 className="card__title">Troubleshooting</h3>
+              <button className="button button--sm button--outline" onClick={addTroubleshooting}>
+                <Plus className="button__icon" />
+                Add Issue
+              </button>
+            </div>
+            <div className="card__body">
+              <div className="margin-bottom--lg">
                 {workInstruction.troubleshooting.map((item, index) => (
-                  <div key={index} className="border rounded-lg p-4 bg-gray-50">
-                    <div className="flex items-center justify-between mb-4">
-                      <h4 className="font-semibold">Issue {index + 1}</h4>
-                      <Button
+                  <div key={index} className="card margin-bottom--md">
+                    <div className="card__header">
+                      <h4 className="card__title">Issue {index + 1}</h4>
+                      <button
                         onClick={() => removeTroubleshooting(index)}
-                        size="sm"
-                        variant="outline"
-                        className="text-red-500 hover:text-red-700"
+                        className="button button--sm button--outline button--danger"
                       >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                        <Trash2 className="button__icon" />
+                      </button>
                     </div>
-                    <div className="space-y-2">
-                      <Input
-                        placeholder="Describe the issue..."
-                        value={item.issue}
-                        onChange={(e) => updateTroubleshooting(index, 'issue', e.target.value)}
-                      />
-                      <Textarea
-                        placeholder="Provide the solution..."
-                        value={item.solution}
-                        onChange={(e) => updateTroubleshooting(index, 'solution', e.target.value)}
-                        rows={3}
-                      />
+                    <div className="card__body">
+                      <div className="margin-bottom--md">
+                        <label className="form__label">Issue Description</label>
+                        <Input
+                          placeholder="Describe the issue..."
+                          value={item.issue}
+                          onChange={(e) => updateTroubleshooting(index, 'issue', e.target.value)}
+                        />
+                      </div>
+                      <div>
+                        <label className="form__label">Solution</label>
+                        <Textarea
+                          placeholder="Provide the solution..."
+                          value={item.solution}
+                          onChange={(e) => updateTroubleshooting(index, 'solution', e.target.value)}
+                          rows={3}
+                        />
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Safety Notes */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
-                <span>Safety Notes</span>
-                <Button onClick={addSafetyNote} size="sm" variant="outline">
-                  <Plus className="w-4 h-4 mr-1" />
-                  Add Safety Note
-                </Button>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
+          <div className="card">
+            <div className="card__header">
+              <h3 className="card__title">Safety Notes</h3>
+              <button className="button button--sm button--outline" onClick={addSafetyNote}>
+                <Plus className="button__icon" />
+                Add Safety Note
+              </button>
+            </div>
+            <div className="card__body">
+              <div className="margin-bottom--sm">
                 {workInstruction.safetyNotes.map((note, index) => (
-                  <div key={index} className="flex space-x-2">
-                    <Textarea
-                      placeholder="Enter safety note..."
-                      value={note}
-                      onChange={(e) => updateSafetyNote(index, e.target.value)}
-                      rows={2}
-                    />
-                    <Button
-                      onClick={() => removeSafetyNote(index)}
-                      size="sm"
-                      variant="outline"
-                      className="text-red-500 hover:text-red-700"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </Button>
+                  <div key={index} className="margin-bottom--sm">
+                    <div className="input-group">
+                      <Textarea
+                        placeholder="Enter safety note..."
+                        value={note}
+                        onChange={(e) => updateSafetyNote(index, e.target.value)}
+                        rows={2}
+                      />
+                      <button
+                        onClick={() => removeSafetyNote(index)}
+                        className="button button--sm button--outline button--danger"
+                      >
+                        <Trash2 className="button__icon" />
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       )}
 
       {activeTab === 'preview' && (
-        <div className="preview-container">
-          <Card>
-            <CardHeader>
-              <CardTitle>Preview</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="theme-doc-markdown" data-path="work-instructions-preview">
-                <h1>{workInstruction.title || 'Work Instruction Title'}</h1>
-                <p>{workInstruction.description || 'Description will appear here...'}</p>
-                
-                {workInstruction.prerequisites.filter(p => p.trim()).length > 0 && (
-                  <>
-                    <h2>Prerequisites</h2>
-                    <ul>
-                      {workInstruction.prerequisites.filter(p => p.trim()).map((prereq, index) => (
-                        <li key={index}>{prereq}</li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-
-                {workInstruction.steps.map((step, index) => (
-                  <div key={step.id} className="step-preview">
-                    <h2>Step {index + 1}: {step.title || 'Step Title'}</h2>
-                    <p>{step.description || 'Step description...'}</p>
-                    {step.imagePreview && (
-                      <img
-                        src={step.imagePreview}
-                        alt={`Step ${index + 1}`}
-                        className="w-full max-w-md rounded-lg border shadow-lg hover:shadow-xl transition-shadow duration-300"
-                      />
-                    )}
-                    {step.notes.filter(note => note.trim()).length > 0 && (
-                      <>
-                        <p><strong>Important Notes:</strong></p>
-                        <ul>
-                          {step.notes.filter(note => note.trim()).map((note, noteIndex) => (
-                            <li key={noteIndex}>{note}</li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
-                  </div>
-                ))}
-
-                {workInstruction.troubleshooting.length > 0 && (
-                  <>
-                    <h2>Troubleshooting</h2>
-                    <h3>Common Issues</h3>
-                    {workInstruction.troubleshooting.map((item, index) => (
-                      <details key={index} className="mb-4">
-                        <summary className="cursor-pointer font-semibold">{item.issue || 'Issue description...'}</summary>
-                        <div className="mt-2 p-4 bg-gray-50 rounded">
-                          <p><strong>Solution:</strong></p>
-                          <p>{item.solution || 'Solution details...'}</p>
-                        </div>
-                      </details>
+        <div className="card">
+          <div className="card__header">
+            <h3 className="card__title">Preview</h3>
+          </div>
+          <div className="card__body">
+            <div className="theme-doc-markdown" data-path="work-instructions-preview">
+              <h1>{workInstruction.title || 'Work Instruction Title'}</h1>
+              <p>{workInstruction.description || 'Description will appear here...'}</p>
+              
+              {workInstruction.prerequisites.filter(p => p.trim()).length > 0 && (
+                <>
+                  <h2>Prerequisites</h2>
+                  <ul>
+                    {workInstruction.prerequisites.filter(p => p.trim()).map((prereq, index) => (
+                      <li key={index}>{prereq}</li>
                     ))}
-                  </>
-                )}
+                  </ul>
+                </>
+              )}
 
-                {workInstruction.safetyNotes.filter(note => note.trim()).length > 0 && (
-                  <>
-                    <h2>Safety Reminders</h2>
-                    {workInstruction.safetyNotes.filter(note => note.trim()).map((note, index) => (
-                      <div key={index} className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-                        <p className="font-semibold text-yellow-800">⚠️ Safety Alert</p>
-                        <p className="text-yellow-700">{note}</p>
+              {workInstruction.steps.map((step, index) => (
+                <div key={step.id} className="step-preview">
+                  <h2>Step {index + 1}: {step.title || 'Step Title'}</h2>
+                  <p>{step.description || 'Step description...'}</p>
+                  {step.imagePreview && (
+                    <img
+                      src={step.imagePreview}
+                      alt={`Step ${index + 1}`}
+                      className="img-preview"
+                    />
+                  )}
+                  {step.notes.filter(note => note.trim()).length > 0 && (
+                    <>
+                      <p><strong>Important Notes:</strong></p>
+                      <ul>
+                        {step.notes.filter(note => note.trim()).map((note, noteIndex) => (
+                          <li key={noteIndex}>{note}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </div>
+              ))}
+
+              {workInstruction.troubleshooting.length > 0 && (
+                <>
+                  <h2>Troubleshooting</h2>
+                  <h3>Common Issues</h3>
+                  {workInstruction.troubleshooting.map((item, index) => (
+                    <details key={index} className="margin-bottom--md">
+                      <summary className="cursor-pointer font-semibold">{item.issue || 'Issue description...'}</summary>
+                      <div className="margin-top--sm padding--md bg-gray-50 rounded">
+                        <p><strong>Solution:</strong></p>
+                        <p>{item.solution || 'Solution details...'}</p>
                       </div>
-                    ))}
-                  </>
-                )}
-              </div>
-            </CardContent>
-          </Card>
+                    </details>
+                  ))}
+                </>
+              )}
+
+              {workInstruction.safetyNotes.filter(note => note.trim()).length > 0 && (
+                <>
+                  <h2>Safety Reminders</h2>
+                  {workInstruction.safetyNotes.filter(note => note.trim()).map((note, index) => (
+                    <div key={index} className="admonition admonition--warning margin-bottom--md">
+                      <div className="admonition__heading">
+                        <h5 className="admonition__title">⚠️ Safety Alert</h5>
+                      </div>
+                      <div className="admonition__content">
+                        <p>{note}</p>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
         </div>
       )}
 
       {activeTab === 'export' && (
-        <div className="export-container">
-          <Card>
-            <CardHeader>
-              <CardTitle>Export Work Instruction</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-2">Generated Markdown</h3>
-                <pre className="text-sm overflow-x-auto bg-white p-4 rounded border">
-                  {generateMarkdown()}
-                </pre>
+        <div className="card">
+          <div className="card__header">
+            <h3 className="card__title">Export Work Instruction</h3>
+          </div>
+          <div className="card__body">
+            <div className="margin-bottom--lg">
+              <h4 className="margin-bottom--md">Generated Markdown</h4>
+              <pre className="code-block">
+                {generateMarkdown()}
+              </pre>
+            </div>
+            <div className="button-group margin-bottom--lg">
+              <button onClick={downloadMarkdown} className="button button--primary">
+                <Download className="button__icon" />
+                Download Markdown
+              </button>
+              <button
+                onClick={() => navigator.clipboard.writeText(generateMarkdown())}
+                className="button button--outline"
+              >
+                Copy to Clipboard
+              </button>
+            </div>
+            <div className="admonition admonition--info">
+              <div className="admonition__heading">
+                <h5 className="admonition__title">Next Steps:</h5>
               </div>
-              <div className="flex space-x-4">
-                <Button onClick={downloadMarkdown} className="flex items-center space-x-2">
-                  <Download className="w-4 h-4" />
-                  <span>Download Markdown</span>
-                </Button>
-                <Button
-                  onClick={() => navigator.clipboard.writeText(generateMarkdown())}
-                  variant="outline"
-                  className="flex items-center space-x-2"
-                >
-                  <span>Copy to Clipboard</span>
-                </Button>
-              </div>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-800 mb-2">Next Steps:</h4>
-                <ol className="text-blue-700 space-y-1">
-                  <li>1. Download the markdown file</li>
-                  <li>2. Save it to <code>docs/work-instructions/your-instruction-name.md</code></li>
-                  <li>3. Upload your images to <code>static/img/work-instructions/</code></li>
-                  <li>4. Update image paths in the markdown file</li>
-                  <li>5. Commit and push to see it on your website!</li>
+              <div className="admonition__content">
+                <ol>
+                  <li>Download the markdown file</li>
+                  <li>Save it to <code>docs/work-instructions/your-instruction-name.md</code></li>
+                  <li>Upload your images to <code>static/img/work-instructions/</code></li>
+                  <li>Update image paths in the markdown file</li>
+                  <li>Commit and push to see it on your website!</li>
                 </ol>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       )}
     </div>

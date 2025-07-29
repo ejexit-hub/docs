@@ -9,7 +9,7 @@ description: Complete guide for data erasure procedures and secure deletion proc
 
 <div style="width: 100%; height: 800px; border: none;">
   <iframe 
-    src="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/pub?embedded=true"
+    src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true"
     width="100%" 
     height="100%" 
     frameborder="0"

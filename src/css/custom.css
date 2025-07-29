@@ -3009,24 +3009,49 @@ table {
   line-height: 1.5;
 }
 
-.work-instruction-builder .prose h1 {
+/* Preview styling to match existing work instruction pages */
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h1 {
   color: #2764AD;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid rgba(39, 100, 173, 0.3);
+  padding-bottom: 1rem;
 }
 
-.work-instruction-builder .prose h2 {
-  color: #81BA54;
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h2 {
+  color: #2764AD;
+  border-bottom: 2px solid rgba(39, 100, 173, 0.3);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.75rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid rgba(129, 186, 84, 0.3);
-  padding-bottom: 0.5rem;
+  position: relative;
+  padding-left: 3rem;
+  counter-increment: step-counter;
 }
 
-.work-instruction-builder .prose h3 {
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h2::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, #81BA54, #2764AD);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(129, 186, 84, 0.3);
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h3 {
   color: #2764AD;
   font-size: 1.4rem;
   font-weight: 600;
@@ -3034,39 +3059,93 @@ table {
   margin-bottom: 0.75rem;
 }
 
-.work-instruction-builder .prose ul {
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin: 1.5rem 0;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h2 + p {
+  color: #374151;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] ul {
   margin: 1rem 0;
   padding-left: 1.5rem;
 }
 
-.work-instruction-builder .prose li {
-  margin: 0.5rem 0;
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] ul li {
+  margin: 0.75rem 0;
   color: #374151;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 0.5rem;
 }
 
-.work-instruction-builder .prose p {
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] ul li::before {
+  content: "•";
+  color: #81BA54;
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] p {
   margin: 1rem 0;
   line-height: 1.6;
   color: #374151;
 }
 
-.work-instruction-builder .prose details {
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] details {
   margin: 1rem 0;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
+  background: #f9fafb;
 }
 
-.work-instruction-builder .prose summary {
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] summary {
   padding: 1rem;
-  background: #f9fafb;
+  background: #f3f4f6;
   cursor: pointer;
   font-weight: 600;
   color: #374151;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.work-instruction-builder .prose details[open] summary {
-  background: #f3f4f6;
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] details[open] summary {
+  background: #e5e7eb;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] details > div {
+  padding: 1rem;
+  background: white;
+}
+
+/* Safety alerts styling */
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] .bg-yellow-50 {
+  background: #fffbeb !important;
+  border-left: 4px solid #f59e0b !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] .text-yellow-800 {
+  color: #92400e !important;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] .text-yellow-700 {
+  color: #a16207 !important;
 }
 
 /* Responsive design for builder */
@@ -3080,15 +3159,31 @@ table {
     padding: 1rem;
   }
   
-  .work-instruction-builder .prose h1 {
+  .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h1 {
     font-size: 2rem;
   }
   
-  .work-instruction-builder .prose h2 {
+  .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h2 {
     font-size: 1.5rem;
+    padding-left: 2.5rem;
   }
   
-  .work-instruction-builder .prose h3 {
+  .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h2::before {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h3 {
     font-size: 1.2rem;
   }
+}
+
+/* Preview styling to match existing work instruction pages */
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] {
+  counter-reset: step-counter;
+}
+
+.work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h1 {
+  counter-reset: step-counter;
 }

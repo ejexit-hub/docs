@@ -519,7 +519,7 @@ ${note}
               <CardTitle>Preview</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="prose max-w-none">
+              <div className="theme-doc-markdown" data-path="work-instructions-preview">
                 <h1>{workInstruction.title || 'Work Instruction Title'}</h1>
                 <p>{workInstruction.description || 'Description will appear here...'}</p>
                 
@@ -542,7 +542,7 @@ ${note}
                       <img
                         src={step.imagePreview}
                         alt={`Step ${index + 1}`}
-                        className="w-full max-w-md rounded-lg border"
+                        className="w-full max-w-md rounded-lg border shadow-lg hover:shadow-xl transition-shadow duration-300"
                       />
                     )}
                     {step.notes.filter(note => note.trim()).length > 0 && (

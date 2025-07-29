@@ -23,6 +23,10 @@ Our work instructions provide:
 ### Safety & Compliance
 - **[Safety Procedures](/docs/work-instructions/safety-procedures)** - Essential safety guidelines and protocols
 
+### Core Processing Procedures
+- **[Erasure](/docs/work-instructions/erasure)** - Complete data erasure procedures and secure deletion processes
+- **[Receiving](/docs/work-instructions/receiving)** - Receiving, inspecting, and processing incoming equipment and materials
+
 ### Equipment & Setup
 - **[Equipment Setup Example](/docs/work-instructions/equipment-setup-example)** - Equipment setup and configuration procedures
 

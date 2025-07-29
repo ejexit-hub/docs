@@ -2,7 +2,7 @@
   "label": "Work Instructions",
   "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "Step-by-step work instructions with visual guides for various processes and procedures."
+    "type": "doc",
+    "id": "work-instructions/intro"
   }
 }

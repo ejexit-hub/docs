@@ -1,11 +1,11 @@
 ---
 id: work-instructions-guide
-title: Work Instructions Guide
-sidebar_label: Work Instructions Guide
+title: Creating Work Instructions Guide
+sidebar_label: Creating Work Instructions
 description: How to create and organize work instructions with pictures
 ---
 
-# Work Instructions Guide
+# Creating Work Instructions Guide
 
 This guide shows you how to create professional work instructions with pictures using markdown files.
 
@@ -15,11 +15,12 @@ This guide shows you how to create professional work instructions with pictures 
 docs/
 ├── work-instructions/
 │   ├── _category_.json
-│   ├── README.md (this file)
+│   ├── intro.md (main overview page)
+│   ├── README.md (this guide)
 │   ├── sample-work-instruction.md
-│   ├── equipment-setup.md
+│   ├── equipment-setup-example.md
 │   ├── safety-procedures.md
-│   └── quality-checks.md
+│   └── your-new-instruction.md
 
 static/
 └── img/
@@ -68,21 +69,29 @@ static/
 
 3. **Structure your content:**
    ```markdown
-   # Main Title
+   # Your Instruction Title
+   
+   Brief overview of the process.
    
    ## Prerequisites
-   - List required items
+   
+   - Required tools
+   - Safety equipment
+   - Materials needed
    
    ## Step 1: First Step
-   Description of the step
+   
+   Description of the step.
    
    ![Step 1 Image](/img/work-instructions/step1.jpg)
    
    **Important Notes:**
-   - Key points
+   - Key point 1
+   - Key point 2
    
    ## Step 2: Second Step
-   Next step description
+   
+   Next step description.
    
    ![Step 2 Image](/img/work-instructions/step2.jpg)
    ```
@@ -141,14 +150,14 @@ Key information
 ## 📊 **Image Best Practices**
 
 ### File Formats
-- **JPG/JPEG**: For photographs and complex images
-- **PNG**: For screenshots and images with text
-- **WebP**: For better compression (modern browsers)
+- **JPG/JPEG**: For photographs (recommended)
+- **PNG**: For screenshots with text
+- **WebP**: For better compression
 
 ### Image Sizing
-- **Recommended width**: 600-800px
-- **Maximum file size**: 500KB per image
-- **Aspect ratio**: 4:3 or 16:9 for consistency
+- **Width**: 600-800px (optimal)
+- **Aspect ratio**: 4:3 or 16:9
+- **File size**: Under 500KB
 
 ### Naming Convention
 ```
@@ -243,6 +252,6 @@ When updating work instructions:
 
 ## 📞 **Need Help?**
 
-- Check the [sample work instruction](/docs/work-instructions/sample-work-instruction)
-- Review existing product training pages for examples
+- Check the [main Work Instructions page](/docs/work-instructions/intro)
+- Review existing examples for guidance
 - Contact the documentation team for assistance

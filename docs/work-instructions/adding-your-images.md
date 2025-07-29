@@ -100,6 +100,6 @@ Your images automatically get:
 
 ## 📞 **Need Help?**
 
-- Check the [Work Instructions Guide](/docs/work-instructions/README)
-- Review the [Sample Work Instruction](/docs/work-instructions/sample-work-instruction)
+- Check the [main Work Instructions page](/docs/work-instructions/intro)
+- Review the [Creating Work Instructions Guide](/docs/work-instructions/README)
 - Contact the documentation team

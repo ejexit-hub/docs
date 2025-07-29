@@ -11,7 +11,7 @@ Welcome to the Processing section. Here you'll find all the procedures, work ins
 
 ## 📋 **Available Resources**
 
-### [Work Instructions](/docs/work-instructions/README)
+### [Work Instructions](/docs/work-instructions/intro)
 Step-by-step visual guides for various processes and procedures.
 
 - **Equipment Setup** - Proper setup and configuration procedures
@@ -34,7 +34,7 @@ Standardized terminology and naming conventions used across all processes.
         <p>Step-by-step guides with pictures for all processing procedures.</p>
       </div>
       <div class="card__footer">
-        <a href="/docs/work-instructions/README" class="button button--primary button--block">
+        <a href="/docs/work-instructions/intro" class="button button--primary button--block">
           View Work Instructions
         </a>
       </div>
@@ -76,6 +76,6 @@ Standardized terminology and naming conventions used across all processes.
 
 ## 📞 **Need Help?**
 
-- Check the [Work Instructions Guide](/docs/work-instructions/README)
+- Check the [Work Instructions Guide](/docs/work-instructions/intro)
 - Review [Safety Procedures](/docs/work-instructions/safety-procedures)
 - Contact the processing team for assistance

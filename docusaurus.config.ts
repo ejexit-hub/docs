@@ -173,7 +173,7 @@ const config: Config = {
             },
             {
               label: 'Work Instructions',
-              to: '/docs/work-instructions/README',
+              to: '/docs/work-instructions/intro',
             },
             {
               label: 'Nomenclature',

@@ -1693,32 +1693,7 @@ aside[class*="toc"],
   margin: 0 auto;
 }
 
-/* Override for Product Training grid layout */
-.categories .container .row,
-section.categories .container .row,
-div.categories .container .row {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 2rem !important;
-  margin: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  flex-wrap: unset !important;
-  overflow: hidden !important;
-  flex-direction: unset !important;
-  align-items: unset !important;
-  justify-content: unset !important;
-}
-
-.categories .container .row > * {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  flex: unset !important;
-  flex-basis: unset !important;
-  flex-grow: unset !important;
-  flex-shrink: unset !important;
-}
+/* Product Training grid layout - removed conflicting overrides */
 
 /* Technical Cutlines Styles */
 .technical-cutlines-container {
@@ -3303,4 +3278,52 @@ table {
   .work-instruction-builder .theme-doc-markdown[data-path*="work-instructions-preview"] h3 {
     font-size: 1.2rem;
   }
+}
+
+/* WORK INSTRUCTIONS IFRAME SCROLLBAR STYLING */
+
+/* Custom scrollbar for iframes in work instructions */
+.theme-doc-markdown[data-path*="work-instructions"] iframe {
+  /* Hide default scrollbars */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(129, 186, 84, 0.6) transparent;
+}
+
+/* Webkit scrollbar styling for iframes */
+.theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2764AD 0%, #81BA54 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1e4a8a 0%, #6ba045 100%);
+}
+
+.theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #81BA54 0%, #2764AD 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #6ba045 0%, #1e4a8a 100%);
 }

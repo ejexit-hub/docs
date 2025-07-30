@@ -5,9 +5,7 @@ sidebar_label: Safety Procedures
 description: Essential safety guidelines and protocols for all processing operations
 ---
 
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 
-<WorkInstructionsNavBar />
 
 # Safety Procedures
 
@@ -136,7 +134,7 @@ Report any safety concerns or near-miss incidents immediately to your supervisor
 
 ## Related Documents
 
-- [Work Instructions Guide](/docs/work-instructions/README)
-- [Equipment Manuals](/docs/equipment-manuals)
-- [Emergency Procedures](/docs/emergency-procedures)
-- [First Aid Guidelines](/docs/first-aid)
+- [Work Instructions Guide](/docs/work-instructions)
+- [Equipment Setup Guide](/docs/work-instructions/equipment-setup-example)
+- [Safety Procedures](/docs/work-instructions/safety-procedures)
+- [Emergency Response](/docs/work-instructions)

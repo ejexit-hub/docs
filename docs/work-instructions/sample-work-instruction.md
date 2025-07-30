@@ -110,6 +110,6 @@ Take photos of any unusual conditions or issues for documentation.
 
 ## Related Documents
 
-- [Safety Manual](/docs/safety-manual)
-- [Equipment Manual](/docs/equipment-manual)
-- [Quality Procedures](/docs/quality-procedures)
+- [Safety Procedures](/docs/work-instructions/safety-procedures)
+- [Equipment Setup Guide](/docs/work-instructions/equipment-setup-example)
+- [Quality Procedures](/docs/work-instructions)

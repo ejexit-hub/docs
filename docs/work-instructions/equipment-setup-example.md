@@ -5,9 +5,7 @@ sidebar_label: Equipment Setup
 description: Equipment setup and configuration procedures with step-by-step guidance
 ---
 
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 
-<WorkInstructionsNavBar />
 
 # Equipment Setup Example
 
@@ -119,6 +117,6 @@ Always follow manufacturer guidelines for your specific equipment model.
 
 ## Related Documents
 
-- [Safety Manual](/docs/safety-manual)
-- [Equipment Manual](/docs/equipment-manual)
-- [Maintenance Procedures](/docs/maintenance)
+- [Safety Procedures](/docs/work-instructions/safety-procedures)
+- [Equipment Setup Guide](/docs/work-instructions/equipment-setup-example)
+- [Maintenance Procedures](/docs/work-instructions)

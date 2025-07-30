@@ -101,5 +101,5 @@ Your images automatically get:
 ## 📞 **Need Help?**
 
 - Check the [main Work Instructions page](/docs/work-instructions/intro)
-- Review the [Creating Work Instructions Guide](/docs/work-instructions/README)
+- Review the [Creating Work Instructions Guide](/docs/work-instructions)
 - Contact the documentation team

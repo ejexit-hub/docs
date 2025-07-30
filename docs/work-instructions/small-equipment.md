@@ -5,9 +5,7 @@ sidebar_label: Small Equipment
 description: Complete guide for handling, processing, and managing small equipment and components
 ---
 
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 
-<WorkInstructionsNavBar />
 
 # Small Equipment Procedures
 

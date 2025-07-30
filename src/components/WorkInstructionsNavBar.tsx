@@ -2,7 +2,12 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import styles from './WorkInstructionsNavBar.module.css';
 
-const navItems = [
+interface NavItem {
+  label: string;
+  to: string;
+}
+
+const navItems: NavItem[] = [
   { label: 'Safety Procedures', to: '/docs/work-instructions/safety-procedures' },
   { label: 'Receiving', to: '/docs/work-instructions/receiving' },
   { label: 'Large Equipment', to: '/docs/work-instructions/large-equipment' },
@@ -12,7 +17,7 @@ const navItems = [
   { label: 'Equipment Setup', to: '/docs/work-instructions/equipment-setup-example' },
 ];
 
-export default function WorkInstructionsNavBar() {
+function WorkInstructionsNavBar() {
   return (
     <nav className={styles.navBar}>
       {navItems.map((item) => (
@@ -23,3 +28,5 @@ export default function WorkInstructionsNavBar() {
     </nav>
   );
 }
+
+export default WorkInstructionsNavBar;

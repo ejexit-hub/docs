@@ -5,9 +5,7 @@ sidebar_label: Parts
 description: Complete guide for handling, inventory, and management of parts and components including erasure procedures
 ---
 
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 
-<WorkInstructionsNavBar />
 
 # Parts Procedures
 

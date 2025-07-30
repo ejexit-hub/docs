@@ -5,9 +5,7 @@ sidebar_label: Receiving
 description: Complete guide for receiving, inspecting, and processing incoming equipment and materials
 ---
 
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 
-<WorkInstructionsNavBar />
 
 # Receiving Procedures
 

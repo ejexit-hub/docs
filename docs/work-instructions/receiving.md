@@ -5,10 +5,16 @@ sidebar_label: Receiving
 description: Complete guide for receiving, inspecting, and processing incoming equipment and materials
 ---
 
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
+
 # Receiving Procedures
 
+## 🔍 **Receiving Inspection & Processing**
+
 <iframe 
-  src="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/pub?embedded=true"
+  src="https://docs.google.com/document/d/e/2PACX-1vRd6RFsKaOKU3A3n7QUJq8boyeDVKgPn0h2QNcVYJmci7lLuM6BWxIrImi-sOp_hd443HgD4LNB4uRf/pub?embedded=true"
   width="100%" 
   height="800px" 
   frameBorder="0"

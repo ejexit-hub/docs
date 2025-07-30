@@ -5,10 +5,16 @@ sidebar_label: Small Equipment
 description: Complete guide for handling, processing, and managing small equipment and components
 ---
 
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
+
 # Small Equipment Procedures
 
+## 🔧 **Small Equipment Processing & Handling**
+
 <iframe 
-  src="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/pub?embedded=true"
+  src="https://docs.google.com/document/d/e/2PACX-1vS97LVE8OVIbWjcc_XmsDcd3pP54amhGsnE6q96LaTVXmuHh9o4hoPZ5yeCsL99W323m4KZtSGW5M4z/pub?embedded=true"
   width="100%" 
   height="800px" 
   frameBorder="0"

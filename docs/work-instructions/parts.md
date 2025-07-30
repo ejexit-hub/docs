@@ -2,13 +2,29 @@
 id: parts
 title: Parts Procedures
 sidebar_label: Parts
-description: Complete guide for handling, inventory, and management of parts and components
+description: Complete guide for handling, inventory, and management of parts and components including erasure procedures
 ---
+
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
 
 # Parts Procedures
 
+## 🔧 **Parts Processing Procedures**
+
 <iframe 
-  src="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/pub?embedded=true"
+  src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true"
+  width="100%" 
+  height="800px" 
+  frameBorder="0"
+  style={{border: "none"}}>
+</iframe>
+
+## 🖥️ **CPU Procedures**
+
+<iframe 
+  src="https://docs.google.com/document/d/e/2PACX-1vQECXPc-EKPCpkCjQdxd-nmzAv8ILuwDXHMAFXwk2NpH8RjcYbJLFv1bQILG456t_XgTVLdDF0Hu5Tv/pub?embedded=true"
   width="100%" 
   height="800px" 
   frameBorder="0"
@@ -26,3 +42,4 @@ To connect your Google Doc:
 3. Copy the document ID from the URL
 4. Replace `YOUR_GOOGLE_DOC_ID` in the iframe src above
 :::
+

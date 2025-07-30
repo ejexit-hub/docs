@@ -24,97 +24,31 @@ export function ProductCarousel({
   autoPlay = false,
   interval = 5000,
 }: ProductCarouselProps) {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-
-  // Auto-play functionality
-  React.useEffect(() => {
-    if (!autoPlay || images.length <= 1) return;
-
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [autoPlay, interval, images.length]);
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
   if (!images || images.length === 0) {
     return <div className="text-center text-gray-500">No images available</div>;
   }
 
   return (
-    <div className={`relative w-full max-w-4xl mx-auto product-carousel ${className}`} style={{ maxWidth: '900px', overflow: 'hidden' }}>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 max-h-96" style={{ width: '100%', maxHeight: '600px' }}>
-        {/* Main Image */}
-        <img
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-          title={images[currentIndex].title || images[currentIndex].alt}
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-          loading="lazy"
-          style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }}
-        />
-        
-        {/* Image Title Overlay */}
-        {images[currentIndex].title && (
-          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3 text-sm font-medium">
-            {images[currentIndex].title}
-          </div>
-        )}
-        
-        {/* Navigation Arrows */}
-        {showNavigation && images.length > 1 && (
-          <>
-            <button
-              onClick={goToPrevious}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-              aria-label="Previous image"
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M10.5 12.5L5.5 8l5-4.5"/>
-              </svg>
-            </button>
-            <button
-              onClick={goToNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-              aria-label="Next image"
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M5.5 3.5l5 4.5-5 4.5"/>
-              </svg>
-            </button>
-          </>
-        )}
-      </div>
-      
-      {/* Indicators */}
-      {showIndicators && images.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`h-2 w-2 rounded-full transition-opacity duration-300 ${
-                index === currentIndex
-                  ? 'bg-white opacity-100'
-                  : 'bg-white/50 opacity-50 hover:opacity-75'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
+    <div className={`w-full max-w-6xl mx-auto product-gallery ${className}`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {images.map((image, index) => (
+          <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 group">
+            <img
+              src={image.src}
+              alt={image.alt}
+              title={image.title || image.alt}
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+              style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }}
             />
-          ))}
-        </div>
-      )}
+            {image.title && (
+              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {image.title}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

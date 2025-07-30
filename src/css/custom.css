@@ -2069,9 +2069,23 @@ img {
   height: auto;
 }
 
-/* Responsive iframe handling */
+/* Enhanced iframe styling for better container filling */
 iframe {
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 800px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  background: #ffffff !important;
+  display: block !important;
+  margin: 1rem 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+iframe:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Base responsive container improvements */
@@ -2290,9 +2304,16 @@ iframe {
 /* Responsive iframe improvements */
 @media screen and (max-width: 768px) {
   .markdown iframe {
-    max-width: 100%;
-    height: auto;
-    min-height: 300px;
+    width: 100% !important;
+    height: 600px !important;
+    margin: 0.75rem 0 !important;
+    border-radius: 8px !important;
+  }
+  
+  .theme-doc-markdown[data-path*="work-instructions"] iframe {
+    height: 600px !important;
+    margin: 1rem 0 !important;
+    border-radius: 8px !important;
   }
 }
 
@@ -3282,11 +3303,29 @@ table {
 
 /* WORK INSTRUCTIONS IFRAME SCROLLBAR STYLING */
 
-/* Custom scrollbar for iframes in work instructions */
+/* Enhanced iframe styling for work instructions */
 .theme-doc-markdown[data-path*="work-instructions"] iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 800px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(39, 100, 173, 0.1) !important;
+  background: #ffffff !important;
+  display: block !important;
+  margin: 1.5rem 0 !important;
+  transition: all 0.3s ease !important;
+  /* Force content to fill width */
+  transform: scale(1.02) !important;
+  transform-origin: top left !important;
   /* Hide default scrollbars */
   scrollbar-width: thin;
   scrollbar-color: rgba(129, 186, 84, 0.6) transparent;
+}
+
+.theme-doc-markdown[data-path*="work-instructions"] iframe:hover {
+  box-shadow: 0 8px 30px rgba(39, 100, 173, 0.2) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Webkit scrollbar styling for iframes */

@@ -76,7 +76,7 @@ const procedureData: Procedure[] = [
       'Item Number: Template: [Line] [MODEL NUMBER] [Form Factor] (Example: Optiplex 7440 SFF)',
       'Specify "- NO OS" in Item ID if item has no OS',
       'If item has OS, do not specify that it does (it is the assumption)',
-      'Master Item Title: Template: [Chipset] [RAM Type] Desktop (Example: LGA1151 DDR3 DESKTOP)',
+      'Master Item Title: Template: [socket] [RAM Type] Desktop (Example: LGA1151 DDR3 DESKTOP)',
       'Attributes: CPU, Total RAM GB, Drive GB, Drive Type'
     ],
     requirements: ['Desktop inventory system', 'Model identification', 'Specification verification'],

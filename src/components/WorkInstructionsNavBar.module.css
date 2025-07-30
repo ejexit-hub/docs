@@ -1,0 +1,96 @@
+.navBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(39, 100, 173, 0.1) 0%, rgba(129, 186, 84, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.navBar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2764AD 0%, #81BA54 100%);
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.navLink:hover, .navLink:focus {
+  background: rgba(129, 186, 84, 0.2);
+  color: #81BA54;
+  border-color: rgba(129, 186, 84, 0.3);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(129, 186, 84, 0.2);
+}
+
+.navLink:active {
+  transform: translateY(0);
+}
+
+/* Active state for current page */
+.navLink[aria-current="page"] {
+  background: linear-gradient(135deg, #2764AD 0%, #81BA54 100%);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.navLink[aria-current="page"]:hover {
+  background: linear-gradient(135deg, #2764AD 0%, #81BA54 100%);
+  color: white;
+  transform: translateY(0);
+  box-shadow: 0 4px 16px rgba(39, 100, 173, 0.3);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .navBar {
+    padding: 0.75rem 1rem;
+    gap: 0.25rem;
+  }
+  
+  .navLink {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navBar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .navBar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .navLink {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}

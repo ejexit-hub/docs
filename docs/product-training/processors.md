@@ -26,6 +26,7 @@ The Central Processing Unit (CPU) is the core component that performs calculatio
 - **Core Count:** More cores allow efficient multitasking and enhanced performance.
 - **Clock Speed:** Measured in GHz; higher speeds enable faster processing.
 - **Cache Size:** Temporary storage for rapid data access; larger caches improve performance.
+- **Socket Type:** The physical interface that mates the CPU to the motherboard; matching socket types are essential for hardware compatibility and future upgrade options.
 
 :::
 

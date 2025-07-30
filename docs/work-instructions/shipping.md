@@ -5,6 +5,10 @@ sidebar_label: Shipping
 description: Complete guide for shipping, packaging, and logistics procedures
 ---
 
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
+
 # Shipping Procedures
 
 <iframe 

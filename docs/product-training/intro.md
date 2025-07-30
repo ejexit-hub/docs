@@ -51,7 +51,7 @@ Explore our comprehensive product training modules covering all major IT asset c
   textAlign: 'center'
 }}>
   <h3 style={{ color: '#2764AD', marginBottom: '1rem' }}>📚 What You'll Learn</h3>
-  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginTop: '1.5rem', '@media (max-width: 768px)': { gridTemplateColumns: '1fr' } }}>
     <div>
       <strong style={{ color: '#81BA54' }}>Asset Valuation</strong>
       <p style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)', margin: '0.5rem 0 0' }}>

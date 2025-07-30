@@ -2,8 +2,12 @@
 id: safety-procedures
 title: Safety Procedures
 sidebar_label: Safety Procedures
-description: Essential safety procedures and guidelines
+description: Essential safety guidelines and protocols for all processing operations
 ---
+
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
 
 # Safety Procedures
 

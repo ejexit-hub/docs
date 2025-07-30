@@ -5,10 +5,14 @@ sidebar_label: Large Equipment
 description: Complete guide for handling, processing, and managing large equipment and machinery
 ---
 
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
+
 # Large Equipment Procedures
 
 <iframe 
-  src="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/pub?embedded=true"
+  src="https://docs.google.com/document/d/e/2PACX-1vTXJLpP7m0F4b2Z4MWDc-nLcjnzZOLBYTfMkfCKx1PQg71OlQjq4flzfrQq_l-1zclKcMfYUxMVW5Yw/pub?embedded=true"
   width="100%" 
   height="800px" 
   frameBorder="0"

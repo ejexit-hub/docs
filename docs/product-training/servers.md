@@ -129,10 +129,6 @@ Standalone servers providing localized data management and IT services.
   <p>In secondary markets, certain server parts consistently fetch higher prices. Modern multi‑core processors and large‑capacity ECC memory modules are typically top‑value components. Enterprise‑grade storage drives (SSD or SAS HDD) tend to retain strong resale value, and specialized add‑ons like high‑speed NICs or RAID controller cards are often in high demand as well.</p>
 </Accordion>
 
-<Accordion title="Which server form factor has the highest resale value?" description="Resale value trends for rack vs. blade vs. tower servers" type="note">
-  <p>Rack‑mounted and blade servers generally hold their value best on the used market. These types usually contain high‑end components and are popular in enterprise data centers, keeping demand (and resale prices) high. By contrast, tower servers (common in small offices) typically have lower resale value due to more modest components and limited buyer demand.</p>
-</Accordion>
-
 <Accordion title="How can I maximize the value recovered from a decommissioned server?" description="Best practices to get the highest return when reselling retired servers" type="tip">
   <p>To recover the most value from a retired server, focus on extracting its high‑value parts rather than selling the unit whole. Identify and remove key components like CPUs, RAM, and storage drives that have strong resale demand. Selling these parts individually often yields greater total profit, though it requires careful handling. Be sure to test each component for functionality and securely wipe any data on drives. Cleaning the hardware and documenting each part’s model and specifications will make them more appealing to buyers.</p>
 </Accordion>

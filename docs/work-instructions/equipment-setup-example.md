@@ -2,8 +2,12 @@
 id: equipment-setup-example
 title: Equipment Setup Example
 sidebar_label: Equipment Setup
-description: Example work instruction for equipment setup with pictures
+description: Equipment setup and configuration procedures with step-by-step guidance
 ---
+
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
 
 # Equipment Setup Example
 

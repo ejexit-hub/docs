@@ -19,7 +19,11 @@ RAM (Random Access Memory) temporarily stores data actively used by a computer, 
 ## 2. Key Specifications
 - **Capacity:** Typically 4GB, 8GB, 16GB, 32GB, or more.
 - **Speed:** Measured in MHz; higher speeds improve performance.
-- **Form Factor:** Desktop (DIMM), Laptop (SO-DIMM).
+- **Error Correction (ECC vs. Non-ECC):** ECC memory can detect and correct single-bit errors, critical for server and enterprise environments.
+- **Timing:** Refers to how quickly RAM responds to commands; lower timing values generally mean faster performance.
+- **CAS Latency (CL):** Indicates the delay between a command and when data becomes available; lower CL values are preferred for performance.
+
+
 
 ## 3. Common Use Cases
 - General Computing: 8GB to 16GB recommended for smooth performance.

@@ -14,7 +14,7 @@ import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar'
 ## 🔧 **Parts Processing Procedures**
 
 <iframe 
-  src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true"
+  src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true&rm=minimal"
   width="100%" 
   height="800px" 
   frameBorder="0"
@@ -24,7 +24,7 @@ import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar'
 ## 🖥️ **CPU Procedures**
 
 <iframe 
-  src="https://docs.google.com/document/d/e/2PACX-1vQECXPc-EKPCpkCjQdxd-nmzAv8ILuwDXHMAFXwk2NpH8RjcYbJLFv1bQILG456t_XgTVLdDF0Hu5Tv/pub?embedded=true"
+  src="https://docs.google.com/document/d/e/2PACX-1vQECXPc-EKPCpkCjQdxd-nmzAv8ILuwDXHMAFXwk2NpH8RjcYbJLFv1bQILG456t_XgTVLdDF0Hu5Tv/pub?embedded=true&rm=minimal"
   width="100%" 
   height="800px" 
   frameBorder="0"

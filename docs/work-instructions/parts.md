@@ -7,7 +7,7 @@ description: Procedures for processing and handling parts and components
 
 # Parts Processing
 
-## 🔧 **Parts Processing Procedures**
+## 🔧 **Erasure Procedures**
 
 <iframe 
   src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true&rm=minimal"

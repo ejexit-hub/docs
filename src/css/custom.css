@@ -2849,9 +2849,13 @@ table {
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  margin: 1.5rem 0;
-  max-width: 100%;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  max-height: 500px;
+  width: 100%;
   height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] img:hover {
@@ -2969,8 +2973,10 @@ table {
   }
 
   .theme-doc-markdown[data-path*="work-instructions"] img {
-    margin: 1rem 0;
+    margin: 1rem auto;
     border-radius: 8px;
+    max-width: 100%;
+    max-height: 400px;
   }
 }
 

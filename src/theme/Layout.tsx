@@ -54,17 +54,43 @@ export default function CustomLayout(props) {
       const style = document.createElement('style');
       style.id = 'chatbase-custom-style';
       style.innerHTML = `
-        /* Change Chatbase FAB background to #2764AD */
-        .chatbase-chat-button, .chatbase-chat-button svg {
-          background: #2764AD !important;
+        /* Change Chatbase FAB background to ExitTech green */
+        .chatbase-chat-button, 
+        .chatbase-chat-button svg,
+        .chatbase-chat-button div,
+        .chatbase-chat-button button,
+        .chatbase-chat-button * {
+          background: #81BA54 !important;
+          background-color: #81BA54 !important;
           color: #fff !important;
         }
-        .chatbase-chat-button svg path {
+        .chatbase-chat-button svg path,
+        .chatbase-chat-button svg * {
           fill: #fff !important;
+        }
+        /* Override any hover states */
+        .chatbase-chat-button:hover,
+        .chatbase-chat-button:hover svg,
+        .chatbase-chat-button:hover div,
+        .chatbase-chat-button:hover button {
+          background: #81BA54 !important;
+          background-color: #81BA54 !important;
         }
       `;
       document.head.appendChild(style);
     }
+
+    // Apply styles after a delay to ensure Chatbase has loaded
+    setTimeout(() => {
+      const chatButton = document.querySelector('.chatbase-chat-button');
+      if (chatButton) {
+        chatButton.setAttribute('style', 'background: #81BA54 !important; background-color: #81BA54 !important;');
+        const svg = chatButton.querySelector('svg');
+        if (svg) {
+          svg.setAttribute('style', 'background: #81BA54 !important; background-color: #81BA54 !important;');
+        }
+      }
+    }, 2000);
   }, []);
 
   return <Layout {...props} />;

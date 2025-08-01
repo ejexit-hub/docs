@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { ImageModal } from './image-modal';
 
 interface ProductImage {
   src: string;
@@ -26,6 +27,7 @@ export function ProductCarousel({
 }: ProductCarouselProps) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [imageError, setImageError] = React.useState(false);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   // Auto-play functionality
   React.useEffect(() => {
@@ -58,6 +60,10 @@ export function ProductCarousel({
     setImageError(true);
   };
 
+  const handleImageClick = () => {
+    setIsModalOpen(true);
+  };
+
   if (!images || images.length === 0) {
     return <div className="text-center text-gray-500 p-8 border-2 border-red-500 bg-red-50">No images available</div>;
   }
@@ -78,15 +84,26 @@ export function ProductCarousel({
             </div>
           </div>
         ) : (
-          <img
-            src={encodeURI(images[currentIndex].src)}
-            alt={images[currentIndex].alt}
-            title={images[currentIndex].title || images[currentIndex].alt}
-            className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-            loading="lazy"
-            style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }}
-            onError={handleImageError}
-          />
+          <div className="relative h-full w-full group cursor-pointer" onClick={handleImageClick}>
+            <img
+              src={encodeURI(images[currentIndex].src)}
+              alt={images[currentIndex].alt}
+              title={images[currentIndex].title || images[currentIndex].alt}
+              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+              style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }}
+              onError={handleImageError}
+            />
+            
+            {/* Expand Icon Overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+              <div className="bg-white/90 dark:bg-gray-800/90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-gray-700 dark:text-gray-300">
+                  <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
         )}
         
         {/* Image Title Overlay */}
@@ -162,6 +179,13 @@ export function ProductCarousel({
           ))}
         </div>
       )}
+      
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        image={images[currentIndex]}
+      />
     </div>
   );
 }

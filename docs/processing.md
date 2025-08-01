@@ -24,36 +24,100 @@ Standardized terminology and naming conventions used across all processes.
 
 ## 🎯 **Quick Access**
 
-<div class="row">
-  <div class="col col--6">
-    <div class="card">
-      <div class="card__header">
-        <h3>Work Instructions</h3>
-      </div>
-      <div class="card__body">
-        <p>Step-by-step guides with pictures for all processing procedures.</p>
-      </div>
-      <div class="card__footer">
-        <a href="/docs/work-instructions/intro" class="button button--primary button--block">
-          View Work Instructions
-        </a>
-      </div>
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+  gap: '2rem',
+  margin: '2rem 0'
+}}>
+  <div className="quick-access-card" style={{
+    background: 'linear-gradient(135deg, rgba(39, 100, 173, 0.1), rgba(129, 186, 84, 0.1))',
+    border: '1px solid rgba(39, 100, 173, 0.2)',
+    borderRadius: '12px',
+    padding: '1.5rem',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    cursor: 'pointer'
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+      <div style={{
+        width: '8px',
+        height: '8px',
+        borderRadius: '50%',
+        backgroundColor: '#81BA54',
+        marginRight: '0.75rem'
+      }}></div>
+      <h3 style={{
+        margin: 0,
+        color: '#2764AD',
+        fontSize: '1.25rem',
+        fontWeight: '600'
+      }}>Work Instructions</h3>
     </div>
+    <p style={{
+      color: '#666',
+      marginBottom: '1.5rem',
+      lineHeight: '1.6'
+    }}>Step-by-step guides with pictures for all processing procedures.</p>
+    <a href="/docs/work-instructions/intro" className="quick-access-button" style={{
+      display: 'inline-block',
+      backgroundColor: '#81BA54',
+      color: 'white',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '8px',
+      textDecoration: 'none',
+      fontWeight: '500',
+      transition: 'all 0.3s ease',
+      border: 'none',
+      cursor: 'pointer'
+    }}>
+      View Work Instructions
+    </a>
   </div>
-  <div class="col col--6">
-    <div class="card">
-      <div class="card__header">
-        <h3>Nomenclature</h3>
-      </div>
-      <div class="card__body">
-        <p>Standardized terminology and naming conventions.</p>
-      </div>
-      <div class="card__footer">
-        <a href="/nomenclature" class="button button--primary button--block">
-          View Nomenclature
-        </a>
-      </div>
+  
+  <div className="quick-access-card" style={{
+    background: 'linear-gradient(135deg, rgba(39, 100, 173, 0.1), rgba(129, 186, 84, 0.1))',
+    border: '1px solid rgba(39, 100, 173, 0.2)',
+    borderRadius: '12px',
+    padding: '1.5rem',
+    transition: 'all 0.3s ease',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    cursor: 'pointer'
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+      <div style={{
+        width: '8px',
+        height: '8px',
+        borderRadius: '50%',
+        backgroundColor: '#81BA54',
+        marginRight: '0.75rem'
+      }}></div>
+      <h3 style={{
+        margin: 0,
+        color: '#2764AD',
+        fontSize: '1.25rem',
+        fontWeight: '600'
+      }}>Nomenclature</h3>
     </div>
+    <p style={{
+      color: '#666',
+      marginBottom: '1.5rem',
+      lineHeight: '1.6'
+    }}>Standardized terminology and naming conventions used across all processes.</p>
+    <a href="/nomenclature" className="quick-access-button" style={{
+      display: 'inline-block',
+      backgroundColor: '#81BA54',
+      color: 'white',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '8px',
+      textDecoration: 'none',
+      fontWeight: '500',
+      transition: 'all 0.3s ease',
+      border: 'none',
+      cursor: 'pointer'
+    }}>
+      View Nomenclature
+    </a>
   </div>
 </div>
 

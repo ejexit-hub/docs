@@ -1,11 +1,9 @@
 ---
 id: receiving
-title: Receiving Procedures
+title: Receiving
 sidebar_label: Receiving
-description: Complete guide for receiving, inspecting, and processing incoming equipment and materials
+description: Procedures for receiving, inspecting, and processing incoming equipment and materials
 ---
-
-
 
 # Receiving Procedures
 

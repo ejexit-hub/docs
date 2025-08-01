@@ -158,9 +158,6 @@ Refer to the [Storage Cut Lines](link‑to‑document) for SKU‑level specs, en
   title="Storage Gear Gallery"
 />
 
----
-
-
 ## Technical Cutlines
 
 <iframe

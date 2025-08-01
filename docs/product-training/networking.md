@@ -141,13 +141,10 @@ Refer to the [Networking Cut Lines](link‑to‑document) for SKU‑specific spe
 
 ## Product Gallery
 
-<ProductCarousel
+<ProductCarousel 
   images={networking_images}
   title="Networking Gear Gallery"
 />
-
----
-
 
 ## Technical Cutlines
 

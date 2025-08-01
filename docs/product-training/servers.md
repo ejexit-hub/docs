@@ -148,9 +148,6 @@ Refer to the [Technical Cut Lines](link-to-document) for detailed specification 
   title="Server Gallery"
 />
 
----
-
-
 ## Technical Cutlines
 
 <iframe

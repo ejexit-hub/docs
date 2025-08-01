@@ -1,11 +1,11 @@
 ---
 id: erasure
-title: Erasure Procedures
+title: Erasure
 sidebar_label: Erasure
-description: Complete guide for data erasure procedures and secure deletion processes
+description: Data erasure procedures and protocols
 ---
 
-# Erasure Procedures
+# Data Erasure Procedures
 
 <iframe 
   src="https://docs.google.com/document/d/e/2PACX-1vSv6Q1cZegldbSQkuvdbHiL2SRFxeVod4cOsth5iNpylimdj3rAgtonx8sBgn9t7LvDJRYaR9W5n8dn/pub?embedded=true"

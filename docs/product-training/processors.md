@@ -66,9 +66,6 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
   title="Processors (CPU) Gallery"
 />
 
----
-
-
 ## Technical Cutlines
 
 <iframe
@@ -79,4 +76,3 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
   title="Technical Cutlines"
   allowfullscreen
 ></iframe>
-

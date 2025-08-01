@@ -23,19 +23,19 @@
   background: linear-gradient(90deg, #2764AD 0%, #81BA54 100%);
 }
 
-.navLink {
+.navItem {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-decoration: none;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
   border: 1px solid transparent;
 }
 
-.navLink:hover, .navLink:focus {
+.navItem:hover, .navItem:focus {
   background: rgba(129, 186, 84, 0.2);
   color: #81BA54;
   border-color: rgba(129, 186, 84, 0.3);
@@ -44,23 +44,23 @@
   box-shadow: 0 4px 12px rgba(129, 186, 84, 0.2);
 }
 
-.navLink:active {
+.navItem:active {
   transform: translateY(0);
 }
 
 /* Active state for current page */
-.navLink[aria-current="page"] {
-  background: linear-gradient(135deg, #2764AD 0%, #81BA54 100%);
+.navItem.active {
+  background: #81BA54;
   color: white;
   border-color: rgba(255, 255, 255, 0.2);
   font-weight: 600;
 }
 
-.navLink[aria-current="page"]:hover {
-  background: linear-gradient(135deg, #2764AD 0%, #81BA54 100%);
+.navItem.active:hover {
+  background: #81BA54;
   color: white;
   transform: translateY(0);
-  box-shadow: 0 4px 16px rgba(39, 100, 173, 0.3);
+  box-shadow: 0 4px 16px rgba(129, 186, 84, 0.3);
 }
 
 /* Responsive design */
@@ -70,9 +70,9 @@
     gap: 0.25rem;
   }
   
-  .navLink {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.8rem;
+  .navItem {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 
@@ -89,7 +89,7 @@
     display: none;
   }
   
-  .navLink {
+  .navItem {
     white-space: nowrap;
     flex-shrink: 0;
   }

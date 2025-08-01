@@ -1,13 +1,9 @@
 ---
 id: shipping
-title: Shipping Procedures
+title: Shipping
 sidebar_label: Shipping
-description: Complete guide for shipping, packaging, and logistics procedures
+description: Procedures for shipping, packaging, and logistics
 ---
-
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
-
-<WorkInstructionsNavBar />
 
 # Shipping Procedures
 

@@ -5,11 +5,7 @@ sidebar_label: Overview
 description: Comprehensive work instructions for all processing procedures and equipment management
 ---
 
-import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
-
 # Work Instructions
-
-<WorkInstructionsNavBar />
 
 Welcome to the comprehensive Work Instructions section. Here you'll find detailed procedures for all aspects of our processing operations, from safety protocols to equipment management and logistics.
 

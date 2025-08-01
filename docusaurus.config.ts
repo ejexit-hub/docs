@@ -194,42 +194,58 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Training',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Product Training',
+              to: '/docs/product-training/intro',
+            },
+            {
+              label: 'IT Glossary',
+              to: '/it-glossary',
+            },
+            {
+              label: 'Technical Cutlines',
+              to: '/docs/technical-cutlines',
+            },
+          ],
+        },
+        {
+          title: 'Processing',
+          items: [
+            {
+              label: 'Work Instructions',
+              to: '/docs/work-instructions/intro',
+            },
+            {
+              label: 'Safety Procedures',
+              to: '/docs/work-instructions/safety-procedures',
+            },
+            {
+              label: 'Equipment Setup',
+              to: '/docs/work-instructions/equipment-setup-example',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Getting Started',
               to: '/docs/intro',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Processing Guide',
+              to: '/docs/processing',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Nomenclature',
+              to: '/nomenclature',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ExitTech. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

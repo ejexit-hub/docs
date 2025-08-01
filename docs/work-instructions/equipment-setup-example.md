@@ -1,13 +1,13 @@
 ---
 id: equipment-setup-example
-title: Equipment Setup Example
+title: Equipment Setup
 sidebar_label: Equipment Setup
-description: Equipment setup and configuration procedures with step-by-step guidance
+description: Equipment setup and configuration procedures
 ---
 
+import Details from '@site/src/components/Details';
 
-
-# Equipment Setup Example
+# Equipment Setup Procedures
 
 This is a practical example of how to create work instructions with pictures for equipment setup.
 
@@ -77,8 +77,7 @@ Calibrate the equipment according to specifications.
 
 ### Common Setup Issues
 
-<details>
-<summary>Equipment won't power on</summary>
+<Details summary="Equipment won't power on">
 
 ![Power Issue](/img/products/laptops-desktops/IMG_5510.JPG)
 
@@ -87,10 +86,9 @@ Calibrate the equipment according to specifications.
 - Verify outlet functionality
 - Contact support if needed
 
-</details>
+</Details>
 
-<details>
-<summary>Calibration errors</summary>
+<Details summary="Calibration errors">
 
 ![Calibration Error](/img/products/laptops-desktops/IMG_5521.JPG)
 
@@ -99,7 +97,7 @@ Calibrate the equipment according to specifications.
 - Check sensor connections
 - Refer to manual for error codes
 
-</details>
+</Details>
 
 ## Safety Reminders
 

@@ -767,23 +767,31 @@ details > summary::-webkit-details-marker {
 }
 
 .faq-accordion-note {
-  border-left-color: #f59e0b;
+  border-left-color: #2764AD;
 }
 
 .faq-accordion-note .faq-accordion-header {
-  border-left-color: #f59e0b;
+  border-left-color: #2764AD;
 }
 
 .faq-accordion-note .faq-accordion-content {
-  border-left-color: #f59e0b;
+  border-left-color: #2764AD;
 }
 
 .faq-accordion-note .faq-accordion-title h4 {
-  color: #f59e0b;
+  color: #2764AD;
+}
+
+[data-theme='dark'] .faq-accordion-note .faq-accordion-title h4 {
+  color: #81BA54;
 }
 
 .faq-accordion-note .faq-accordion-icon {
-  color: #f59e0b;
+  color: #2764AD;
+}
+
+[data-theme='dark'] .faq-accordion-note .faq-accordion-icon {
+  color: #81BA54;
 }
 
 /* ========================================
@@ -878,17 +886,17 @@ details > summary::-webkit-details-marker {
 
 /* Carousel size optimization for better visibility */
 [data-path*="product-training"] .product-carousel {
-  max-width: 585px !important;
-  margin: 1.25rem auto;
-  float: right;
+  max-width: 900px !important;
+  margin: 2rem auto !important;
+  float: none !important;
   clear: both;
-  margin-left: 2rem;
-  margin-bottom: 1.25rem;
+  display: block !important;
+  width: 100% !important;
 }
 
 /* Make carousel images larger and more visible */
 [data-path*="product-training"] .product-carousel img {
-  max-height: 338px !important;
+  max-height: 500px !important;
   object-fit: cover;
 }
 
@@ -909,8 +917,31 @@ details > summary::-webkit-details-marker {
 
 /* Additional constraints for carousel container */
 [data-path*="product-training"] .product-carousel > div {
-  max-width: 585px !important;
-  max-height: 416px !important;
+  max-width: 900px !important;
+  max-height: 600px !important;
+}
+
+/* Ensure carousel navigation arrows are visible */
+[data-path*="product-training"] .product-carousel button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 50 !important;
+  position: absolute !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Make arrows more prominent */
+[data-path*="product-training"] .product-carousel button:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Ensure carousel container allows arrows to be visible */
+[data-path*="product-training"] .product-carousel > div {
+  position: relative !important;
+  overflow: visible !important;
 }
 
 /* ========================================
@@ -953,13 +984,14 @@ details > summary::-webkit-details-marker {
 /* Responsive sizing for mobile devices */
 @media (max-width: 768px) {
   [data-path*="product-training"] .product-carousel {
-    max-width: 416px !important;
-    float: none;
-    margin: 1rem auto;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 1rem auto !important;
+    display: block !important;
   }
   
   [data-path*="product-training"] .product-carousel img {
-    max-height: 234px !important;
+    max-height: 300px !important;
   }
   
   [data-path*="product-training"] .product-carousel .carousel-navigation {
@@ -3366,3 +3398,19 @@ table {
 [data-theme='dark'] .theme-doc-markdown[data-path*="work-instructions"] iframe::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #6ba045 0%, #1e4a8a 100%);
 }
+
+/* Quick Access Cards Hover Effects */
+[data-path*="processing"] .quick-access-card {
+  transition: all 0.3s ease;
+}
+
+[data-path*="processing"] .quick-access-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(39, 100, 173, 0.2);
+}
+
+[data-path*="processing"] .quick-access-card:hover .quick-access-button {
+  background-color: #6ba045;
+}
+
+/* Ensure carousel container allows arrows to be visible */

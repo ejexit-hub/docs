@@ -1,32 +1,35 @@
 import React from 'react';
+import { useLocation } from '@docusaurus/router';
 import Link from '@docusaurus/Link';
 import styles from './WorkInstructionsNavBar.module.css';
 
-interface NavItem {
-  label: string;
-  to: string;
-}
-
-const navItems: NavItem[] = [
-  { label: 'Safety Procedures', to: '/docs/work-instructions/safety-procedures' },
-  { label: 'Receiving', to: '/docs/work-instructions/receiving' },
-  { label: 'Large Equipment', to: '/docs/work-instructions/large-equipment' },
-  { label: 'Small Equipment', to: '/docs/work-instructions/small-equipment' },
-  { label: 'Parts', to: '/docs/work-instructions/parts' },
-  { label: 'Shipping', to: '/docs/work-instructions/shipping' },
-  { label: 'Equipment Setup', to: '/docs/work-instructions/equipment-setup-example' },
+const workInstructionCategories = [
+  { label: 'Safety Procedures', path: '/docs/work-instructions/safety-procedures' },
+  { label: 'Receiving', path: '/docs/work-instructions/receiving' },
+  { label: 'Large Equipment', path: '/docs/work-instructions/large-equipment' },
+  { label: 'Small Equipment', path: '/docs/work-instructions/small-equipment' },
+  { label: 'Parts', path: '/docs/work-instructions/parts' },
+  { label: 'Shipping', path: '/docs/work-instructions/shipping' },
+  { label: 'Equipment Setup', path: '/docs/work-instructions/equipment-setup-example' },
 ];
 
-function WorkInstructionsNavBar() {
+export default function WorkInstructionsNavBar() {
+  const location = useLocation();
+
   return (
-    <nav className={styles.navBar}>
-      {navItems.map((item) => (
-        <Link key={item.to} className={styles.navLink} to={item.to}>
-          {item.label}
-        </Link>
-      ))}
-    </nav>
+    <div className={styles.navBar}>
+      {workInstructionCategories.map((category) => {
+        const isActive = location.pathname === category.path;
+        return (
+          <Link
+            key={category.path}
+            to={category.path}
+            className={`${styles.navItem} ${isActive ? styles.active : ''}`}
+          >
+            {category.label}
+          </Link>
+        );
+      })}
+    </div>
   );
 }
-
-export default WorkInstructionsNavBar;

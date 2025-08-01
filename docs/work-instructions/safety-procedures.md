@@ -5,39 +5,19 @@ sidebar_label: Safety Procedures
 description: Essential safety guidelines and protocols for all processing operations
 ---
 
-
+import Details from '@site/src/components/Details';
 
 # Safety Procedures
 
-Essential safety procedures and guidelines for all ExitTech operations.
+## Overview
+
+Safety is our top priority in all processing operations. This document outlines essential safety procedures that must be followed at all times.
 
 ## Prerequisites
 
-- Safety training certification
-- Appropriate PPE (Personal Protective Equipment)
-- Emergency contact information
-- First aid kit access
+Before beginning any work, ensure you have:
 
-## Step 1: Pre-Work Safety Check
-
-Before starting any work, perform a comprehensive safety check of your work area.
-
-![Pre-Work Safety Check](/img/products/laptops-desktops/IMG_1548.JPEG)
-
-**Safety Checklist:**
-- Verify emergency exits are accessible
-- Check fire extinguisher locations
-- Ensure proper lighting and ventilation
-- Confirm emergency contact numbers are posted
-
-## Step 2: PPE Assessment
-
-Assess and don appropriate Personal Protective Equipment for your specific task.
-
-![PPE Assessment](/img/products/laptops-desktops/IMG_2663.JPG)
-
-**Required PPE:**
-- Safety glasses or goggles
+- Safety glasses
 - Appropriate work gloves
 - Safety footwear
 - Hearing protection (if needed)
@@ -83,8 +63,7 @@ Review emergency procedures and ensure you know how to respond to incidents.
 
 ### Common Safety Issues
 
-<details>
-<summary>Equipment malfunction during operation</summary>
+<Details summary="Equipment malfunction during operation">
 
 ![Equipment Malfunction](/img/products/laptops-desktops/IMG_5510.JPG)
 
@@ -95,10 +74,9 @@ Review emergency procedures and ensure you know how to respond to incidents.
 4. Document the incident
 5. Do not attempt repairs unless qualified
 
-</details>
+</Details>
 
-<details>
-<summary>Injury or medical emergency</summary>
+<Details summary="Injury or medical emergency">
 
 ![Medical Emergency](/img/products/laptops-desktops/IMG_5521.JPG)
 
@@ -109,7 +87,7 @@ Review emergency procedures and ensure you know how to respond to incidents.
 4. Notify supervisor immediately
 5. Document the incident
 
-</details>
+</Details>
 
 ## Safety Reminders
 

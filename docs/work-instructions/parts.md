@@ -1,13 +1,11 @@
 ---
 id: parts
-title: Parts Procedures
+title: Parts
 sidebar_label: Parts
-description: Complete guide for handling, inventory, and management of parts and components including erasure procedures
+description: Procedures for processing and handling parts and components
 ---
 
-
-
-# Parts Procedures
+# Parts Processing
 
 ## 🔧 **Parts Processing Procedures**
 

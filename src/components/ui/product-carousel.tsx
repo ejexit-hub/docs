@@ -25,6 +25,7 @@ export function ProductCarousel({
   interval = 5000,
 }: ProductCarouselProps) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [imageError, setImageError] = React.useState(false);
 
   // Auto-play functionality
   React.useEffect(() => {
@@ -39,32 +40,54 @@ export function ProductCarousel({
 
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
+    setImageError(false);
   };
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setImageError(false);
   };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
+    setImageError(false);
+  };
+
+  const handleImageError = () => {
+    console.error('Failed to load image:', images[currentIndex].src);
+    setImageError(true);
   };
 
   if (!images || images.length === 0) {
-    return <div className="text-center text-gray-500">No images available</div>;
+    return <div className="text-center text-gray-500 p-8 border-2 border-red-500 bg-red-50">No images available</div>;
   }
 
+  console.log('ProductCarousel rendering with images:', images.length, images);
+  console.log('showNavigation:', showNavigation, 'images.length > 1:', images.length > 1);
+
   return (
-    <div className={`relative w-full max-w-4xl mx-auto product-carousel ${className}`} style={{ maxWidth: '900px', overflow: 'hidden' }}>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 max-h-96" style={{ width: '100%', maxHeight: '600px' }}>
+    <div className={`relative w-full max-w-4xl mx-auto product-carousel ${className}`} style={{ maxWidth: '900px', overflow: 'visible', position: 'relative' }}>
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 max-h-96" style={{ width: '100%', maxHeight: '600px', position: 'relative' }}>
         {/* Main Image */}
-        <img
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-          title={images[currentIndex].title || images[currentIndex].alt}
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-          loading="lazy"
-          style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }}
-        />
+        {imageError ? (
+          <div className="flex items-center justify-center h-full w-full bg-gray-200 dark:bg-gray-700">
+            <div className="text-center text-gray-500">
+              <div className="text-4xl mb-2">🖼️</div>
+              <div className="text-sm">Image failed to load</div>
+              <div className="text-xs text-gray-400 mt-1">{images[currentIndex].src}</div>
+            </div>
+          </div>
+        ) : (
+          <img
+            src={encodeURI(images[currentIndex].src)}
+            alt={images[currentIndex].alt}
+            title={images[currentIndex].title || images[currentIndex].alt}
+            className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+            style={{ maxWidth: '100%', height: '100%', objectFit: 'cover' }}
+            onError={handleImageError}
+          />
+        )}
         
         {/* Image Title Overlay */}
         {images[currentIndex].title && (
@@ -78,20 +101,44 @@ export function ProductCarousel({
           <>
             <button
               onClick={goToPrevious}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors z-10"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/80 text-white p-2 rounded-full hover:bg-black/100 transition-colors z-50"
               aria-label="Previous image"
+              style={{ 
+                width: '40px', 
+                height: '40px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                position: 'absolute',
+                left: '8px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 50
+              }}
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M10.5 12.5L5.5 8l5-4.5"/>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
               </svg>
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors z-10"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/80 text-white p-2 rounded-full hover:bg-black/100 transition-colors z-50"
               aria-label="Next image"
+              style={{ 
+                width: '40px', 
+                height: '40px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                position: 'absolute',
+                right: '8px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 50
+              }}
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M5.5 3.5l5 4.5-5 4.5"/>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
               </svg>
             </button>
           </>
@@ -147,8 +194,8 @@ export function getProductImages(category: string): ProductImage[] {
     'storage': [
       { src: '/img/products/storage/Screenshot 2025-07-14 113024.png', alt: 'Storage Product 1', title: 'Enterprise SSD' },
       { src: '/img/products/storage/Screenshot 2025-07-14 113116.png', alt: 'Storage Product 2', title: 'High-capacity HDD' },
-      { src: '/img/products/storage/Screenshot 2025-07-14 113147.png', alt: 'Storage Product 3', title: 'NVMe Drive' },
-      { src: '/img/products/storage/Screenshot 2025-07-14 113238.png', alt: 'Storage Product 4', title: 'RAID Array' },
+      { src: '/img/products/storage/Screenshot 2025-07-14 113147.png', alt: 'Storage Product 3', title: 'NVMe Storage' },
+      { src: '/img/products/storage/Screenshot 2025-07-14 113238.png', alt: 'Storage Product 4', title: 'Storage Array' },
     ],
     'gpu': [
       { src: '/img/products/gpu/IMG_0322.JPEG', alt: 'GPU Product 1', title: 'Gaming Graphics Card' },
@@ -164,15 +211,15 @@ export function getProductImages(category: string): ProductImage[] {
     ],
     'phones': [
       { src: '/img/products/phones/IMG_0521.JPEG', alt: 'Phone Product 1', title: 'Smartphone' },
-      { src: '/img/products/phones/IMG_0531.JPEG', alt: 'Phone Product 2', title: 'Business Phone' },
-      { src: '/img/products/phones/Screenshot 2025-07-14 113622.png', alt: 'Phone Product 3', title: 'Mobile Device' },
-      { src: '/img/products/phones/Screenshot 2025-07-14 113650.png', alt: 'Phone Product 4', title: 'Communication Device' },
+      { src: '/img/products/phones/IMG_0531.JPEG', alt: 'Phone Product 2', title: 'Mobile Device' },
+      { src: '/img/products/phones/Screenshot 2025-07-14 113622.png', alt: 'Phone Product 3', title: 'Phone Display' },
+      { src: '/img/products/phones/Screenshot 2025-07-14 113650.png', alt: 'Phone Product 4', title: 'Phone Interface' },
     ],
     'tablets': [
-      { src: '/img/products/tablets/Screenshot 2025-07-14 113729.png', alt: 'Tablet Product 1', title: 'iPad' },
-      { src: '/img/products/tablets/Screenshot 2025-07-14 113758.png', alt: 'Tablet Product 2', title: 'Android Tablet' },
-      { src: '/img/products/tablets/Screenshot 2025-07-14 113841.png', alt: 'Tablet Product 3', title: 'Windows Tablet' },
-      { src: '/img/products/tablets/Screenshot 2025-07-14 113911.png', alt: 'Tablet Product 4', title: 'Professional Tablet' },
+      { src: '/img/products/tablets/Screenshot 2025-07-14 113729.png', alt: 'Tablet Product 1', title: 'Tablet Device' },
+      { src: '/img/products/tablets/Screenshot 2025-07-14 113758.png', alt: 'Tablet Product 2', title: 'Tablet Display' },
+      { src: '/img/products/tablets/Screenshot 2025-07-14 113841.png', alt: 'Tablet Product 3', title: 'Tablet Interface' },
+      { src: '/img/products/tablets/Screenshot 2025-07-14 113911.png', alt: 'Tablet Product 4', title: 'Tablet Features' },
     ],
     'servers': [
       { src: '/img/products/servers/IMG_0386.JPG', alt: 'Server Product 1', title: 'Rack Server' },

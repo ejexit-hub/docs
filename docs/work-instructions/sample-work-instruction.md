@@ -1,18 +1,20 @@
 ---
 id: sample-work-instruction
 title: Sample Work Instruction
-sidebar_label: Sample Work Instruction
-description: Example of how to create work instructions with pictures
+sidebar_label: Sample
+description: Example work instruction with all features demonstrated
 ---
+
+import Details from '@site/src/components/Details';
 
 # Sample Work Instruction
 
-This is an example of how to create work instructions with pictures for each step.
+This is a sample work instruction that demonstrates all the features and formatting options available.
 
 ## Prerequisites
 
-- Required tools
 - Safety equipment
+- Required tools
 - Materials needed
 
 ## Step 1: Initial Setup
@@ -74,8 +76,7 @@ Finalize the process and clean up.
 
 ### Common Issues
 
-<details>
-<summary>Issue 1: Equipment not starting</summary>
+<Details summary="Issue 1: Equipment not starting">
 
 ![Troubleshooting 1](/img/products/laptops-desktops/IMG_5510.JPG)
 
@@ -84,10 +85,9 @@ Finalize the process and clean up.
 - Verify safety switches
 - Contact supervisor if needed
 
-</details>
+</Details>
 
-<details>
-<summary>Issue 2: Quality problems</summary>
+<Details summary="Issue 2: Quality problems">
 
 ![Troubleshooting 2](/img/products/laptops-desktops/IMG_6679.JPEG)
 
@@ -96,7 +96,7 @@ Finalize the process and clean up.
 - Check equipment calibration
 - Document the issue
 
-</details>
+</Details>
 
 ## Safety Reminders
 

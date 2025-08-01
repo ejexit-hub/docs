@@ -1,129 +1,77 @@
 ---
-id: work-instructions-guide
-title: Creating Work Instructions Guide
-sidebar_label: Creating Work Instructions
-description: How to create and organize work instructions with pictures
+id: README
+title: Work Instructions Guide
+sidebar_label: Overview
+description: Complete guide for creating and managing work instructions
 ---
 
-# Creating Work Instructions Guide
+import Details from '@site/src/components/Details';
 
-This guide shows you how to create professional work instructions with pictures using markdown files.
+# Work Instructions Guide
 
-## 📁 **File Structure**
+Welcome to the comprehensive guide for creating and managing work instructions. This document provides templates, best practices, and examples to help you create effective, user-friendly work instructions.
 
-```
-docs/
-├── work-instructions/
-│   ├── _category_.json
-│   ├── intro.md (main overview page)
-│   ├── README.md (this guide)
-│   ├── sample-work-instruction.md
-│   ├── equipment-setup-example.md
-│   ├── safety-procedures.md
-│   └── your-new-instruction.md
+## 📋 **What Are Work Instructions?**
 
-static/
-└── img/
-    └── work-instructions/
-        ├── step1-safety-setup.jpg
-        ├── step2-equipment.jpg
-        ├── step3-process.jpg
-        ├── step4-quality.jpg
-        └── step5-completion.jpg
-```
+Work instructions are step-by-step procedures that guide users through specific tasks or processes. They ensure consistency, safety, and quality in all operations.
 
-## 🖼️ **Adding Pictures**
+## 🎯 **Key Components**
 
-### Method 1: Basic Image Syntax
-```markdown
-![Step Description](/img/work-instructions/your-image.jpg)
-```
+### Essential Elements
+- **Clear title and description**
+- **Prerequisites and safety requirements**
+- **Step-by-step procedures**
+- **Visual aids (images/diagrams)**
+- **Troubleshooting section**
+- **Emergency procedures**
 
-### Method 2: With Caption
-```markdown
-![Step Description](/img/work-instructions/your-image.jpg "Optional caption")
-```
+### Optional Elements
+- **Video demonstrations**
+- **Interactive checklists**
+- **Related documents**
+- **Contact information**
 
-### Method 3: Responsive Images
-```markdown
-<img src="/img/work-instructions/your-image.jpg" alt="Step Description" width="600" height="400" />
-```
+## 📝 **Writing Guidelines**
 
-## 📝 **Creating a New Work Instruction**
+### Language and Style
+- Use clear, concise language
+- Write in active voice
+- Use numbered steps for procedures
+- Include safety warnings prominently
+- Avoid technical jargon when possible
 
-1. **Create the markdown file:**
-   ```bash
-   # In docs/work-instructions/
-   touch your-instruction-name.md
-   ```
+### Structure
+- Start with an overview
+- List prerequisites
+- Provide step-by-step instructions
+- Include troubleshooting
+- End with safety reminders
 
-2. **Add the frontmatter:**
-   ```markdown
-   ---
-   id: your-instruction-name
-   title: Your Instruction Title
-   sidebar_label: Short Title
-   description: Brief description
-   ---
-   ```
+## 🖼️ **Image Guidelines**
 
-3. **Structure your content:**
-   ```markdown
-   # Your Instruction Title
-   
-   Brief overview of the process.
-   
-   ## Prerequisites
-   
-   - Required tools
-   - Safety equipment
-   - Materials needed
-   
-   ## Step 1: First Step
-   
-   Description of the step.
-   
-   ![Step 1 Image](/img/work-instructions/step1.jpg)
-   
-   **Important Notes:**
-   - Key point 1
-   - Key point 2
-   
-   ## Step 2: Second Step
-   
-   Next step description.
-   
-   ![Step 2 Image](/img/work-instructions/step2.jpg)
-   ```
+### When to Use Images
+- **Safety procedures**: Show proper PPE usage
+- **Equipment setup**: Display correct positioning
+- **Process steps**: Illustrate key actions
+- **Troubleshooting**: Show common issues
+- **Quality checks**: Demonstrate standards
 
-## 🎨 **Styling Features**
-
-Your work instructions automatically get:
-
-- **Numbered steps** with colored circles
-- **Enhanced images** with hover effects
-- **Color-coded sections** (prerequisites, steps, troubleshooting)
-- **Responsive design** for mobile devices
-- **Brand colors** (ExitTech green and blue)
-
-## 📱 **Mobile Optimization**
-
-Images automatically:
-- Scale to fit mobile screens
-- Maintain aspect ratio
-- Load quickly with optimized sizing
+### Image Requirements
+- **High quality**: Clear, well-lit photos
+- **Relevant**: Directly related to the step
+- **Safe**: No safety violations visible
+- **Current**: Up-to-date equipment/processes
 
 ## 🔧 **Advanced Features**
 
 ### Accordion Sections
 ```markdown
-<details>
-<summary>Expandable Section</summary>
+<Details summary="Expandable Section">
 
 ![Image in accordion](/img/work-instructions/accordion-image.jpg)
 
 Content here...
-</details>
+</Details>
 ```
 
 ### Admonitions
@@ -179,6 +127,8 @@ sidebar_label: Short Title
 description: Brief description
 ---
 
+import Details from '@site/src/components/Details';
+
 # Your Instruction Title
 
 Brief overview of the process.
@@ -211,26 +161,13 @@ Description of the main process.
 
 ## Troubleshooting
 
-<details>
-<summary>Common Issue</summary>
-
-![Troubleshooting](/img/work-instructions/troubleshoot.jpg)
+<Details summary="Common Issue 1">
 
 **Solution:**
 - Step 1
 - Step 2
-</details>
 
-## Safety Reminders
-
-:::warning Safety First
-Always follow safety protocols.
-:::
-
-## Related Documents
-
-- [Related Doc 1](/docs/doc1)
-- [Related Doc 2](/docs/doc2)
+</Details>
 ```
 
 ## 📋 **Organization Tips**

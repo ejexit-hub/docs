@@ -179,9 +179,6 @@ Refer to the [Laptop & Desktop Cut Lines](link‑to‑document) for SKU‑specif
   title="Laptop & Desktop Gallery"
 />
 
----
-
-
 ## Technical Cutlines
 
 <iframe

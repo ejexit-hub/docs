@@ -1,13 +1,11 @@
 ---
 id: small-equipment
-title: Small Equipment Procedures
+title: Small Equipment
 sidebar_label: Small Equipment
-description: Complete guide for handling, processing, and managing small equipment and components
+description: Procedures for processing and handling small equipment and components
 ---
 
-
-
-# Small Equipment Procedures
+# Small Equipment Processing
 
 ## 🔧 **Small Equipment Processing & Handling**
 

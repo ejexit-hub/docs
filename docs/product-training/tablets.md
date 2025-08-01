@@ -66,9 +66,6 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
   title="Tablets Gallery"
 />
 
----
-
-
 ## Technical Cutlines
 
 <iframe

@@ -21,7 +21,7 @@ This is a sample work instruction that demonstrates all the features and formatt
 
 First, ensure all safety equipment is properly worn and the work area is clean.
 
-![Step 1 - Safety Setup](/img/products/laptops-desktops/IMG_2663.JPG)
+<img src="/img/products/laptops-desktops/IMG_2663.JPG" alt="Step 1 - Safety Setup" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Important Notes:**
 - Always wear safety glasses
@@ -32,7 +32,7 @@ First, ensure all safety equipment is properly worn and the work area is clean.
 
 Prepare your equipment according to the manufacturer's specifications.
 
-![Step 2 - Equipment Setup](/img/products/laptops-desktops/IMG_2722.JPG)
+<img src="/img/products/laptops-desktops/IMG_2722.JPG" alt="Step 2 - Equipment Setup" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Key Points:**
 - Verify all connections are secure
@@ -43,7 +43,7 @@ Prepare your equipment according to the manufacturer's specifications.
 
 Follow the main process steps carefully.
 
-![Step 3 - Main Process](/img/products/laptops-desktops/IMG_2743.JPG)
+<img src="/img/products/laptops-desktops/IMG_2743.JPG" alt="Step 3 - Main Process" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Process Details:**
 1. Start the equipment
@@ -54,7 +54,7 @@ Follow the main process steps carefully.
 
 Perform quality checks at each stage.
 
-![Step 4 - Quality Check](/img/products/laptops-desktops/IMG_2807.JPG)
+<img src="/img/products/laptops-desktops/IMG_2807.JPG" alt="Step 4 - Quality Check" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Quality Criteria:**
 - Visual inspection
@@ -65,7 +65,7 @@ Perform quality checks at each stage.
 
 Finalize the process and clean up.
 
-![Step 5 - Completion](/img/products/laptops-desktops/IMG_5521.JPG)
+<img src="/img/products/laptops-desktops/IMG_5521.JPG" alt="Step 5 - Completion" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Final Steps:**
 - Clean work area
@@ -78,7 +78,7 @@ Finalize the process and clean up.
 
 <Details summary="Issue 1: Equipment not starting">
 
-![Troubleshooting 1](/img/products/laptops-desktops/IMG_5510.JPG)
+<img src="/img/products/laptops-desktops/IMG_5510.JPG" alt="Troubleshooting 1" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Solution:**
 - Check power connections
@@ -89,7 +89,7 @@ Finalize the process and clean up.
 
 <Details summary="Issue 2: Quality problems">
 
-![Troubleshooting 2](/img/products/laptops-desktops/IMG_6679.JPEG)
+<img src="/img/products/laptops-desktops/IMG_6679.JPEG" alt="Troubleshooting 2" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Solution:**
 - Review process parameters

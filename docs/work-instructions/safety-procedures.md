@@ -27,7 +27,7 @@ Before beginning any work, ensure you have:
 
 Inspect all equipment for safety compliance before use.
 
-![Equipment Safety Inspection](/img/products/laptops-desktops/IMG_2722.JPG)
+<img src="/img/products/laptops-desktops/IMG_2722.JPG" alt="Equipment Safety Inspection" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Inspection Points:**
 - Check for damaged cords or cables
@@ -39,7 +39,7 @@ Inspect all equipment for safety compliance before use.
 
 Prepare your work area to minimize safety risks.
 
-![Work Area Preparation](/img/products/laptops-desktops/IMG_2743.JPG)
+<img src="/img/products/laptops-desktops/IMG_2743.JPG" alt="Work Area Preparation" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Preparation Steps:**
 1. Clear work area of obstructions
@@ -51,7 +51,7 @@ Prepare your work area to minimize safety risks.
 
 Review emergency procedures and ensure you know how to respond to incidents.
 
-![Emergency Response Planning](/img/products/laptops-desktops/IMG_2807.JPG)
+<img src="/img/products/laptops-desktops/IMG_2807.JPG" alt="Emergency Response Planning" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Emergency Procedures:**
 - Know evacuation routes
@@ -65,7 +65,7 @@ Review emergency procedures and ensure you know how to respond to incidents.
 
 <Details summary="Equipment malfunction during operation">
 
-![Equipment Malfunction](/img/products/laptops-desktops/IMG_5510.JPG)
+<img src="/img/products/laptops-desktops/IMG_5510.JPG" alt="Equipment Malfunction" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Emergency Response:**
 1. Stop work immediately
@@ -78,7 +78,7 @@ Review emergency procedures and ensure you know how to respond to incidents.
 
 <Details summary="Injury or medical emergency">
 
-![Medical Emergency](/img/products/laptops-desktops/IMG_5521.JPG)
+<img src="/img/products/laptops-desktops/IMG_5521.JPG" alt="Medical Emergency" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Response Steps:**
 1. Assess the situation

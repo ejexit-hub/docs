@@ -166,6 +166,6 @@ Refer to the [Storage Cut Lines](link‑to‑document) for SKU‑level specs, en
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}
   title="Technical Cutlines"
-  allowfullscreen
+  allowFullScreen
 ></iframe>
 

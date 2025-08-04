@@ -187,6 +187,6 @@ Refer to the [Laptop & Desktop Cut Lines](link‑to‑document) for SKU‑specif
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}
   title="Technical Cutlines"
-  allowfullscreen
+  allowFullScreen
 ></iframe>
 

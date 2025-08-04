@@ -74,6 +74,6 @@ For detailed technical specifications, refer to [Technical Cut Lines](8.1-2.3-P 
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}
   title="Technical Cutlines"
-  allowfullscreen
+  allowFullScreen
 ></iframe>
 

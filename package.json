@@ -13,7 +13,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "dev:api": "node api/server.js",
+    "start:api": "node api/server.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
@@ -23,9 +25,12 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@supabase/supabase-js": "^2.43.3",
     "@tinymce/tinymce-react": "^6.2.1",
+    "axios": "^1.11.0",
     "classnames": "^2.5.1",
     "dotenv": "^17.2.0",
+    "eventsource-parser": "^1.1.2",
     "framer-motion": "^12.23.3",
+    "lucide-react": "^0.525.0",
     "motion": "^12.23.6",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.3.1",
@@ -44,7 +49,6 @@
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.525.0",
     "postcss": "^8.5.6",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11",

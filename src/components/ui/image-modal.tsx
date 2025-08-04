@@ -12,20 +12,25 @@ interface ImageModalProps {
 }
 
 export function ImageModal({ isOpen, onClose, image }: ImageModalProps) {
-  if (!isOpen) return null;
+  const [imageError, setImageError] = React.useState(false);
+  const [imageLoaded, setImageLoaded] = React.useState(false);
 
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose();
+  // Debug logging
+  React.useEffect(() => {
+    if (isOpen) {
+      console.log('ImageModal opened with image:', image);
     }
-  };
+  }, [isOpen, image]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      onClose();
+  // Reset states when modal opens/closes
+  React.useEffect(() => {
+    if (isOpen) {
+      setImageError(false);
+      setImageLoaded(false);
     }
-  };
+  }, [isOpen]);
 
+  // Handle escape key and body overflow
   React.useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -44,14 +49,65 @@ export function ImageModal({ isOpen, onClose, image }: ImageModalProps) {
     };
   }, [isOpen, onClose]);
 
+  // Debug alert to test if component renders
+  React.useEffect(() => {
+    if (isOpen) {
+      console.log('Modal is opening - should be visible now');
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      onClose();
+    }
+  };
+
+  const handleImageError = () => {
+    console.error('Failed to load image:', image.src);
+    setImageError(true);
+  };
+
+  const handleImageLoad = () => {
+    console.log('Image loaded successfully:', image.src);
+    setImageLoaded(true);
+  };
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 999999,
+        padding: '20px'
+      }}
       onClick={handleBackdropClick}
       onKeyDown={handleKeyDown}
       tabIndex={-1}
     >
-      <div className="relative max-w-[90vw] max-h-[90vh] bg-white dark:bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
+      <div style={{
+        position: 'relative',
+        maxWidth: '90vw',
+        maxHeight: '90vh',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        overflow: 'hidden'
+      }}>
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -65,15 +121,51 @@ export function ImageModal({ isOpen, onClose, image }: ImageModalProps) {
 
         {/* Image Container */}
         <div className="relative">
-          <img
-            src={encodeURI(image.src)}
-            alt={image.alt}
-            className="max-w-full max-h-[90vh] object-contain"
-            loading="eager"
-          />
+          {imageError ? (
+            <div className="flex items-center justify-center w-full h-64 bg-gray-100 dark:bg-gray-800">
+              <div className="text-center text-gray-500">
+                <div className="text-4xl mb-2">🖼️</div>
+                <div className="text-sm">Image failed to load</div>
+                <div className="text-xs text-gray-400 mt-1">{image.src}</div>
+                <button
+                  onClick={onClose}
+                  className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="relative">
+              {/* Loading overlay */}
+              {!imageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 z-10">
+                  <div className="text-center text-gray-500">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
+                    <div className="text-sm">Loading image...</div>
+                    <div className="text-xs text-gray-400 mt-1">{image.src}</div>
+                  </div>
+                </div>
+              )}
+              
+              {/* Image */}
+              <img
+                src={encodeURI(image.src)}
+                alt={image.alt}
+                className="max-w-full max-h-[90vh] object-contain"
+                loading="eager"
+                onError={handleImageError}
+                onLoad={handleImageLoad}
+                style={{ 
+                  opacity: imageLoaded ? 1 : 0,
+                  transition: 'opacity 0.3s ease-in-out'
+                }}
+              />
+            </div>
+          )}
           
           {/* Image Title */}
-          {image.title && (
+          {image.title && !imageError && imageLoaded && (
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
               <h3 className="text-lg font-medium">{image.title}</h3>
               {image.alt && image.alt !== image.title && (

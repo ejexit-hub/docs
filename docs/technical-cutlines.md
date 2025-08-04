@@ -13,7 +13,7 @@ Below is the live Technical Cutlines sheet. Any updates made in Google Sheets wi
   height="800"
   style={{ border: 'none', borderRadius: '8px', marginLeft: '0%' }}
   title="Technical Cutlines"
-  allowfullscreen
+  allowFullScreen
 ></iframe>
 
  

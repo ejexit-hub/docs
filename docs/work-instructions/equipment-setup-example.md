@@ -22,7 +22,7 @@ This is a practical example of how to create work instructions with pictures for
 
 Before starting any equipment setup, ensure all safety protocols are followed.
 
-![Safety Equipment Check](/img/products/laptops-desktops/IMG_1548.JPEG)
+<img src="/img/products/laptops-desktops/IMG_1548.JPEG" alt="Safety Equipment Check" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Important Notes:**
 - Always wear safety glasses
@@ -33,7 +33,7 @@ Before starting any equipment setup, ensure all safety protocols are followed.
 
 Inspect the equipment for any visible damage or missing parts.
 
-![Equipment Inspection](/img/products/laptops-desktops/IMG_2663.JPG)
+<img src="/img/products/laptops-desktops/IMG_2663.JPG" alt="Equipment Inspection" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Inspection Points:**
 - Check for loose connections
@@ -44,7 +44,7 @@ Inspect the equipment for any visible damage or missing parts.
 
 Connect the equipment to the power source following manufacturer guidelines.
 
-![Power Connection](/img/products/laptops-desktops/IMG_2722.JPG)
+<img src="/img/products/laptops-desktops/IMG_2722.JPG" alt="Power Connection" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Connection Steps:**
 1. Verify power requirements
@@ -55,7 +55,7 @@ Connect the equipment to the power source following manufacturer guidelines.
 
 Perform initial testing to ensure equipment functions properly.
 
-![Initial Testing](/img/products/laptops-desktops/IMG_2743.JPG)
+<img src="/img/products/laptops-desktops/IMG_2743.JPG" alt="Initial Testing" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Test Procedures:**
 - Power on sequence
@@ -66,7 +66,7 @@ Perform initial testing to ensure equipment functions properly.
 
 Calibrate the equipment according to specifications.
 
-![Equipment Calibration](/img/products/laptops-desktops/IMG_2807.JPG)
+<img src="/img/products/laptops-desktops/IMG_2807.JPG" alt="Equipment Calibration" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Calibration Steps:**
 1. Access calibration menu
@@ -79,7 +79,7 @@ Calibrate the equipment according to specifications.
 
 <Details summary="Equipment won't power on">
 
-![Power Issue](/img/products/laptops-desktops/IMG_5510.JPG)
+<img src="/img/products/laptops-desktops/IMG_5510.JPG" alt="Power Issue" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Solution:**
 - Check power cord connection
@@ -90,7 +90,7 @@ Calibrate the equipment according to specifications.
 
 <Details summary="Calibration errors">
 
-![Calibration Error](/img/products/laptops-desktops/IMG_5521.JPG)
+<img src="/img/products/laptops-desktops/IMG_5521.JPG" alt="Calibration Error" style={{maxWidth: '600px', maxHeight: '400px', width: 'auto', height: 'auto', display: 'block', margin: '1.5rem 0', borderRadius: '12px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)'}} />
 
 **Solution:**
 - Restart calibration process

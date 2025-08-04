@@ -154,6 +154,6 @@ Refer to the [Networking Cut Lines](link‑to‑document) for SKU‑specific spe
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}
   title="Technical Cutlines"
-  allowfullscreen
+  allowFullScreen
 ></iframe>
 

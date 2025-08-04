@@ -2845,22 +2845,24 @@ table {
   counter-reset: section;
 }
 
+/* More specific rule for work-instructions images */
+.theme-doc-markdown[data-path*="work-instructions"] p img,
 .theme-doc-markdown[data-path*="work-instructions"] img {
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  margin: 1.5rem auto;
-  max-width: 900px;
-  max-height: 500px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+  margin: 1.5rem auto !important;
+  max-width: 600px !important;
+  max-height: 400px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2) !important;
 }
 
 .theme-doc-markdown[data-path*="work-instructions"] h2 + p {
@@ -2973,10 +2975,10 @@ table {
   }
 
   .theme-doc-markdown[data-path*="work-instructions"] img {
-    margin: 1rem auto;
-    border-radius: 8px;
-    max-width: 100%;
-    max-height: 400px;
+    margin: 1rem auto !important;
+    border-radius: 8px !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
   }
 }
 
@@ -3420,3 +3422,16 @@ table {
 }
 
 /* Ensure carousel container allows arrows to be visible */
+
+/* Most specific rule for work-instructions images - highest priority */
+body .theme-doc-markdown[data-path*="work-instructions"] img,
+body .theme-doc-markdown[data-path*="work-instructions"] p img,
+body [data-path*="work-instructions"] img {
+  max-width: 600px !important;
+  max-height: 400px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Force image sizing for work-instructions - highest priority */

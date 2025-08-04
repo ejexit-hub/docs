@@ -61,6 +61,7 @@ export function ProductCarousel({
   };
 
   const handleImageClick = () => {
+    console.log('Image clicked! Opening modal for image:', images[currentIndex]);
     setIsModalOpen(true);
   };
 
@@ -72,7 +73,7 @@ export function ProductCarousel({
   console.log('showNavigation:', showNavigation, 'images.length > 1:', images.length > 1);
 
   return (
-    <div className={`relative w-full max-w-4xl mx-auto product-carousel ${className}`} style={{ maxWidth: '900px', overflow: 'visible', position: 'relative' }}>
+    <div className={`relative w-full max-w-4xl product-carousel ${className}`} style={{ maxWidth: '900px', overflow: 'visible', position: 'relative' }}>
       <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 max-h-96" style={{ width: '100%', maxHeight: '600px', position: 'relative' }}>
         {/* Main Image */}
         {imageError ? (

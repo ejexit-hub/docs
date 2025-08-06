@@ -1,10 +1,18 @@
 'use client';
 
+// TEMPORARILY DISABLED - Will be re-enabled in the future
+// This component is currently disabled but preserved for future use
+
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import { ChatCard } from './ui/chat-card';
 
 export default function ChatButton() {
+  // TEMPORARILY DISABLED - Return null to hide the component
+  return null;
+  
+  // Original code preserved below for future re-enabling:
+  /*
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -86,4 +94,5 @@ export default function ChatButton() {
       </div>
     </div>
   );
+  */
 } 

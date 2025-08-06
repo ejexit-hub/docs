@@ -3522,55 +3522,5 @@ body [data-path*="work-instructions"] img {
 
 /* Force image sizing for work-instructions - highest priority */
 
-/* Chat Button and Chat Card Styles */
-.chat-button {
-  position: fixed !important;
-  bottom: 16px !important;
-  right: 16px !important;
-  z-index: 9999 !important;
-  pointer-events: auto !important;
-}
-
-.chat-card {
-  position: fixed !important;
-  bottom: 16px !important;
-  right: 16px !important;
-  z-index: 9998 !important;
-  pointer-events: auto !important;
-}
-
-/* Ensure chat components are always visible */
-[data-theme='light'] .chat-button,
-[data-theme='dark'] .chat-button {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-[data-theme='light'] .chat-card,
-[data-theme='dark'] .chat-card {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Override any potential hiding */
-.chat-button.hidden,
-.chat-card.hidden {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Ensure proper stacking context */
-.theme-doc-layout {
-  position: relative;
-  z-index: 1;
-}
-
-/* Chat components should be above everything */
-.chat-button,
-.chat-card {
-  z-index: 9999 !important;
-  position: fixed !important;
-}
+/* Chat Button and Chat Card Styles - TEMPORARILY DISABLED */
+/* Will be re-enabled in the future */

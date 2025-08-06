@@ -22,7 +22,7 @@ const embedBlock = (gid: string) => `
 ## Technical Cutlines
 
 <iframe
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnkw0fLQVW9RiVoUQbeJiRhh06xbjChfc0LEM-G3fscA9hEMNxbiibHi0HKW9eWQ/pubhtml?widget=true&headers=false&gid=${gid}&single=true"
+  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKEG_k78qv7qXWAQu3WnnRl7jO-3KWSH1t6PemKWB_UHERHi2SUIlhPcaqQQJhiw/pubhtml?widget=true&headers=false&gid=${gid}&single=true"
   width="100%"
   height="800"
   style={{ border: 'none', borderRadius: '8px' }}

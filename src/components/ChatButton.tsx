@@ -1,54 +1,89 @@
 'use client';
 
-import React, { useState } from 'react';
-import { MessageCircle, Sparkles } from 'lucide-react';
-import InternalChat from './InternalChat';
+import React, { useState, useEffect } from 'react';
+import { MessageCircle, X } from 'lucide-react';
+import { ChatCard } from './ui/chat-card';
 
 export default function ChatButton() {
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  console.log('ChatButton component rendered'); // Debug log
+  useEffect(() => {
+    // Component mounted
+  }, []);
+
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleSendMessage = (message: string) => {
+    // Handle message sending
+  };
+
+  const handleReaction = (messageId: string, emoji: string) => {
+    // Handle reaction
+  };
+
+  const handleMoreClick = () => {
+    // Handle more options
+  };
 
   return (
-    <>
-      {/* Floating Chat Button */}
+    <div style={{ position: 'fixed', bottom: '16px', right: '16px', zIndex: 9999 }}>
+      {/* Floating Action Button */}
       <button
-        onClick={() => {
-          console.log('Chat button clicked'); // Debug log
-          setIsChatOpen(true);
-        }}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 group"
-        aria-label="Open AI Assistant"
-        style={{ 
-          position: 'fixed', 
-          bottom: '24px', 
-          right: '24px', 
-          zIndex: 9999,
-          borderRadius: '16px',
-          width: '72px',
-          height: '72px',
+        onClick={toggleChat}
+        style={{
+          width: '48px',
+          height: '48px',
+          borderRadius: '50%',
+          background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+          border: '2px solid white',
+          color: 'white',
+          boxShadow: '0 6px 16px rgba(59, 130, 246, 0.3)',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          border: 'none',
           cursor: 'pointer',
-          background: 'linear-gradient(135deg, #3B82F6 0%, #4F46E5 100%)',
-          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+          transition: 'all 0.3s ease',
+          fontSize: '18px',
         }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.1)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+        aria-label="Open AI Assistant"
       >
-        <Sparkles className="w-6 h-6 mb-1" />
-        <span style={{ 
-          fontSize: '10px', 
-          display: 'block', 
-          fontWeight: '600',
-          letterSpacing: '0.5px',
-          textShadow: '0 1px 2px rgba(0, 0, 0, 0.1)'
-        }}>
-          AI
-        </span>
+        {isOpen ? '✕' : '💬'}
       </button>
-      {isChatOpen && <InternalChat isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />}
-    </>
+
+      {/* Chat Card - Vertical Layout */}
+      <div style={{ 
+        position: 'absolute', 
+        bottom: '60px', 
+        right: '0px',
+        display: isOpen ? 'block' : 'none'
+      }}>
+        <ChatCard
+          isOpen={isOpen}
+          onClose={handleClose}
+          onSendMessage={handleSendMessage}
+          onReaction={handleReaction}
+          onMoreClick={handleMoreClick}
+          theme="dark"
+          chatName="AI Assistant"
+          currentUser={{
+            name: "You",
+            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+          }}
+          className="chat-card"
+        />
+      </div>
+    </div>
   );
 } 

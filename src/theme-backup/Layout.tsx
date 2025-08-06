@@ -1,12 +1,8 @@
 import React from 'react';
 import Layout from '@theme-original/Layout';
-import type LayoutType from '@theme/Layout';
-import type {WrapperProps} from '@docusaurus/types';
 import ChatButton from '@site/src/components/ChatButton';
 
-type Props = WrapperProps<typeof LayoutType>;
-
-export default function LayoutWrapper(props: Props): JSX.Element {
+export default function CustomLayout(props) {
   return (
     <>
       <Layout {...props} />

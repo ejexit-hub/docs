@@ -18,6 +18,8 @@
     "start:api": "node api/server.js"
   },
   "dependencies": {
+    "@docsearch/css": "^3.9.0",
+    "@docsearch/react": "^3.9.0",
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@easyops-cn/docusaurus-search-local": "^0.51.1",

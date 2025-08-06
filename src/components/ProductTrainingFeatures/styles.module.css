@@ -22,6 +22,19 @@ div.categories,
   width: 100%;
 }
 
+/* Global override to ensure 3 columns always */
+html .categories .container .row,
+html section.categories .container .row,
+html div.categories .container .row,
+html [class*="categories"] .container .row {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  flex: none !important;
+  flex-direction: unset !important;
+  flex-wrap: unset !important;
+}
+
 /* Override global .row flex styles with maximum specificity */
 .categories .container .row,
 section.categories .container .row,
@@ -35,6 +48,27 @@ div[class*="categories"] .container .row {
   flex-wrap: unset !important;
   margin: 0 !important;
   flex-direction: unset !important;
+}
+
+/* Force 3 columns at all screen sizes - Override any responsive behavior */
+.categories .container .row,
+section.categories .container .row,
+div.categories .container .row,
+[class*="categories"] .container .row,
+section[class*="categories"] .container .row,
+div[class*="categories"] .container .row {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-wrap: unset !important;
+  overflow: visible !important;
+  flex-direction: unset !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+  box-sizing: border-box !important;
 }
 
 .categories::before {
@@ -338,7 +372,7 @@ div[class*="categories"] .container .row > * {
   section.categories .container .row,
   div.categories .container .row,
   [class*="categories"] .container .row {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1rem !important;
   }
   
@@ -373,7 +407,7 @@ div[class*="categories"] .container .row > * {
   section.categories .container .row,
   div.categories .container .row,
   [class*="categories"] .container .row {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 0.75rem !important;
   }
   
@@ -408,7 +442,9 @@ div[class*="categories"] .container .row > * {
   
   .categories .container .row,
   section.categories .container .row,
-  div.categories .container .row {
+  div.categories .container .row,
+  [class*="categories"] .container .row {
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 0.5rem !important;
   }
   

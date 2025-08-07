@@ -16,6 +16,9 @@ Welcome to the comprehensive Work Instructions section. Here you'll find detaile
 
 ### Core Processing Procedures
 - **[Receiving](/docs/work-instructions/receiving)** - Receiving, inspecting, and processing incoming equipment and materials
+- **[Parts](/docs/work-instructions/parts)** - Processing and handling electronic parts and components
+- **[Small Equipment](/docs/work-instructions/small-equipment)** - Procedures for small equipment (laptops, phones, etc.)
+- **[Large Equipment](/docs/work-instructions/large-equipment)** - Handling and processing large equipment and machinery
 
 ### Logistics & Operations
 - **[Shipping](/docs/work-instructions/shipping)** - Shipping, packaging, and logistics procedures

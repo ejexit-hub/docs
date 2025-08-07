@@ -9,22 +9,83 @@ description: Procedures for processing and handling small equipment and componen
 
 ## 🔧 **Small Equipment Processing & Handling**
 
-<iframe 
-  src="https://docs.google.com/document/d/e/2PACX-1vS97LVE8OVIbWjcc_XmsDcd3pP54amhGsnE6q96LaTVXmuHh9o4hoPZ5yeCsL99W323m4KZtSGW5M4z/pub?embedded=true"
-  width="100%" 
-  height="800px" 
-  frameBorder="0"
-  style={{border: "none"}}>
-</iframe>
+### **Overview**
+This guide covers the proper procedures for processing and handling small equipment and components in our facility.
 
-:::tip Google Docs Integration
-This document is maintained in Google Docs for easy collaboration and updates. The content above will automatically reflect any changes made to the Google Doc.
+### **Safety Precautions**
+- Always wear appropriate PPE (Personal Protective Equipment)
+- Ensure work area is clean and well-lit
+- Follow all safety protocols before beginning work
+- Report any damaged or unsafe equipment immediately
+
+### **Equipment Classification**
+Small equipment includes but is not limited to:
+- Laptops and tablets
+- Mobile phones and accessories
+- Small electronic devices
+- Computer components
+- Networking equipment
+
+### **Processing Steps**
+
+#### **1. Initial Inspection**
+- Visually inspect equipment for damage
+- Check for any missing components
+- Document condition and serial numbers
+- Photograph any damage or unusual conditions
+
+#### **2. Data Handling**
+- Follow data security protocols
+- Ensure proper data erasure procedures
+- Document data handling steps
+- Verify data removal completion
+
+#### **3. Component Processing**
+- Disassemble equipment carefully
+- Organize components by type
+- Label all components clearly
+- Store components in appropriate containers
+
+#### **4. Quality Control**
+- Verify all components are accounted for
+- Check for any processing errors
+- Complete quality control checklist
+- Document any issues or concerns
+
+### **Storage and Organization**
+- Use appropriate storage containers
+- Label all containers clearly
+- Maintain organized storage system
+- Regular inventory checks
+
+### **Documentation Requirements**
+- Complete all required forms
+- Update tracking systems
+- Maintain accurate records
+- File documentation properly
+
+### **Common Issues and Solutions**
+- **Missing components**: Document and report immediately
+- **Damaged equipment**: Follow damage assessment procedures
+- **Data recovery issues**: Escalate to supervisor
+- **Storage space**: Coordinate with facility management
+
+### **Quality Standards**
+- All equipment must be processed within 24 hours
+- 100% accuracy in component tracking
+- Complete documentation for all items
+- Zero tolerance for data security breaches
+
+:::tip Best Practices
+- Always double-check your work
+- Maintain clean and organized workspace
+- Follow established procedures exactly
+- Ask for clarification when needed
 :::
 
-:::note Setup Instructions
-To connect your Google Doc:
-1. Open your Google Doc
-2. Click "Share" → "Publish to web"
-3. Copy the document ID from the URL
-4. Replace `YOUR_GOOGLE_DOC_ID` in the iframe src above
+:::note Important Reminders
+- Safety first - never compromise safety for speed
+- Quality over quantity - accuracy is essential
+- Communication is key - report issues promptly
+- Continuous improvement - suggest process improvements
 :::

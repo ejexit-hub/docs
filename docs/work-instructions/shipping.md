@@ -4,6 +4,9 @@ title: Shipping
 sidebar_label: Shipping
 description: Procedures for shipping, packaging, and logistics
 ---
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
 
 # Shipping Procedures
 

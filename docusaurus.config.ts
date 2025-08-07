@@ -96,6 +96,7 @@ const config: Config = {
           type: 'dropdown',
           label: 'Training',
           position: 'left',
+          to: '/docs/product-training/intro',
           items: [
             {
               label: 'Introduction',
@@ -155,6 +156,7 @@ const config: Config = {
           type: 'dropdown',
           label: 'Sales',
           position: 'left',
+          to: '#',
           items: [
             {
               label: 'Coming Soon',
@@ -166,6 +168,7 @@ const config: Config = {
           type: 'dropdown',
           label: 'Processing',
           position: 'left',
+          to: '/docs/processing',
           items: [
             {
               label: 'Overview',

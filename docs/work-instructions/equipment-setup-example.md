@@ -4,8 +4,10 @@ title: Equipment Setup
 sidebar_label: Equipment Setup
 description: Equipment setup and configuration procedures
 ---
-
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 import Details from '@site/src/components/Details';
+
+<WorkInstructionsNavBar />
 
 # Equipment Setup Procedures
 

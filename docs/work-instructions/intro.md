@@ -4,6 +4,9 @@ title: Work Instructions
 sidebar_label: Overview
 description: Comprehensive work instructions for all processing procedures and equipment management
 ---
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
+
+<WorkInstructionsNavBar />
 
 # Work Instructions
 

@@ -4,8 +4,10 @@ title: Safety Procedures
 sidebar_label: Safety Procedures
 description: Essential safety guidelines and protocols for all processing operations
 ---
-
+import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 import Details from '@site/src/components/Details';
+
+<WorkInstructionsNavBar />
 
 # Safety Procedures
 

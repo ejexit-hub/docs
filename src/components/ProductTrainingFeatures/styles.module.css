@@ -197,6 +197,13 @@ div[class*="categories"] .container .row > * {
   flex-shrink: 0;
 }
 
+/* Remove global markdown h3 dot from category titles */
+.categoryTitle::before {
+  content: none !important;
+  display: none !important;
+  box-shadow: none !important;
+}
+
 .categoryCard:hover .categoryTitle {
   color: #81BA54;
 }

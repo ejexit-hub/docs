@@ -2,7 +2,7 @@
 id: receiving
 title: Receiving
 sidebar_label: Receiving
-description: Procedures for receiving, inspecting, and processing incoming equipment and materials
+description: Procedures for receiving equipment and materials
 ---
 import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar';
 
@@ -10,24 +10,33 @@ import WorkInstructionsNavBar from '@site/src/components/WorkInstructionsNavBar'
 
 # Receiving Procedures
 
-## 🔍 **Receiving Inspection & Processing**
+## WI
 
-<iframe 
-  src="https://docs.google.com/document/d/e/2PACX-1vRd6RFsKaOKU3A3n7QUJq8boyeDVKgPn0h2QNcVYJmci7lLuM6BWxIrImi-sOp_hd443HgD4LNB4uRf/pub?embedded=true"
-  width="100%" 
-  height="800px" 
-  frameBorder="0"
-  style={{border: "none"}}>
-</iframe>
+### Scrapping from Inventory
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vS_PYKhUrNJQxIckQlEKeadhXjENnNuhgfvedns96HU8pE3X2GGqvTbtax-z7eRnE6E6lRAjsGxdW7-/pub?embedded=true" style={{width: '100%', height: '800px', border: 'none'}}></iframe>
 
-:::tip Google Docs Integration
-This document is maintained in Google Docs for easy collaboration and updates. The content above will automatically reflect any changes made to the Google Doc.
-:::
+<br />
+<br />
 
-:::note Setup Instructions
-To connect your Google Doc:
-1. Open your Google Doc
-2. Click "Share" → "Publish to web"
-3. Copy the document ID from the URL
-4. Replace `YOUR_GOOGLE_DOC_ID` in the iframe src above
-:::
+### RMA's
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vRlNgAda9zsuzABCVQf3448NkUjdCGPsLOJwLbdM9AMoloRDEmubPuhILHRrHMB6NpeZsmS-6UUOr_a/pub?embedded=true" style={{width: '100%', height: '800px', border: 'none'}}></iframe>
+
+<br />
+<br />
+
+### Receiving
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vRtRY2Zlqad39M8DIdGnvjQtqwH2REAzeZh81krpkA-EoMwmt3BboymcdoKHV3pnmjiumqRuE-N5wfY/pub?embedded=true" style={{width: '100%', height: '800px', border: 'none'}}></iframe>
+
+<br />
+<br />
+
+### Creating an Inbound Order
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vSOTdFOLt-5F4Z_5k5vx5jfYx2g61nW6Dx_u4WwESZq9GoR2yXA9pQXYpzBZAV95_0WpWg66ANUWhrT/pub?embedded=true" style={{width: '100%', height: '800px', border: 'none'}}></iframe>
+
+<br />
+<br />
+
+## DMO
+
+### Receiving
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vRj0GzoC1XnJDINCueSuvAuGVH5-JgQxZ2RP2ox7mElYWihyTb1NbJPpvegHK-Rv3UuKJjjpr2I0dC8/pub?embedded=true" style={{width: '100%', height: '800px', border: 'none'}}></iframe>

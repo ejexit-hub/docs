@@ -3580,3 +3580,52 @@ body [data-path*="work-instructions"] img {
 [data-path="docs/product-training/intro"] *[class*="sidebar"] {
   display: none !important;
 }
+
+/* Laptop-friendly responsive embeds */
+/* Applies broadly to docs with iframes to avoid overflow on common laptop sizes */
+.theme-doc-markdown iframe,
+.markdown iframe {
+  width: 100% !important;
+  height: clamp(560px, 78vh, 1000px) !important;
+  border: none !important;
+  display: block !important;
+  margin: 0 0 1.25rem 0 !important;
+}
+
+/* Scope stronger rules to work instructions, product-training, and technical-cutlines pages */
+[data-path*="work-instructions"] iframe,
+[data-path*="product-training"] iframe,
+[data-path="docs/technical-cutlines"] iframe {
+  width: 100% !important;
+  height: clamp(560px, 78vh, 1000px) !important;
+  border: none !important;
+  display: block !important;
+}
+
+/* Fine-tune for typical laptop widths (1280–1536px) */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  [data-path*="work-instructions"] iframe,
+  [data-path*="product-training"] iframe,
+  [data-path="docs/technical-cutlines"] iframe {
+    height: clamp(520px, 76vh, 940px) !important;
+  }
+}
+
+/* Product Training intro hero text scaling on laptops */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  [data-path="docs/product-training/intro"] h2 {
+    font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
+    line-height: 1.2;
+  }
+  [data-path="docs/product-training/intro"] p {
+    font-size: 1.25rem;
+    line-height: 1.55;
+  }
+}
+
+/* Override product training intro hero h2 size */
+[data-path="docs/product-training/intro"] .theme-doc-markdown h2,
+[data-path="docs/product-training/intro"] h2 {
+  font-size: 3.6rem !important;
+  line-height: 1.2 !important;
+}
